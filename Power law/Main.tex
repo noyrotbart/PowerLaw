@@ -1,0 +1,75 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphics}       % Casper: Needed for figures
+\usepackage{graphicx}       % Casper: Needed for figures
+\usepackage[space]{grffile} % Casper: Needed for spaces in path (for Windows only) 
+\usepackage{subfig}			% Casper: For plotting figures side-by-side
+\usepackage{color} 			% Casper: For text highlighting
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{enumurate}
+%\usepackage{theorem}
+ \usepackage{fullpage}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\la}{\ensuremath{ \mathcal{L}}}
+%\newcommand{\PL}{\ensuremath{ \mathcal{P}_{\alpha}}}
+\newcommand{\PLB}{\ensuremath{ \mathcal{P}_{\alpha}}}
+\newcommand{\PLC}{\ensuremath{ \mathcal{P}'_{\alpha}}}
+\newcommand{\Sparse}{\ensuremath{ \mathcal{S}_{c,n}}}
+
+\date{February 12, 2015}
+
+\title{Near-optimal adjacency labeling scheme for power-law graphs}
+\author{Casper Petersen, Noy Rotbart,\\ Jakob Grue Simonsen and Christian Wulff-Nilsen \\ \\
+\small{Department of Computer Science, University of Copenhagen} \\
+\small{Universitetsparken 5, 2100 Copenhagen}\\
+ \small{\texttt{\{cazz,noyro,simonsen,koolooz\}@diku.dk}} \\
+ %\small{phone: (+45) 29611674}
+ }
+ 
+  
+\begin{document}
+\begin{titlepage}
+\clearpage\maketitle
+\thispagestyle{empty}
+\begin{abstract}
+An adjacency labeling scheme is a method that assigns labels to the vertices of a graph such that adjacency between vertices 
+can be inferred directly from the assigned label, without using a  centralized data structure.
+We devise adjacency labeling schemes for  the family  of power-law graphs which  has been used to model many types of networks, e.g. the Internet AS-level graph. Furthermore, we  prove an almost matching  lower bound for this family.
+We also provide an asymptotically near-optimal  labeling scheme for sparse graphs.
+Finally, we validate the efficiency of our labeling scheme by  an experimental evaluation  using both synthetic data and real-world networks of up to hundreds of thousands of vertices. 
+
+\end{abstract}
+%\vspace{280px}
+%This paper is  a regular submission,  eligible for best student paper award (Petersen and Rotbart are full-time students), and can be considered for a  brief announcement selection.
+\end{titlepage}
+\newpage
+\input{Introduction}
+\input{Preliminaries}
+\input{GraphFamilies}
+\input{LabelingScheme}
+\input{LowerBounds}
+\input{ScaleFree}
+\input{Experimental}
+\newpage
+ \bibliographystyle{abbrv}
+\bibliography{lit}
+\newpage
+\appendix
+\input{Appendix}
+
+%\include{Appendix}
+
+
+\end{document}

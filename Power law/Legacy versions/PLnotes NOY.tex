@@ -1,0 +1,288 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{theorem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\la}{\ensuremath{ \mathcal{L}}}
+
+
+\title{Adjacency labeling  schemes for sparse and power law graphs.}
+\author{Jakob Grue Simonsen, Noy Rotbart and Christian Wulff Nielsen}
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+We discuss adjacency labeling schemes for power-law graphs. These are a sub-family of sparse graphs that  received a considerable attention in the literature in the last decade. We first find a lower bound for the size of the induced universal graphs required to each of the families.
+We then  provide a constructive upper bound for these induced universal graphs using adjacency  labeling schemes of similar asymptotic size.
+\end{abstract}
+\section{Introduction}
+Power-law graphs appear in vast number of places.
+The number of nodes in power-law graphs seen in practice is of magnitude  of $10^{12}$.
+A label of  $\sqrt{10^{12}}$ bits is reasonable to handle given the current state of hardware. 
+\subsection{Previous work}
+A  graph  $G$ is universal, respectively induced universal to the graph family $\mathcal{F}$ if it contains all graphs in  $\mathcal{F}$  as subgraphs, respectively induced subgraphs.
+Kannan, Naor and Rudich~\cite{} showed that an adjacency labeling scheme of $f(n)$ bits  for some family of graphs  can construct an induced universal graph for this family of $2^{f(n)}$ vertices.
+The size of the smallest induced universal graph was first studied by  Moon~\cite{moon1965minimal}. Seen from labelling schemes, he showed a lower bound of $n/2$ on the label size for general graphs, and an upper bound of  $n/2+ \log n$. This gap was recently closed by Alstrup et al.~\cite{alstrup2014adjacency}.
+Universal graphs for sparse graphs were investigated first by Babai et al.~\cite{babai1982graphs} and improved by Alon and Asodi~\cite{Alon2002universal}. 
+\begin{remark}
+Let $N$ be the smallest number of nodes in the an induced universal graph $G=(V,E)$ for a family $\mathcal{F}$ of graphs with $n$ vertices .
+If this family contains no isomorphic graphs, then ${N}\choose{n}$ is clearly an upper bound on $\vert \mathcal{F} \vert$.
+\end{remark}
+%\subsection{Induced universal graphs and the size of the family}
+%We attempt to prove the following connection:
+%The size of the smallest induced universal graph is tightly coupled with the number of the non-isomorphic graphs in the family it represents.
+%
+%Let $N$ be the smallest number of nodes in the an induced universal graph $G=V,E$ for a family of graphs with $n$ vertices $\mathcal{F}$.
+%If this family contains no isomorphic graphs, then ${N}\choose{n}$ is clearly an upper bound on $\vert \mathcal{F} \vert$.
+%This bound is not tight as can be seen in Figure~\ref{}.
+%%Now, suppose that $N$ is the smallest possible, and that there are less than  ${N}\choose{n}$ non-isomorphic graphs in  $\mathcal{F}$.
+%%This means that at least one graph $G'=(V',E') \in \mathcal{F}$ can be embedded in $G$ in more than one way, such that the two sets of vertices it embeds to are different.  
+
+
+
+\section{Preliminaries}
+In the following we deal with $n$-vertex undirected finite and connected graphs.
+A graph $G=(V,E)$ is \emph{sparse} if $\vert E \vert = O(n)$, and an  $n$-vertex graph with at  most $cn$ edges is called $c$-sparse.
+We  denote the family of $c$-sparse graphs with $n$ nodes as   $\mathcal{S}_C$.
+The degree of a vertex $v$ in a graph $G=(V,E)$ is denoted by $\Delta(v)$.
+For every $1 \leq k \leq n$  the collection of vertices of degree $k$ is denoted $V_k$.
+We begin by a definition relating to the fraction of vertices of a certain degree.
+\begin{definition}
+The \emph{degree distribution} of a graph $G = (V,E)$ is the mapping 
+$\mathrm{ddist}_G : \mathbb{N}_0 \longrightarrow \mathbb{Q}$
+defined by $\mathrm{ddist}_G (k) := 
+\frac{\vert V_k \vert} {n}.$
+\end{definition}
+
+We also define a family of graphs where this fraction exponentially decreases as the degree increases.
+\begin{definition}
+We say that a graph  $G=(V,E)$ is a  $(C,\alpha)$ \emph{power-law graph} if for every $1 \leq i \leq n$:
+$n \cdot \mathrm{ddist}_G(k) = \lfloor C \frac{n}{i^{\alpha}} \rfloor $ for some real numbers $C > 0,\alpha > 1$.
+\end{definition}
+By this definition:
+$$|E| = \sum_{i=1}^{n} i \lfloor C \frac{n}{i^{\alpha}} \rfloor= \sum_{i=1}^{n}  \lfloor C \frac{n}{i^{\alpha-1}} \rfloor.$$
+Since $\sum_{i=1}^n 1/i^{a}$ converges when $a>1$, all power law graphs where $\alpha>2$ are sparse.
+Moreover, for $\alpha>3$,  a $(C,\alpha)$ power law graph is $2C$ sparse\footnote{It is in fact $\frac{\pi^2}{6}C \sim 1.64C$ sparse, which is the result of $\zeta(2)$, the Riemman Zeta function.}.
+We denote  $\mathcal{P}_{C,\alpha}$ the family of power law graphs with $n$ nodes, and parameters  $C$ and $\alpha$.
+
+%The literature is not very clear on when to use $[\cdot]$, $\lfloor \cdot \rfloor$ or other rounding --- most papers assume a little slack,
+%and it is common just to see ``$\mathrm{ddist}_G(k) \sim k^{-\alpha}$''\footnote{Also: when truncating the probability mass of a distribution with infinite support (e.g., power-law distributions), the excess probability mass needs to be accounted for. If we ever write a paper on this, we need to do this more formally than almost all existing papers.}. Furthermore,
+%the degree distribution is sometimes only assumed to ``kick in'' for sufficiently large values of $k$.
+%Power-law graphs are also known as ``scale-free networks'', or ``graphs with a fat-tailed degree distribution''.
+
+%An unbelievable amount of literature has been written about power law graphs, almost all of it bad. A very large
+%set of phenomena  that ``naturally'' involve graphs (protein networks, internet AS-level graphs, Facebook friends, \ldots) have been modelled more-or-less accurately by power-law graphs\footnote{I think most of it is crap --- ask Casper.}. The typical fit of $C k^{-\alpha}$ results in $1 < \alpha < 2$.
+
+We also ignore rounding and remark the two following equalities.
+\begin{enumerate}
+\item   $\mathrm{ddist}_G(k) = \frac{C}{k^{\alpha}}$  
+\item $\vert V_k \vert = \frac{nC}{k^{\alpha}}$.
+\end{enumerate}
+
+\section{The Labeling Schemes}
+We first handle sparse graphs.
+\begin{proposition}\label{sparse-label}
+There exist a $\sqrt {2cn} \log n+ \log n$ adjacency labeling scheme for $\mathcal{S}_c$.
+\end{proposition}
+\begin{proof}
+Let $G=(V,E)$ be a $c$-sparse graph.
+We first assign each vertex $v \in V$ a unique identifier $ID(v)$, using $\log n$ bits.
+A vertex of degree at least $\sqrt{2cn}$ is called \emph{fat} and \emph{thin} otherwise.
+From hereon, we use the terminology degree threshold to describe the value separating these two groups.
+The first bit of $\la(v), v \in V$ is set to  zero if $v$ is fat and to  one if it is thin.
+Since there are at most $2cn$ edges, the number of fat vertices  is at most $\sqrt{2cn}$.
+Let $(u,v)$ be an edge in $G$ such that $ID(u)<ID(v)$. 
+If $u$ and $v$ are both either thin or fat $ID(v)$ will appear in $\la(u)$ and vice versa.
+If $u$ is fat and $v$ is thin, $ID(u)$ will appear in $ID(v)$.
+Since there are at most $\sqrt{2cn}$ fat vertices, the size of the largest label is bounded by $\sqrt{2cn} \log n +\log n$.
+Similarly, thin vertices enjoy the same label size as they have at degree at most $\sqrt{2cn}$.
+Decoding the label is now obvious, and will take $O(\sqrt{n})$ operations.
+\end{proof}
+
+\begin{remark}
+%% Christian's remark
+%Considering $f(n)$-sparse graphs\footnote{Graphs with $n$ vertices and  $f(n)$ edges}, and a degree threshold $g(n)$, 
+%the size of a thin label size is $g(n) \log n$, and the number of fat nodes is at most $ 2n\frac{f(n)}{g(n)}$.
+%In this case, fat nodes have label size $2n\frac{f(n)}{g(n)}\log n$.
+% Setting $g(n)\log n = 2n\frac{f(n)}{g(n)}\log n$, we have  a label size of $g(n)\log n = \sqrt{2f(n)n} \log n$. 
+%This matches (ignoring logarithms) the bounds known for sparse and for dense graphs.
+It is easy to see that $f(n)$-sparse graphs\footnote{Graphs with $n$ vertices and  $f(n)$ edges}
+enjoy a  $\sqrt{2f(n)n} \log n$ labeling scheme by setting the degree threshold to $\sqrt{2f(n)n}$.
+\end{remark}
+%\begin{remark}
+%The labeling scheme in Proposition~\ref{sparse-label} is valid for all $1 \leq c \leq n$. Moreover, it is favourable to Alstrup et al.'s labeling scheme for 
+%$1 \leq c \leq \frac{\sqrt{n}}{\log n}$
+%\end{remark}
+Recall that  $\mathcal{P}_{C,\alpha} \in \mathcal{S}_{2C}$ when $\alpha \geq 2$.  This yields a $\sqrt{4C n} \log n$ labeling scheme for $\mathcal{P}_{C,\alpha}$.
+We now show that this label can be significantly improved. To do so we first need to account for the number of vertices of degree at least $k$ for any $1\leq k \leq n$.
+\begin{proposition}\label{prop:smallfraction}
+Let $f : \mathbb{N} \longrightarrow \mathbb{N}$ be a mapping such that
+$f(n) = o(n)$. Let $C > 0$ and $\alpha > 1$ be real numbers. Then
+there is $N \in \mathbb{N}$ such that if $G$ is a power-law graph with $\mathrm{ddist}_G(k) = C k^{-\alpha}$
+and at least $N$ vertices, then the fraction of vertices in $G$ with degree at least $f(n) + 1$
+is bounded above by $O(f(n)^{-(\alpha-1)})$.
+\end{proposition}
+
+\begin{proof}
+For $1 \leq j \leq n - 1$, the fraction of vertices of degree at least $j$
+is $C\sum_{i=j}^{n-1} 1/i^{\alpha}.$
+Note that $d/dx (Cx^{-\alpha}) =  -\alpha C x^{-(\alpha + 1)} < 0$
+and thus  for all $j \geq 1$ we have $\int_{j}^{j+1} Cx^{-\alpha} dx > C(j+1)^{-\alpha}$.
+Hence, the fraction of vertices of degree at least $j+1$ is at most
+$$
+\int_j^{n-1} C x^{-\alpha} dx = \left[ \frac{C}{-(\alpha - 1)} x^{-(\alpha-1)} \right]_j^{n-1}
+= \frac{C}{\alpha - 1}\left(j^{-(\alpha - 1)} - (n-1)^{-(\alpha -1 )} \right)
+$$
+
+In particular, the fraction of vertices of degree at least $f(n) + 1$ is at most
+ $\frac{C}{\alpha - 1}\left(f(n)^{-(\alpha - 1)} - (n-1)^{-(\alpha -1 )} \right)
+\leq \frac{C}{\alpha - 1} f(n)^{-(\alpha - 1)} = O(f(n)^{-(\alpha - 1)})$.
+\end{proof}
+%%%
+
+
+
+
+\begin{lemma}\label{lem:silly_bound}
+Let $f : \mathbb{N} \longrightarrow \mathbb{N}$ be a computable mapping such that $f(n) = o(n)$
+and let $C > 0, \alpha > 1$ be real numbers. Then the family of power-law graphs
+with $\mathrm{ddist}_G(k) = C k^{-\alpha}$ has a adjacency labeling scheme
+such that for all sufficiently large $n$, the maximum size of a label
+is bounded above by:
+$$\log n +\max(f(n) \log n   ,  O(n / f(n)^{\alpha -1})).$$
+\end{lemma}
+
+\begin{proof}
+We set the degree threshold at $f(n)$. By that we mean that   a vertex $v \in V$ is \emph{small} if $\Delta(v) \leq f(n)$ and \emph{large} otherwise.
+By Proposition \ref{prop:smallfraction} there are at most $c'n / f(n)^{\alpha -1}$ large  vertices for some $c'$.
+We assign each vertex a unique identifier from $1 \dots n$, such that the large vertices are assigned the last $c' n / f(n)^{\alpha -1}$  identifiers according to their degree in non-decreasing order.
+
+The label of a small vertex consists of two parts: its unique identifier and a list of the identifiers of all its neighbors.
+The size of such label  is thus at  most  $(f(n)+1) \log n$.
+The label of a large vertex consists also of two parts: a unique identifier and a bit string of length $c' \cdot  n \cdot f(n)^{-(\alpha -1)}$ such that  position $i$ is $1$ in this bit string if the vertex 
+is adjacent to the $i$'th largest large vertex.
+The size of a such  label is  at most $c' \cdot  n / f(n)^{\alpha +1}+ \log n.$
+
+Let $\la(v), \la(w)$ be two labels assigned by our suggested decoder to  vertices $v,w \in V$.
+ If $v$ and $w$ are both small or both large, then there is an edge from $v$ to $w$ if and only if $w$ is listed in the label of $v$ and vice versa.
+ Assume w.l.o.g that $v$ is small and $w$ is large, then there is an edge from $v$ to $w$ if and only if $w$ is listed in the label of $w$
+\end{proof}
+
+From Lemma~\ref{lem:silly_bound} it follows that the smallest label size is attained when
+$ f(n) \log n = c'n / f(n)^{\alpha -1}$ for some constant $c'$.
+We rearrange the equation and get
+$ f(n)^{\alpha} = c'n $ and thus the optimum label size occurs when $f(n) = \sqrt[\alpha]{c'n}$, and the resulting label size is  $O( \sqrt[\alpha]{n} \log n)$.
+ 
+This also means that there are $O(\sqrt[\alpha]n)$ large vertices, which correlates nicely with the following fact.
+The largest degree in an $(\alpha,C)$-power law graph is bounded by $O(\sqrt[\alpha]n)$.
+To see this observe that the number of vertices of degree $k$ must  to be at least $1$. Thus 
+$ nC\frac{1}{k^\alpha} \geq 1$, which implies that $k \leq \sqrt[\alpha]{nC}$ for some constant $C$.
+
+
+
+\begin{conjecture}
+Any family of graphs such that $\mathrm{ddist}(k)$ has ``high'' positive skewness will have labeling schemes for adjacency with
+sublinar maximum labeling size. A reasonable way forward would be to consider the third moment of some standard distributions
+and see what happens.
+\end{conjecture}
+
+
+
+
+
+\section{Lower Bounds}
+We begin this section by showing that the upper bounds achieved for sparse graphs are fairly close to the best possible.
+By Moon~\cite{moon1965minimal} it follows  that any adjacency labeling scheme for general graphs requires at least $\lfloor n/2 \rfloor$ bits.
+For brevity, we assume now that $n$ is an even number.
+We present the following extension, due to Spinard~\cite{spinrad2003efficient}.
+\begin{proposition}
+Any adjacency labeling scheme for $c$-sparse graphs requires  labels of size strictly larger than $\frac{\sqrt{n}}{2 \sqrt{c}}$ bits.
+\end{proposition}
+\begin{proof}
+Assume for contradiction that there exist a labeling scheme for adjacency assigning labels of size strictly less than $\frac{\sqrt{n}}{2 \sqrt{c}}$.
+Let $G$ be an $n$-vertices graph. Let $G'$ be the graph resulting by adding $\frac{n(n-1)}{c}$ isolated vertices to $G$, and note that now $G'$ is $c-sparse$. The graph $G$ is an induced subgraph of  $G'$.
+It now follows that the nodes of $G$ have adjacency labels of size less than 
+$ \frac{\sqrt{n^2/c}}{2 \sqrt{c}}= n/2$ bits. As $G$ was an arbitrary graph, we obtain a contradiction.
+\end{proof}
+
+\subsection{Lower bounds for $\mathcal{P}_{C,\alpha}$.}
+We now show that a similar lower bound can be attained for power-law graphs where $\alpha>2$. To do so, we first must argue that  constructing power law graphs in  this fashion  is  possible.
+
+A \emph{degree sequence} is a sequence of  integers $d_1 \dots d_n$ such that $0 \leq d_i \leq n-1$.
+We denote $v_1 \dots v_n$ the vertices the vertices of a graph $G=(V,E)$ in non-increasing order according to their degree.
+We  denote $v_i \in V$ the $i$'th vertex in this ordering.
+The \emph{degree sequence} of $G$ is $d_1 \geq d_2 \dots \geq d_n$ where $d_i$ is the degree of $v_i$.
+While every graph has a degree sequence, not all degree sequences have graphs.
+We say that a degree sequence is \emph{realizable} if it has a corresponding graph. 
+The \emph{Erd\"{o}s-Gallai theorem} \cite{erdos1960graphs} states the following:
+A degree sequence $d_1 \dots d_N$ is realizable if and only if:
+\begin{enumerate}
+\item {For every $1 \leq k \leq N-1$:   $\sum_{i=1}^k d_i \leq k(k-1)+ \sum_{i=k+1}^N \min \{k, d_i \}.$}
+\item {$\sum_{i=1}^n d_i$ is even.}
+\end{enumerate}
+
+We now show the following:
+\begin{lemma}\label{power-law-is-realizable}
+Any degree sequence $d_1 \geq d_2 \dots \geq d_n$   that abides to  an $(\alpha,C)$ power-law distribution  is realizable.
+\end{lemma}
+\begin{proof}
+First, since graphs in $\mathcal{P}_{C,\alpha}$ are sparse, for every $k> O(\sqrt[\alpha] n)$ the condition holds trivially by observing that $k(k+1)> O(n)$.
+The maximum degree of a vertex in a power law graph is $O(\sqrt[\alpha] n)$.
+When   $k\leq O(\sqrt[\alpha] n)$, and since  $\alpha>2$ we have that:
+$$\sum_{i=1}^k d_i < O(\sqrt[\alpha]n \sqrt[\alpha]n) = O(n^{2/\alpha}) = o(n).$$
+It is easy to see that in this case $\sum_{i=k+1}^n \min\{k,d_i\} =O(n)$, and thus the inequality holds.
+
+Finally, if  $\sum_{i=1}^n d_i$ is not even we add a single edge to the graph.
+\end{proof}
+
+\begin{lemma}\label{G-is-powerlaw}
+Any $n$ vertices graph $G=(V,E)$ can be extended to an $N=cn^{\alpha+1}$ vertices graph $G'=(V',E')$ where $G' \in \mathcal{P}_{C,\alpha}$, such that $G$ is an induced subgraph of $G'$.
+\end{lemma}
+\begin{proof}
+The number of vertices with degree at least $n$ in $G'$  is $O(\frac{N}{n^\alpha}) = O(n)$.
+By Lemma~\ref{power-law-is-realizable}, we can create $G'$
+ by first inserting the degree sequence corresponding the vertices of  $G$, and then complete the power lower distribution naively.
+ 
+\end{proof}
+
+We can now conclude with our lower bound:
+\begin{proposition}\label{prop:lower-bound-powerlaw}
+Any adjacency labeling scheme for  $\mathcal{P}_{C,\alpha}$ requires  least $O(\sqrt[\alpha+1]{n})$ bits.
+\end{proposition}
+
+\begin{proof}
+Assume for contradiction that there exist a labeling scheme for adjacency assigning labels of size at most $o(\sqrt[\alpha+1]{n}/c)$ bits. 
+Let $G$ be a graph of $n$-vertices. 
+We now construct the graph $G'$ as described in Lemma~\ref{G-is-powerlaw}.
+ The graph $G$ can be reconstructed by an adjacency labeling scheme for adjacency for $G'$ using only the labels of vertices belonging to $G$ inside $G'$. By the assumption, there is thus a labeling of $G'$ using
+$o(\sqrt[\alpha+1]{n^{\alpha+1}}) = o(n)$ bits. As G is an  arbitrary graph, we obtain a contradiction.
+
+
+
+\subsection{Constructive models and the implication of the lower bound.}
+The two most used power-law constructors are Waxman~\cite{} and N-level Hierarchical~\cite{}.
+The Barabasi-Albert model generates power-law graphs, such that given a parameter $m$, vertices are inserted to an initially empty graph and attached to at most $m$ existing vertices according to a power-law distribution.
+We now prove that  the  constructions  by Waxman and Barabasi-Albert  can not possibly construct all power-law graphs.
+
+It is easy to see that  graphs constructed by the Barabasi-Albert model  has an $m \log n$ adjacency labeling scheme.
+Upon vertex insertion, simply store the identifiers of all vertices attached.
+  This along with proposition~\ref{prop:lower-bound-powerlaw} suggests that there are  a lot more power-law graphs than ones that can be created by  preferential attachment, as in the Barabasi-Albert model.
+
+\end{proof}
+
+
+
+ \bibliographystyle{abbrv}
+\bibliography{lit}
+
+
+\end{document}

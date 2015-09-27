@@ -1,0 +1,49 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage{theorem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\la}{\ensuremath{ \mathcal{L}}}
+\newcommand{\PL}{\ensuremath{ \mathcal{P}_{\alpha,n}}}
+\newcommand{\PLB}{\ensuremath{ \mathcal{P}'_{\alpha,n}}}
+\newcommand{\PLC}{\ensuremath{ \mathcal{P}''_{\alpha,n}}}
+\newcommand{\Sparse}{\ensuremath{ \mathcal{S}_{c,n}}}
+
+
+\title{Adjacency labeling  schemes for sparse and power law graphs.}
+\author{Noy Rotbart, Jakob Grue Simonsen and Christian Wulff-Nilsen}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We devise adjacency labeling schemes for power-law graphs, where the number of vertices of degree $k$ is proportional to $k^{-\alpha}$ for some $\alpha>2$.
+ This  sub-family of sparse graphs received a considerable attention in the literature in the last decade.
+ We provide upper and lower bounds for the size of the label for  both families.
+ We also compare the label size sufficient for graphs that are constructed from the standard generative model for power law graphs, namely, the BA model.
+Finally, demonstrate our labeling scheme on a collaboration graph that corresponds to a power law graph.
+
+\end{abstract}
+\newpage
+\include{Introduction}
+\include{Preliminaries}
+\include{GraphFamilies}
+\include{LabelingScheme}
+\include{LowerBounds}
+\include{ScaleFree}
+\include{Experimental}
+
+\newpage
+ \bibliographystyle{abbrv}
+\bibliography{lit}
+
+
+\end{document}

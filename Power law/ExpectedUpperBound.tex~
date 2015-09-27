@@ -1,0 +1,10 @@
+Using the definition of Mitzenmacher, a random variable $X$ is said to have the \emph{power law} distribution (w.r.t.~$\alpha > 1$) if
+\[
+  Pr[X\geq x] \sim cx^{-\alpha},
+\]
+for some constant $c > 0$, i.e., the limit of $Pr[X\geq x]$ is $1$ for $x$ going to infinity.
+
+Consider a graph $G$ obtained from some random graph model leading to a power law distribution on its vertex degrees (e.g., obtained from the preferential attachment model). For $d = 0,\ldots, n-1$ where $n$ is the number of vertices of $G$, let $X_d$ be the random variable denoting the number of vertices of $G$ of degree $d$. For any fixed $\epsilon > 0$, there are constants $N_0,D_0\in\mathbb N$ (depending on $\epsilon$) such if $n\geq N_0$ then for any $d\geq D_0$,
+\[
+  Pr[X_d
+\]

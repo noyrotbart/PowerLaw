@@ -1,0 +1,123 @@
+\begin{thebibliography}{10}
+
+\bibitem{aiello2001random}
+W.~Aiello, F.~Chung, and L.~Lu.
+\newblock A random graph model for power law graphs.
+\newblock {\em Experimental Mathematics}, 10(1):53--66, 2001.
+
+\bibitem{Alon2002universal}
+N.~Alon and V.~Asodi.
+\newblock Sparse universal graphs.
+\newblock {\em J. Comput. Appl. Math.}, 142(1):1--11, May 2002.
+
+\bibitem{alstrup2005labeling}
+S.~Alstrup, P.~Bille, and T.~Rauhe.
+\newblock Labeling schemes for small distances in trees.
+\newblock {\em SIAM J. Disc. Math.}, 19(2):448--462, 2005.
+
+\bibitem{alstrup2014adjacency}
+S.~Alstrup, H.~Kaplan, M.~Thorup, and U.~Zwick.
+\newblock Adjacency labeling schemes and induced-universal graphs.
+\newblock {\em arXiv preprint arXiv:1404.3391}, 2014.
+
+\bibitem{Alstrup02}
+S.~Alstrup and T.~Rauhe.
+\newblock Small induced-universal graphs and compact implicit graph
+  representations.
+\newblock In {\em Proceedings of the 43rd Symposium on Foundations of Computer
+  Science}, FOCS '02, pages 53--62, Washington, DC, USA, 2002. IEEE Computer
+  Society.
+
+\bibitem{arikati1997efficient}
+S.~R. Arikati, A.~Maheshwari, and C.~D. Zaroliagis.
+\newblock Efficient computation of implicit representations of sparse graphs.
+\newblock {\em Discrete Applied Mathematics}, 78(1):1--16, 1997.
+
+\bibitem{babai1982graphs}
+L.~Babai, F.~R. Chung, P.~Erdos, R.~L. Graham, and J.~Spencer.
+\newblock On graphs which contain all sparse graphs.
+\newblock {\em Ann. Discrete Math}, 12:21--26, 1982.
+
+\bibitem{barabasi1999emergence}
+A.-L. Barab{\'a}si and R.~Albert.
+\newblock Emergence of scaling in random networks.
+\newblock {\em science}, 286(5439):509--512, 1999.
+
+\bibitem{bollobas1980probabilistic}
+B.~Bollob{\'a}s.
+\newblock A probabilistic proof of an asymptotic formula for the number of
+  labelled regular graphs.
+\newblock {\em European Journal of Combinatorics}, 1(4):311--316, 1980.
+
+\bibitem{brady2006compact}
+A.~Brady and L.~J. Cowen.
+\newblock Compact routing on power law graphs with additive stretch.
+\newblock In {\em ALENEX}, volume~6, pages 119--128. SIAM, 2006.
+
+\bibitem{calvert1997modeling}
+K.~L. Calvert, M.~B. Doar, and E.~W. Zegura.
+\newblock Modeling internet topology.
+\newblock {\em Communications Magazine, IEEE}, 35(6):160--163, 1997.
+
+\bibitem{chen2012compact}
+W.~Chen, C.~Sommer, S.-H. Teng, and Y.~Wang.
+\newblock A compact routing scheme and approximate distance oracle for
+  power-law graphs.
+\newblock {\em ACM Transactions on Algorithms (TALG)}, 9(1):4, 2012.
+
+\bibitem{chung2003eigenvalues}
+F.~Chung, L.~Lu, and V.~Vu.
+\newblock Eigenvalues of random power law graphs.
+\newblock {\em Annals of Combinatorics}, 7(1):21--33, 2003.
+
+\bibitem{chung2006complex}
+F.~R. Chung and L.~Lu.
+\newblock {\em Complex graphs and networks}, volume 107.
+\newblock American mathematical society Providence, 2006.
+
+\bibitem{erdos1960graphs}
+P.~Erdos and T.~Gallai.
+\newblock Graphs with prescribed degrees of vertices (hungarian).
+\newblock {\em Mat. Lapok}, 11:264--274, 1960.
+
+\bibitem{goel2006bounded}
+G.~Goel and J.~Gustedt.
+\newblock Bounded arboricity to determine the local structure of sparse graphs.
+\newblock In {\em Graph-Theoretic Concepts in Computer Science}, pages
+  159--167. Springer, 2006.
+
+\bibitem{Kannan92}
+S.~Kannan, M.~Naor, and S.~Rudich.
+\newblock Implicit representation of graphs.
+\newblock In {\em SIAM Journal On Discrete Mathematics}, pages 334--343, 1992.
+
+\bibitem{kowalik2006approximation}
+{\L}.~Kowalik.
+\newblock Approximation scheme for lowest outdegree orientation and graph
+  density measures.
+\newblock In {\em Algorithms and computation}, pages 557--566. Springer, 2006.
+
+\bibitem{mitzenmacher2004brief}
+M.~Mitzenmacher.
+\newblock A brief history of generative models for power law and lognormal
+  distributions.
+\newblock {\em Internet mathematics}, 1(2):226--251, 2004.
+
+\bibitem{moon1965minimal}
+J.~Moon.
+\newblock On minimal n-universal graphs.
+\newblock In {\em Proceedings of the Glasgow Mathematical Association},
+  volume~7, pages 32--33. Cambridge University Press, 1965.
+
+\bibitem{spinrad2003efficient}
+J.~P. Spinrad.
+\newblock {\em Efficient graph representations}.
+\newblock American mathematical society, 2003.
+
+\bibitem{waxman1988routing}
+B.~M. Waxman.
+\newblock Routing of multipoint connections.
+\newblock {\em Selected Areas in Communications, IEEE Journal on},
+  6(9):1617--1622, 1988.
+
+\end{thebibliography}

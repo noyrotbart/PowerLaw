@@ -1,0 +1,61 @@
+% !TEX root = Main.tex
+
+
+\section{Introduction}
+A fundamental problem in networks is how to disseminate the structural information of the underlying graph of a network to its vertices in such  that the local structure of the network can be inferred using only local information. One way of doing so is via an \emph{adjacency labeling scheme}: an algorithm that assigns a bit string--a \emph{label}--to each vertex so that adjacency between any two vertices can be inferred solely from their respective labels.
+The main objective is to minimize the maximum label length, i.e., the maximum number of bits used in a label. Moon~\cite{moon1965minimal} showed a lower bound of $n/2$ on label size for general graphs, and a corresponding upper bound of $n/2 + 6$ was very recently shown by Alstrup et al.~\cite{alstrup2014adjacency}. Upper bounds for adjacency labeling schemes exist for many specific classes of graphs, including trees~\cite{Alstrup02}, planar graphs~\cite{gavoille2007shorter},  bounded-degree graphs~\cite{adjiashvili2014labeling}, and bipartite graphs~\cite{lozin2007minimal}.
+
+However, for classes of graphs whose statistical properties--in particular their \emph{degree distribution}--more closely resembles that of real-world networks, there has been no research on adjacency labeling schemes.
+% and to our knowledge no attempts at general, space-efficient algorithms for local storage of the graph structure. 
+One class of graphs extensively used for modelling real-world networks is \emph{power-law graphs}: roughly, graphs where the number of vertices of degree $k$ is proportional to $k^{\alpha}$ for some positive $\alpha$. Power-law graphs\footnote{Power-law graphs are also called scale-free graphs in the literature surveyed.} have been used, e.g., to model the Internet AS-level graph \cite{DBLP:journals/ton/SiganosFFF03,DBLP:conf/podc/AkellaCKS03}, and many other types of network (see, e.g., \cite{mitzenmacher2004brief,clauset2009power} for overviews). 
+%Both the adequacy of fit of power-law graph models of networks to actual data, and the empirical correctness of the conjectured mechanisms giving rise to power-law behaviour have been subject to criticism (see, e.g., \cite{DBLP:journals/jacm/AchlioptasCKM09,clauset2009power}). 
+Both the adequacy of fit of power-law graph models to actual data, as well as the empirical correctness of the conjectured mechanisms giving rise to power-law behaviour have been subject to criticism (see, e.g., \cite{DBLP:journals/jacm/AchlioptasCKM09,clauset2009power}). 
+In spite of such criticism, and because their degree distribution affords a reasonable approximation of the degree distribution of many networks, the class of power-law graphs remains a popular tool in network modelling whose statistical behaviour is well-understood: e.g., for graphs with $2<\alpha<3$ it is known that with high probability the average distance between any two vertices is  $O(\log \log n)$, the diameter is $O(\log n)$ and  includes a dense subgraph of $n^{c/\log \log n}$ vertices~\cite{chung2004average}. 
+
+Routing labeling schemes for power-law graphs  have been investigated by Brady and Cowen~\cite{brady2006compact}, and by Chen et. al~\cite{chen2012compact}. Labeling schemes for other properties than adjacency have been investigated for various classes of graphs, e.g., distance~\cite{gavoillea2004distance}, and flow~\cite{katz2004labeling}.
+Dynamic labeling schemes were studied by Korman and Peleg~\cite{korman2007compact,Korman07,korman2007general} and recently by Dahlgaard et. al~\cite{dahlgaard2014dynamic}.
+Experimental evaluation for some labeling schemes for various properties on general graphs habe been performed by Caminiti et.~al~\cite{caminiti2008engineering}, Fischer~\cite{fischer2009short} and Rotbart et.~al~\cite{rotbart2014evaluation}.
+
+%This paper is the first to prove upper and lower bounds for adjacency labeling schemes for power-law graphs, and one of only a few papers containing an empirical study of the efficiency of  labeling schemes on real-world graphs. 
+Adjacency labeling schemes are tightly coupled with  the graph-theory related question of induced universal graphs.
+Given  graph family  $\mathcal{F}$ the question is to find smallest $N$ such that a graph of  $N$ vertices contains all graphs in $\mathcal{F}$ as induced subgraphs. 
+Kannan, Naor and Rudich~\cite{Kannan92} showed that an $f(n) \log n$ adjacency labeling scheme for $\mathcal{F}$  constructs an induced universal graph for this family of  $2^{f(n)}$ vertices.
+In the context of  sparse graphs,  a body of work on universal graphs\footnote{A graph must contain each graph from  graph family as subgraph, not necessarily induced} for this family was  investigated both by  Babai et al.~\cite{babai1982graphs} and  by Alon and Asodi~\cite{Alon2002universal}. 
+
+
+\subsection{Our contribution}
+
+In detail, our contribution comprises of:
+
+\paragraph{An  $O(\sqrt[\alpha] n (\log n)^{1 - 1/\alpha})$ adjacency labeling scheme for power-law graphs $G$.}
+%$\sqrt[\alpha]{C'n}(\log n)^{1 - 1/\alpha} + 2\log n + 1$ for some $C'$. 
+The scheme is based on two ideas:
+(I) a labeling \emph{strategy} that  partitions the vertices of $G$ into high (``fat'') and low degree (``thin'') vertices based on a threshold degree, and (II) a threshold \emph{prediction} that depends only on the coefficient $\alpha$ of a power-law curve fitted to the degree distribution of $G$. 
+Real-world power-law graphs rarely exceed  $~10^{10}$ vertices, implying a label size of maximum  ${10^{5}}$ bits, well within the processing capabilities of current hardware. 
+We claim that our  scheme is thus appealing in practice   due both to  its simplicity and  its size.
+Using the same ideas, we get an  asymptotically tight  $O(\sqrt{n})$ adjacency labeling scheme for sparse graphs.
+% and five orders of magnitude less than the optimal upper bound of $.5 \cdot 10^9$ bits for general graphs \cite{alstrup2014adjacency}. 
+
+\paragraph{A lower bound of $\Omega(\sqrt[\alpha]{n})$ bits on the maximum label size for \emph{any} adjacency labeling scheme for power-law graphs.}
+To that end we define a  highly restrictive subclass of power-law graphs and ...
+% use  the Erd{\"o}s-Gallai Theorem \cite{Erdos1960graphs} and construct  a highly restrictive subclass of power-law graphs.
+The lower bound shows that our upper bound above is asymptotically  optimal, bar a $(\log n)^{1 - 1/\alpha}$ factor.
+Both the upper and lower bounds are, to the best of our knowledge the first upper and lower bounds on induced universal graphs for power-law graphs. 
+
+
+\paragraph{An experimental investigation  of our labeling scheme}
+Using both real-world (23K-325K vertices) and synthetic (300K-1M vertices) data sets, we observe that:
+(i) Our threshold \emph{prediction} performs close to optimal when using the labeling \emph{strategy} above. 
+%That is true for both the maximum label size as well as for the overhead incurred by distributing  the data structure, and 
+(ii) our labeling scheme achieves maximum label size several orders of magnitude smaller than the state-of-the-art labeling schemes for more general graph families.
+% as well as  upper and lower bounds on the size of induced universal graphs \cite{moon1965minimal} for the class of power-law graphs. 
+
+Finally, our study  may contribute to  the understanding of the quality of  \emph{generative models}\footnote{Procedures that ``grow'' random graphs whose degree distributions are with high probability ``close'' to power-law graphs} for power-law graphs,  such as the Barabasi-Albert model~\cite{barabasi1999emergence} and the   Aiello-Chung-Lu model~\cite{aiello2001random}. As a first step, we provide an evidence  that the  Barabasi-Albert model~\cite{barabasi1999emergence} produces only a small fraction of the power-law graphs possible.
+
+
+
+
+
+
+
+

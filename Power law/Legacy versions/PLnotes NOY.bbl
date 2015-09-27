@@ -1,0 +1,34 @@
+\begin{thebibliography}{1}
+
+\bibitem{Alon2002universal}
+N.~Alon and V.~Asodi.
+\newblock Sparse universal graphs.
+\newblock {\em J. Comput. Appl. Math.}, 142(1):1--11, May 2002.
+
+\bibitem{alstrup2014adjacency}
+S.~Alstrup, H.~Kaplan, M.~Thorup, and U.~Zwick.
+\newblock Adjacency labeling schemes and induced-universal graphs.
+\newblock {\em arXiv preprint arXiv:1404.3391}, 2014.
+
+\bibitem{babai1982graphs}
+L.~Babai, F.~R. Chung, P.~Erdos, R.~L. Graham, and J.~Spencer.
+\newblock On graphs which contain all sparse graphs.
+\newblock {\em Ann. Discrete Math}, 12:21--26, 1982.
+
+\bibitem{erdos1960graphs}
+P.~Erdos and T.~Gallai.
+\newblock Graphs with prescribed degrees of vertices (hungarian).
+\newblock {\em Mat. Lapok}, 11:264--274, 1960.
+
+\bibitem{moon1965minimal}
+J.~Moon.
+\newblock On minimal n-universal graphs.
+\newblock In {\em Proceedings of the Glasgow Mathematical Association},
+  volume~7, pages 32--33. Cambridge University Press, 1965.
+
+\bibitem{spinrad2003efficient}
+J.~P. Spinrad.
+\newblock {\em Efficient graph representations}.
+\newblock American mathematical society, 2003.
+
+\end{thebibliography}

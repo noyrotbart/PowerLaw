@@ -1,0 +1,40 @@
+% !TEX root = Main.tex
+
+\section{Lower Bounds}
+We now derive lower bounds for the label size of any  labeling schemes for both $\Sparse$ and  $\PLC$.
+Our proofs rely on  Moon's~\cite{moon1965minimal} lower bound of  $\lfloor n/2 \rfloor$ bits for labeling scheme for general graphs.
+We first show that the upper bound achieved for sparse graphs is close to the best possible.
+The following proposition is essentially a more precise version of the lower bound suggested by Spinrad~\cite{spinrad2003efficient}.
+\begin{proposition}
+Any  labeling scheme for $\Sparse$ requires  labels of size at least $\left\lfloor\frac{\sqrt{cn}}2\right\rfloor$ bits.
+\end{proposition}
+\begin{proof}
+Assume for contradiction that there exists a labeling scheme  assigning labels of size strictly less than $\lfloor\frac{\sqrt{cn}}2\rfloor$.
+Let $G$ be an $n$-vertex graph. Let $G'$ be the graph resulting by adding $\left\lfloor\frac{n^2}{c}\right\rfloor - n$ isolated vertices to $G$, and note that now $G'$ is $c$-sparse. The graph $G$ is an induced subgraph of  $G'$.
+It now follows that the vertices of $G$ have  labels of size strictly less than 
+$\left\lfloor\frac{\sqrt{c\lfloor n^2/c\rfloor}}2\right\rfloor \leq n/2$ bits. As $G$ was arbitrary, we obtain a contradiction.
+\end{proof}
+
+\subsection{Lower bound for power-law graphs}
+In the remainder of this section we are assuming that $\alpha>2$ and  prove the following:
+\begin{proposition}\label{centralLowerBound}
+For all $n$, any labeling scheme for $n$-vertex graphs of $\PLB$ requires label size $\Omega(\sqrt[\alpha]{n})$.
+\end{proposition}
+More precisely, we present a lower bound for $\PLC$ which is contained in $\PLB$. Let $n\in\mathbb N$ be given and let $H = (V(H),E(H))$ be an arbitrary graph with $k$ vertices where $k$ is the smallest integer such that $\lfloor Cn/k^\alpha\rfloor = 1$. Note that $k = \Theta(\sqrt[\alpha]n)$. We show how to construct an $\alpha$-proper power-law graph $G = (V,E)$ with $n$ vertices that contains $H$ as an induced subgraph. Observe that a labeling of $G$ induces a labeling of $H$. As $H$ was chosen arbitrarily and as any labeling scheme for $k$-vertex graphs requires $\lfloor k/2 \rfloor$ label size in the worst case, Proposition~\ref{centralLowerBound} follows if we can show the existence of $G$.
+
+We construct $G$ incrementally where initially $E = \emptyset$. Partition $V$ into subsets $V_1,\ldots,V_n$ as follows. The set $V_1$ has size $\lfloor Cn\rfloor - k$. For $i = 2,\ldots,k-1$, $V_i$ has size $\lfloor Cn/i^\alpha\rfloor$. Letting $n' = \sum_{i = 1}^{k-1} \vert V_i\vert$, we set the size of $V_i$ to $1$ for $i = k,\ldots,k+n-n'-1$ and the size of $V_i$ to $0$ for $i = k+n-n',\ldots,n$, thereby ensuring that the sum of sizes of all sets is $n$. Observe that $\sum_{i = 1}^k\lfloor Cn/i^\alpha\rfloor\leq n$ so that $n'\leq n - k$, implying that $n-n'\geq k$. Hence we have at least $k$ size $1$ subsets $V_k,\ldots,V_{k+n-n'-1}$ in each of which the vertex degree allowed by Definition~\ref{def:proper} is at least $k$.
+
+Let $v_1,\ldots,v_k$ be an ordering of $V(H)$, form a set $V_H\subseteq V$ of $k$ arbitrary vertices from the sets $V_k,\ldots,V_{k+n-n'-1}$, and choose an ordering $v_1',\ldots,v_k'$ of $V_H$. For all $i,j\in\{1,\ldots,k\}$, add edge $(v_i',v_j')$ to $G$ iff $(v_i,v_j)\in E(H)$. Now, $H$ is an induced subgraph of $G$ and since the maximum degree of $H$ is $k-1$, no vertex of $V_i$ exceeds the degree bound allowed by Definition~\ref{def:proper} for $i = 1,\ldots,n$.
+
+We next add additional edges to $G$ in three phases to ensure that it is an $\alpha$-proper power law graph while maintaining the property that $H$ is an induced subgraph of $G$. For $i = 1,\ldots,n$, during the construction of $G$ we say that a vertex $v\in V_i$ is \emph{unprocessed} if its degree in the current graph $G$ is strictly less than $i$. If the degree of $v$ is exactly $i$, $v$ is \emph{processed}.
+
+\paragraph{Phase $1$:}
+Let $V' = V\setminus (V_1\cup V_H)$. Phase $1$ is as follows: while there exists a pair of unprocessed vertices $(u,v)\in V'\times V_H$, add $(u,v)$ to $E$.
+
+When Phase $1$ terminates, $H$ is clearly still an induced subgraph of $G$. Furthermore, all vertices of $V_H$ are processed. To see this, note that the sum of degrees of vertices of $V_H$ when they are all processed is $O(k^2) = O(n^{2/\alpha})$ which is $o(n)$ since $\alpha > 2$. Furthermore, prior to Phase $1$, each of the $\Theta(n)$ vertices of $V'$ have degree $0$ and can thus have their degrees increased by at least $1$ before being processed.
+
+\paragraph{Phase $2$:}
+Phase $2$ is as follows: while there exists a pair of unprocessed vertices $(u,v)\in V'\times V'$, add $(u,v)$ to $E$. At termination, at most one vertex of $V'$ remains unprocessed. If such a vertex exists we process it by connecting it to $O(\sqrt[\alpha]n)$ vertices of $V_1$; as $\vert V_1\vert = \Theta(n)$ there are enough vertices of $V_1$ to accomodate this. Furthermore, prior to adding these edges, all vertices of $V_1$ have degree $0$, and hence the bound allowed for vertices of this set is not exceeded.
+
+\paragraph{Phase $3$:}
+In Phase $3$, we add edges between pairs of unprocessed vertices of $V_1$ until no such pair exists. If no unprocessed vertices remain we have the desired $\alpha$-proper power law graph $G$. Otherwise, let $w\in V_1$ be the unprocessed vertex of degree $0$. We add a single edge from $w$ to another vertex $w'$ of $V_1$, thereby processing $w$ and moving $w'$ from $V_1$ to $V_2$. We may assume that $Cn/2^\alpha$ is not an integer and the resulting graph $G$ is an $\alpha$-proper power law graph since $\lfloor Cn\rfloor - k - 1\leq\vert V_1\vert\leq\lceil Cn\rceil$ and $\vert V_2\vert = \lceil Cn/2^\alpha\rceil$. This shows Proposition~\ref{centralLowerBound}.

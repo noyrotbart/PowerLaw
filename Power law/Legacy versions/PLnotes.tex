@@ -1,0 +1,159 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{theorem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+
+\title{Quick-and-dirty note on adjacency labelling  for power law graphs. Caveat lector: there may be a plethora of errors.}
+\author{Jakob Grue Simonsen}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{definition}
+The \emph{degree distribution} of a finite undirected graph $G = (V,E)$ is the map 
+$\mathrm{ddist}_G : \mathbb{N}_0 \longrightarrow \mathbb{Q}$
+defined by $\mathrm{ddist}_G (k) \triangleq 
+\vert \{v \in V : \mathrm{deg(v) = n}\} \vert /\vert V \vert$.
+\end{definition}
+
+Intuition: $\mathrm{ddist}_G(k)$ is the fraction of nodes in $G$ having $k$ edges incident to it. 
+
+\begin{definition}
+A \emph{power-law graph} is a finite undirected graph $G = (V,E)$ with no nodes of degree zero
+such that, for $k \geq $, we have $\vert V \vert \cdot \mathrm{ddist}_G(k) = [\vert V \vert \cdot C k^{-\alpha}]$ for some real numbers $C > 0,\alpha > 1$
+(where $[\cdot]$ is the nearest integer function).
+\end{definition}
+
+Intuition: The fraction of nodes in $G$ having $k$ edges is proportional to $k^{-\alpha}$.
+
+The literature is not very clear on when to use $[\cdot]$, $\lfloor \cdot \rfloor$ or other rounding --- most papers assume a little slack,
+and it is common just to see ``$\mathrm{ddist}_G(k) \sim k^{-\alpha}$''\footnote{Also: when truncating the probability mass of a distribution with infinite support (e.g., power-law distributions), the excess probability mass needs to be accounted for. If we ever write a paper on this, we need to do this more formally than almost all existing papers.}. Furthermore,
+the degree distribution is sometimes only assumed to ``kick in'' for sufficiently large values of $k$.
+Power-law graphs are also known as ``scale-free networks'', or ``graphs with a fat-tailed degree distribution''.
+
+An unbelievable amount of literature has been written about power law graphs, almost all of it bad. A very large
+set of phenomena  that ``naturally'' involve graphs (protein networks, internet AS-level graphs, Facebook friends, \ldots) have been modelled more-or-less accurately by power-law graphs\footnote{I think most of it is crap --- ask Casper.}. The typical fit of $C k^{-\alpha}$ results in $1 < \alpha < 2$.
+
+In the following, for ease of notation, ignore rounding etc., set $\vert V \vert = n$, and thus assume 
+that $\mathrm{ddist}_G(k) = Ck^{-\alpha}$ and that the number of nodes of degree $k$ is
+$n C k^{-\alpha}$.
+
+\begin{proposition}\label{prop:smallfraction}
+Let $f : \mathbb{N} \longrightarrow \mathbb{N}$ be a map such that
+$f(n) = o(n)$. Let $C > 0$ and $\alpha > 1$ be real numbers. Then
+there is $N \in \mathbb{N}$ such that if $G$ is a power-law graph with $\mathrm{ddist}_G(k) = C k^{-\alpha}$
+and at least $N$ nodes, then the fraction of nodes in $G$ with degree at least $f(n) + 1$
+is bounded above by $O(f(n)^{-(\alpha-1)})$.
+\end{proposition}
+
+\begin{proof}
+For $1 \leq j \leq n - 1$, the fraction of nodes of degree at least $j$
+is $C (j^{-\alpha} + (j+1)^{-\alpha} + \cdots + (n-1)^{-\alpha})$.
+
+Note that $d/dx (Cx^{-\alpha}) =  -\alpha C x^{-(\alpha + 1)} < 0$
+and thus that, for all $j \geq 1$ we have $\int_{j}^{j+1} Cx^{-\alpha} dx > C(j+1)^{-\alpha}$.
+Hence, the fraction of nodes of degree at least $j+1$ is at most\footnote{I doubt that a better upper bound can be \emph{computed} easily. It is not hard to see that, for each sufficiently small $\epsilon > 0$, the fraction can be bounded more tightly by $\zeta(\alpha,j+1) - \epsilon$ where $\zeta$ is the Hurwitz zeta function; but exact
+computation of this can be extremely difficult.}
+$$
+\int_j^{n-1} C x^{-\alpha} dx = \left[ \frac{C}{-(\alpha - 1)} x^{-(\alpha-1)} \right]_j^{n-1}
+= \frac{C}{\alpha - 1}\left(j^{-(\alpha - 1)} - (n-1)^{-(\alpha -1 )} \right)
+$$
+
+In particular, the fraction of nodes of degree at least $f(n) + 1$ is at most
+ $(C/(\alpha - 1))\left(f(n)^{-(\alpha - 1)} - (n-1)^{-(\alpha -1 )} \right)
+\leq C f(n)^{-(\alpha - 1)}/(\alpha - 1) = O(f(n)^{-(\alpha - 1)})$.
+\end{proof}
+
+
+\begin{lemma}\label{lem:silly_bound}
+Let $f : \mathbb{N} \longrightarrow \mathbb{N}$ be a computable map such that $f(n) = o(n)$
+and let $C > 0, \alpha > 1$ be real numbers. Then the family of power-law graphs
+with $\mathrm{ddist}_G(k) = C k^{-\alpha}$ has a labelling scheme for adjacency
+such that for all sufficiently large $n$, the maximum size of a label
+is bounded above by $O(\log n (1 + f(n) + n/(f(n)^{(\alpha - 1)})))$
+\end{lemma}
+
+\begin{proof}
+Say that a node is ``small'' if it has at most $f(n)$ neighbors and ``large'' if it has
+at least $f(n) + 1$ neighbors.
+
+The label of each node $v$ consists of (i) an identifier (space cost $\log(n)$), and:
+
+\begin{itemize}
+
+\item If $v$ is small, the list of identifers of all its small neighbors (space cost $O(f(n)\log(n))$).
+
+\item The list of identifiers of all large neighbors of $v$ (by Proposition \ref{prop:smallfraction}
+there are at most $O(n \cdot f(n)^{-(\alpha -1)})$ such neighbors, for a total space cost
+of $O(\log(n) \cdot n/(f(n)^{\alpha - 1}))$.
+
+\end{itemize}
+
+Thus, if $v$ is large, the total label size is $O(\log(n) (1 + n/(f(n)^{\alpha - 1})))$,
+and if $v$ is small the total label size is $O(\log(n)(1 + f(n) + n/(f(n)^{\alpha - 1})))$.
+
+Observe that if $f$ is computable, the above encoding scheme is computable.
+
+Given two nodes $(v,w)$, the decoder inspects the labels of $v$ and $w$. If $v$ and $w$
+are both small or both large, then there is an edge from $v$ to $w$ if{f} $w$ is listed in the label of $v$ and vice versa.
+If $v$ is small and $w$ is large, then there is an edge from $v$ to $w$ if{f} $w$ is listed in the label of $w$
+(the case where $w$ is small and $v$ is large is symmetric).
+\end{proof}
+
+
+
+\begin{proposition}\label{prop:naive_bound}
+Let $C > 0, \alpha > 1$ be real numbers. Then the family of power law graphs
+with $\mathrm{ddist}_G(k) = C k^{-\alpha}$ has a labelling scheme for adjacency
+such that for all sufficiently large $n$, the maximum size of each label
+is bounded above by $O(n^{1/(\alpha - 1)} \log(n))$
+\end{proposition}
+
+\begin{proof}
+By Lemma \ref{lem:silly_bound}, setting $f(n) = n^{1/(\alpha - 1)}$,
+we obtain a maximum label size of 
+$O(\log(n) (1 + n^{1/(\alpha - 1)} + n/(n^{1/(\alpha - 1)})^{\alpha - 1})) = O(n^{1/(\alpha - 1)} \log(n))$
+\end{proof}
+
+For $\alpha > 2$, that is, for most power law graphs occurring in fits to real-world data, the above proposition
+yields that the maximum label size is $o(n)$. For larger values of $\alpha$,
+the proposition yields that the maximum label size has even better asymptotic bounds,
+e.g. $\alpha \geq 3$, the maximum label size is $o(\sqrt{n} \log(n))$.
+
+For $1 < \alpha \leq 2$, Proposition \ref{prop:naive_bound} yields an unusable
+bound (because $n^{1/(\alpha - 1)} = \Omega(n)$). However, Lemma \ref{lem:silly_bound}
+can be used to show that, for all $\alpha > 1$, there exists a labelling scheme with maximum label size $O(\sqrt{n} \log(n))$ (note, though, that this is actually a \emph{worse} result for $\alpha > 2$ than the bound in Proposition 
+\ref{prop:naive_bound}).
+
+
+\begin{proposition}
+Let $C > 0$ and $\alpha > 1$ be real numbers. Then the family of  power law graphs
+with $\mathrm{ddist}_G(k) = C k^{-\alpha}$ has a labelling scheme for adjacency
+such that for all sufficiently large $n$, the maximum size of each label
+is bounded above by $O(\sqrt{n}\log(n))$.
+\end{proposition}
+
+\begin{proof}
+Set $f(n) = \sqrt(n)$. By Lemma \ref{lem:silly_bound}, there is a labelling scheme with maximum label size
+$O(log(n) (1 +\sqrt(n) + n/\sqrt{n}^{\alpha - 1})) = O(\log(n)(\sqrt(n) + n^{1 - (\alpha - 1)/2}))
+= O(\log(n)(\sqrt{n} + n^{(3-\alpha)/2}))$. As $\alpha > 1$,
+the term $n^{(3-\alpha)/2})$ is asymptotically dominated by $\sqrt{n}$,
+and we thus obtain that the maximum size of each label is bounded above by $O(\sqrt{n}\log(n))$, as desired.
+\end{proof}
+
+\begin{conjecture}
+Any family of graphs such that $\mathrm{ddist}(k)$ has ``high'' positive skewness will have labelling schemes for adjacency with
+sublinar maximum labelling size. A reasonable way forward would be to consider the third moment of some standard distributions
+and see what happens.
+\end{conjecture}
+
+
+\end{document}

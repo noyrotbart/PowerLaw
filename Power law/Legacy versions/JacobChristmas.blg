@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: JacobChristmas.aux
+The style file: abbrv.bst
+Database file #1: lit.bib
+Warning--can't use both volume and number fields in moon1965minimal
+You've used 22 entries,
+            2118 wiz_defined-function locations,
+            649 strings with 7212 characters,
+and the built_in function-call counts, 7865 in all, are:
+= -- 812
+> -- 315
+< -- 9
++ -- 128
+- -- 102
+* -- 551
+:= -- 1265
+add.period$ -- 71
+call.type$ -- 22
+change.case$ -- 115
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 312
+empty$ -- 633
+format.name$ -- 102
+if$ -- 1673
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 24
+newline$ -- 113
+num.names$ -- 44
+pop$ -- 110
+preamble$ -- 1
+purify$ -- 95
+quote$ -- 0
+skip$ -- 224
+stack$ -- 0
+substring$ -- 563
+swap$ -- 80
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 84
+warning$ -- 1
+while$ -- 87
+width$ -- 24
+write$ -- 251
+(There was 1 warning)

@@ -1,0 +1,81 @@
+% !TEX root = Main.tex
+
+ \section{Graph Families Related to Power-Law Graphs}\label{Sec:GraphFamilies}
+In this section we define two families of graphs $\PLB$ and $\PLC$ with $\PLC\subseteq\PLB$. Family $\PLB$ is rich enough to contain the graphs whose degree distribution is approximately, or perfectly, power-law distributed, and our upper bound on the label size for our labeling scheme holds for any graph in $\PLB$. Family $\PLC$ is used to show our lower bound. In the following, let $i_1 = \Theta(\sqrt[\alpha]n)$ be the smallest integer such that $\lfloor Cn/i_1^\alpha\rfloor \leq 1$, and let $C'\geq(\frac C{\alpha-1} + \frac{i_1}{\sqrt[\alpha] n} + 5)^{\alpha} + \frac{C}{\alpha - 1}$ be a constant; we shall use $C'$ in the remainder of the paper.
+\begin{definition} \label{def:general-family}
+Let $\alpha > 1$ be a real number. $\PLB$ is the family of graphs $G$ such that if $n = \vert V(G)\vert$ then for all integers $k$ between $\sqrt[\alpha]{n/\log n}$ and $n-1$, $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$.
+\end{definition}
+
+The class of $\alpha$\emph{-proper} power law graphs contains graphs where  the number of vertices of degree $k$
+must be $C \frac{n}{k^{\alpha}}$ rounded either up or down and the number of vertices of degree $k$ is non-increasing
+with $k$. Note that the function $k \mapsto  C \frac{1}{k^{\alpha}}$ is strictly decreasing.
+ 
+\begin{definition}\label{def:proper}
+Let $\alpha > 1$ be a real number. We say that an $n$-vertex graph  $G=(V,E)$ is an  $\alpha$-\emph{proper power-law graph} 
+if
+\begin{enumerate}
+\item $\lfloor Cn\rfloor - i_1 - 1\leq\vert V_1\vert\leq\lceil Cn\rceil$,
+\item $\lfloor C\frac n{2^\alpha}\rfloor\leq\vert V_2\vert\leq\lceil C\frac n{2^\alpha}\rceil + 1$,
+\item for every $i$ with $3 \leq i \leq n$:  $\vert V_i \vert\in \{\lfloor C\frac{n}{i^{\alpha}} \rfloor, \lceil C \frac{n}{i^{\alpha}} \rceil\}$, and
+\item for every $i$ with $2 \leq i \leq n-1$: $\vert V_i \vert \geq \vert V_{i+1} \vert$.
+\end{enumerate}
+The family of $\alpha$-proper power-law graphs is denoted $\PLC$.
+\end{definition}
+Note that we allow slightly more noise in the sizes of $V_1$ and $V_2$ than in the remaining sets; without it, it seems tricky to prove a better lower bound than $\Omega(\sqrt[\alpha+1]{n})$ on label sizes.
+
+We show the following properties of $\PLC$. 
+%The proofs of Propositions~\ref{prop:powerlawsparse} and~\ref{prop:Contained} are in App.~\ref{App:GraphFamilies}.
+\begin{proposition}\label{prop:maxvertexproper}\label{prop:maxdegree}
+The maximum degree in an $n$-vertex graph in $\PLC$ is at most $\left(\frac{C}{\alpha - 1} + 2\right) \sqrt[\alpha]{n} + i_1 + 3 = \Theta(\sqrt[\alpha]n)$.
+\end{proposition}
+
+\begin{proof}
+Let $n > 0$ be an integer and let $k' = \lfloor \sqrt[\alpha]{n} \rfloor$. 
+Furthermore, let $S_{k'} = \sum_{i=1}^{k'} \vert V_i\vert$, that is $S_{k'}$ is the number of vertices of degree at most $k'$. Let $S^{-}_{k'} = (\sum_{i=1}^{k'} \lfloor Cni^{-\alpha}\rfloor) - i_1 - 1$. Then
+$S_{k'} \geq S^{-}_{k'}$. We now bound $S^{-}_{k'}$ from below.
+For every $i$ with $1 \leq i \leq k'$,
+\begin{align*}
+S^{-}_{k'} + k' & = -i_1 - 1 + \sum_{i=1}^{k'} \left(\left\lfloor Cn i^{-\alpha}\right\rfloor + 1\right) \geq  -i_1 - 1 + \sum_{i=1}^{k'} Cn i^{- \alpha}  = -i_1 - 1 + Cn \sum_{i=1}^{k'} i^{-\alpha} \\
+& \geq n \left(1 - C\sum_{i=k'+1}^{\infty} i^{-\alpha} \right) - i_1 - 1 
+ \geq n \left( 1 - C\int_{k'}^\infty x^{-\alpha} dx \right) - i_1 - 1\\
+ & = n \left( 1 - C\left[ \frac{1}{\alpha - 1} x^{-\alpha + 1}\right]_{\infty}^{k'}\right) - i_1 - 1 = n \left( 1 - \frac{C}{\alpha - 1} \left( \lceil\sqrt[\alpha]{n} \rceil \right)^{-\alpha + 1}\right) - i_1 - 1\\
+ & \geq n \left( 1 -  \frac{C}{\alpha - 1} \left(\sqrt[\alpha]{n}\right)^{-\alpha + 1} \right) - i_1 - 1 = n - \frac{Cn}{\alpha - 1}n^{-1+\frac{1}{\alpha}} - i_1 - 1\\
+& = n - \frac{C}{\alpha - 1}\sqrt[\alpha]{n} - i_1 - 1,
+\end{align*}
+giving $S_{k'} \geq S^{-}_{k'} \geq n - \frac{C}{\alpha - 1}\sqrt[\alpha]{n} - \lceil \sqrt[\alpha]{n} \rceil - i_1 - 1$. There are thus at most $\frac{C}{\alpha - 1} \sqrt[\alpha]{n} + \lfloor \sqrt[\alpha]{n} \rfloor + i_1 + 1$ vertices of degree strictly more than $k' = \lceil \sqrt[\alpha]{n} \rceil$. Since for every $1 \leq i \leq n-1$: $\vert V_i \vert \geq \vert V_{i+1} \vert$, it follows that the maximum degree of any $\alpha$-proper power-law graph is at most $\left(\frac{C}{\alpha - 1} + 2\right) \sqrt[\alpha]{n} + i_1 + 3$.
+\end{proof}
+
+\begin{proposition}\label{prop:powerlawsparse}
+For $\alpha > 2$, all graphs in $\PLC$ are sparse.
+\end{proposition}
+\begin{proof}
+By Proposition \ref{prop:maxvertexproper}, the maximum degree of an $n$-vertex $\alpha$-proper power-law
+graph is at most $k' \triangleq \left(\frac{C}{\alpha - 1} + 2\right) \sqrt[\alpha]{n} + i_1 + 3$, whence
+the total number of edges is at most $\frac{1}{2}\sum_{k=1}^{k'} k \vert V_k\vert$. By definition,
+$\vert V_k \vert\leq \lceil \frac{Cn}{k^\alpha}\rceil \leq \frac{Cn}{k^{\alpha}} + 1$ for $k\neq 2$ and $\vert V_2\vert\leq\lceil\frac{Cn}{2^{\alpha}}\rceil + 1$, and thus
+\begin{align*}
+\frac{1}{2}\sum_{k=1}^{k'} k\vert V_k\vert &\leq 1 + \frac{1}{2}\sum_{k=1}^{k'} k \left(\frac{Cn}{k^{\alpha}} + 1 \right)
+ \leq 1 + \frac{k'(k'+1)}{4} + Cn\sum_{k=1}^{\infty} k^{-\alpha+1} \\
+&   = O(n^{2/\alpha}) + Cn \zeta(\alpha - 1) = O(n).
+\end{align*}
+\end{proof}
+
+\begin{proposition}\label{prop:Contained}
+$\PLC \subseteq \PLB$.
+\end{proposition}
+\begin{proof}
+Let $d = \lfloor(\frac C{\alpha - 1} + 2)\sqrt[\alpha]{n} + i_1 + 3\rfloor$. For any $\alpha$-proper power-law graph with $n$ vertices and for any $k$, $\vert V_k\vert\leq Ck^{-\alpha}n + 1$ and by Proposition~\ref{prop:maxvertexproper}, $\vert V_k\vert = 0$ when $k > d$.
+
+Let $k$ be an arbitrary integer between $\sqrt[\alpha]{n/\log n}$ and $n-1$. We need to show that $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$. It suffices to show this for $k\leq d$. We have:
+\begin{align*}
+  \sum_{i = k}^{n-1} {\vert V_i\vert} & \leq \sum_{i = k}^d(Ci^{-\alpha}n + 1)
+    =    d - k + 1 + Cn\sum_{i = k}^d i^{-\alpha}\\
+  & \leq \left(\frac C{\alpha - 1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)\sqrt[\alpha]{n} + Cn\int_k^d x^{-\alpha}dx\\
+  & \leq \left(\frac C{\alpha - 1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)\sqrt[\alpha]{n} + Cn\left[\frac 1{\alpha - 1}x^{-\alpha+1}\right]_\infty^k\\
+  & \leq \left(\left(\frac C{\alpha - 1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)\left(\frac{\sqrt[\alpha]nd^{\alpha-1}}n\right) + \frac {C}{\alpha - 1}\right)nk^{-\alpha +1}\\
+  & \leq \left(\left(\frac C{\alpha - 1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)\left(\frac C{\alpha-1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)^{\alpha - 1} + \frac{C}{\alpha - 1}\right)nk^{-\alpha+1} \leq C'nk^{-\alpha+1},
+\end{align*}
+as desired.
+\end{proof}
+
+

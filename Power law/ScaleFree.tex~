@@ -1,0 +1,24 @@
+% !TEX root = Main.tex
+\section{Scale free  graphs from constructive model}\label{Sec:ScaleFree}
+In this section we treat the BA model, which   is a generative graph model conjectured to create power-law graphs\footnote{
+Bollobas~\cite{bollobas2003mathematical}(Sec. 6 and 7) proved that for a similar model vertices of degree smaller than $\sqrt[15]{n}$ in fact abide a power-law distribution. }.
+The model gets a parameter $m$ as input and at any vertex insertion, attach it  to at most $m$ existing vertices according to a power-law distribution.
+It is easy to see ~\cite{goel2006bounded} that   graphs created by this model have low arboricity\footnote{The arboricity of a graph is the minimum number of forests into which its edges can be partitioned.}. We go further, and   compare the size of the family it produce  against the number of power-law graphs.
+The proofs in this section are deferred  to Appendix~\ref{App:ScaleFree}.
+
+We present first a relation between the number of distinct (non-isomorphic) graphs in a family and the smallest label size possible.
+\begin{lemma}\label{Lemma:Relations}
+Let $\vert \mathcal{F}_n  \vert$ denote the number of non-isomorphic graphs in $\mathcal{F}_n$ and let $N$ be the smallest number of vertices of any induced universal graph for $\mathcal{F}_n$
+(In other words, any labeling scheme for $\mathcal{F}$ is of size at least $\log N$).
+Then $\log N - \log n \leq \log \vert  \mathcal{F}_n  \vert$.
+\end{lemma}
+
+
+\begin{proposition}\label{Th:baLabeling}
+The family of graphs constructed by the BA model  have an $O(m \log n)$ adjacency labeling scheme.
+\end{proposition}
+
+
+This proposition, along with Lemma~\ref{Lemma:Relations}  and Proposition~\ref{prop:lower-bound-powerlaw} suggest that there are a considerably  more power-law graphs than ones that can be created by  the  BA model. 
+In contrast, other generative models such as   Waxman~\cite{waxman1988routing}, N-level Hierarchical~\cite{calvert1997modeling}.
+and Chung's~\cite{chung2006complex} (Chapter 3) model do not seem to have an obvious lower label size.
