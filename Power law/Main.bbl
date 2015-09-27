@@ -43,6 +43,12 @@ S.~Alstrup, P.~Bille, and T.~Rauhe.
 \newblock Labeling schemes for small distances in trees.
 \newblock {\em SIAM J. Disc. Math.}, 19(2):448--462, 2005.
 
+\bibitem{alstrup2015optimal}
+S.~Alstrup, S.~Dahlgaard, and M.~B.~T. Knudsen.
+\newblock Optimal induced universal graphs and adjacency labeling for trees.
+\newblock In {\em Proceedings of the 58th Symposium on Foundations of Computer
+  Science}, FOCS '15, Washington, DC, USA, 2015. IEEE Computer Society.
+
 \bibitem{alstrup2014adjacency}
 S.~Alstrup, H.~Kaplan, M.~Thorup, and U.~Zwick.
 \newblock Adjacency labeling schemes and induced-universal graphs.
