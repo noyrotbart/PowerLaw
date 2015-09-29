@@ -1,4 +1,4 @@
-% !TEX root = Main.tex
+% !TEX root = WWW.tex
 
 
 \section{Introduction}
@@ -34,7 +34,7 @@ In the context of  sparse graphs,  a body of work on universal graphs\footnote{A
 
 Our contributions are:
 
-\paragraph{An  $O(\sqrt[\alpha] n (\log n)^{1 - 1/\alpha})$ adjacency labeling scheme for power-law graphs $G$.}
+\paragraph{An  $O(\sqrt[\alpha] n (\log n)^{1 - 1/\alpha})$ adjacency labeling scheme for power-law graphs $G$}
 %$\sqrt[\alpha]{C'n}(\log n)^{1 - 1/\alpha} + 2\log n + 1$ for some $C'$. 
 The scheme is based on two ideas:
 (I) a labeling \emph{strategy} that  partitions the vertices of $G$ into high (``fat'') and low degree (``thin'') vertices based on a threshold degree, and (II) a threshold \emph{prediction} that depends only on the coefficient $\alpha$ of a power-law curve fitted to the degree distribution of $G$. 
@@ -43,7 +43,7 @@ We claim that our  scheme is thus appealing in practice   due both to  its simpl
 Using the same ideas, we get an  asymptotically near-tight  $O(\sqrt{n \log n})$ adjacency labeling scheme for sparse graphs.
 % and five orders of magnitude less than the optimal upper bound of $.5 \cdot 10^9$ bits for general graphs \cite{alstrup2014adjacency}. 
 
-\paragraph{A lower bound of $\Omega(\sqrt[\alpha]{n})$ bits on the maximum label size for \emph{any} adjacency labeling scheme for power-law graphs.}
+\paragraph{A lower bound of $\Omega(\sqrt[\alpha]{n})$ bits on the maximum label size for any adjacency labeling scheme for power-law graphs}
 To this end we define a  restrictive subclass of power-law graphs and show that it is contained in the bigger class we study for the upper bound; we show that this class requires label size $\Omega(\sqrt[\alpha]{n})$ for $n$-vertex graphs.
 % use  the Erd{\"o}s-Gallai Theorem \cite{Erdos1960graphs} and construct  a highly restrictive subclass of power-law graphs.
 This lower bound shows that our upper bound above is asymptotically  optimal, bar a $(\log n)^{1 - 1/\alpha}$ factor.
