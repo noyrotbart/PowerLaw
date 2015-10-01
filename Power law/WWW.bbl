@@ -94,6 +94,12 @@ S.~Bhatt, F.~R. Graham~Chung, T.~Leighton, and A.~Rosenberg.
 \newblock {Universal Graphs for Bounded-Degree Trees and Planar Graphs}.
 \newblock {\em SIAM Journal on Discrete Mathematics}, 2(2):145--155, 1989.
 
+\bibitem{boldi2004webgraph}
+P.~Boldi and S.~Vigna.
+\newblock The webgraph framework i: compression techniques.
+\newblock In {\em Proceedings of the 13th international conference on World
+  Wide Web}, pages 595--602. ACM, 2004.
+
 \bibitem{DBLP:journals/rsa/BollobasRST01}
 B.~Bollob{\'{a}}s, O.~Riordan, J.~Spencer, and G.~E. Tusn{\'{a}}dy.
 \newblock The degree sequence of a scale-free random graph process.
@@ -172,6 +178,11 @@ G.~Goel and J.~Gustedt.
 \newblock Bounded arboricity to determine the local structure of sparse graphs.
 \newblock In {\em Graph-Theoretic Concepts in Computer Science}, pages
   159--167. Springer, 2006.
+
+\bibitem{gonzalez2012powergraph}
+J.~E. Gonzalez, Y.~Low, H.~Gu, D.~Bickson, and C.~Guestrin.
+\newblock Powergraph: Distributed graph-parallel computation on natural graphs.
+\newblock In {\em OSDI}, volume~12, page~2, 2012.
 
 \bibitem{guillaume2002efficient}
 J.-L. Guillaume, M.~Latapy, and L.~Viennot.
