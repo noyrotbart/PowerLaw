@@ -2,17 +2,14 @@
 
 
 \section{Introduction}
-A fundamental problem in networks is how to disseminate the structural information of the underlying graph of a network to its vertices. The purpose of such dissemination is that the local topology of the network can be inferred using only local information stored in each vertex without using costly access to large, global data structures.
+A body of work on web graphs deals with the difficulties of storing them. One possible approach to solve these difficulties is to disseminate the structural information of the graph to its vertices. Known as peer to peer, such dissemination allows for an inference of the graph's local topology  using only local information stored in each vertex without using costly access to large, global data structures.
 One way of doing so is via  \emph{ labeling schemes}: an algorithm that assigns a bit string--a \emph{label}--to each vertex so that a query between any two vertices can be deduced solely from their respective labels. 
 The main objective of  labeling schemes is to minimize the \emph{maximum label size}: the maximum number of bits used in a label of any vertex. 
 Labeling schemes for adjacency and other properties have found practical use in  XML search engines~\cite{cohen2010labeling}, mapping services~\cite{abraham2011hub} and routing~\cite{krioukov2004compact}.
 
 In this paper we are interested in particular with labeling schemes for   \emph{adjacency} queries. 
-For general graphs Moon~\cite{moon1965minimal} showed lower and upper bounds of respectively $n/2$ and $n/2+\log n$ bits on the  label size.
-The asymptotic gap between these bounds was only recently closed  by Alstrup et al.~\cite{alstrup2014adjacency} who proved an upper bound of $n/2 + 6$ bits. 
-Upper bounds for adjacency labeling schemes exist for many specific classes of graphs, including trees~\cite{Alstrup02}, planar graphs~\cite{gavoille2007shorter},  bounded-degree graphs~\cite{adjiashvili2014labeling}, and bipartite graphs~\cite{lozin2007minimal}.
-
-However, for classes of graphs whose statistical properties--in particular their \emph{degree distribution}--more closely resemble that of real-world networks, there has, to our knowledge, been no research on adjacency labeling schemes.
+General graphs are known to require a label size of $n/2+O(1)$~\cite{moon1965minimal, alstrup2014adjacency}.
+Trees, planar graphs, and bounded degree graphs, on the other hand,   enjoy labels of logarithmic size~\cite{Alstrup02, gavoille2007shorter, adjiashvili2014labeling}. Classes of graphs whose statistical properties--in particular their \emph{degree distribution}--more closely resemble that of real-world networks, there has, to our knowledge, been no research on adjacency labeling schemes.
 % and to our knowledge no attempts at general, space-efficient algorithms for local storage of the graph structure. 
 One class of graphs extensively used for modelling real-world networks is \emph{power-law graphs}: roughly, $n$-vertex graphs where the number of vertices of degree $k$ is proportional to $n/k^{\alpha}$ for some positive $\alpha$. Power-law graphs (also called scale-free graphs in the literature) have been used, e.g., to model the Internet AS-level graph \cite{DBLP:journals/ton/SiganosFFF03,DBLP:conf/podc/AkellaCKS03}, and many other types of network (see, e.g., \cite{mitzenmacher2004brief,clauset2009power} for overviews). 
 %Both the adequacy of fit of power-law graph models of networks to actual data, and the empirical correctness of the conjectured mechanisms giving rise to power-law behaviour have been subject to criticism (see, e.g., \cite{DBLP:journals/jacm/AchlioptasCKM09,clauset2009power}). 
