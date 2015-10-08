@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.17)  8 OCT 2015 22:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.17)  8 OCT 2015 23:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -337,39 +337,46 @@ Overfull \hbox (14.43144pt too wide) in paragraph at lines 3--3
  []
 
 [2]
-Overfull \hbox (7.06264pt too wide) in paragraph at lines 29--30
+Overfull \hbox (22.4632pt too wide) in paragraph at lines 34--37
+\T1/aer/m/n/9 Al-go-rith-mic Com-plex-ity of Power Law Net-works arXiv:1507.024
+26
+ []
+
+
+Overfull \hbox (7.06264pt too wide) in paragraph at lines 45--46
 []\T1/aer/m/it/9 The max-i-mum de-gree in an $\OML/cmm/m/it/9 n$\T1/aer/m/it/9 
 -vertex graph
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (20.0528pt too wide) in paragraph at lines 55--59
+Overfull \hbox (20.0528pt too wide) in paragraph at lines 71--75
 \T1/aer/m/n/9 vertex $\OML/cmm/m/it/9 $\T1/aer/m/n/9 -proper power-law graph i
 s at most $\OML/cmm/m/it/9 k[] \U/msa/m/n/9 , [] [] \OT1/cmr/m/n/9 +
  []
 
 
-Overfull \hbox (12.68007pt too wide) in paragraph at lines 55--59
+Overfull \hbox (12.68007pt too wide) in paragraph at lines 71--75
 \OML/cmm/m/it/9 i[] \OT1/cmr/m/n/9 + 3$\T1/aer/m/n/9 , whence the to-tal num-be
 r of edges is at most $[] [][] \OML/cmm/m/it/9 k\OMS/cmsy/m/n/9 j\OML/cmm/m/it/
 9 V[]\OMS/cmsy/m/n/9 j$\T1/aer/m/n/9 .
  []
 
-
-Overfull \hbox (18.63036pt too wide) in paragraph at lines 81--81
+[3]
+Overfull \hbox (18.63036pt too wide) in paragraph at lines 97--97
 [] 
  []
 
-[3]) (./LabelingScheme.tex
+) (./LabelingScheme.tex
 Overfull \hbox (6.60562pt too wide) in paragraph at lines 30--34
 []$ \T1/aer/m/n/9 then by Def-i-ni-tion 1[] there are at most $\OML/cmm/m/it/9 
 C[]n=f\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 n\OT1/cmr/m/n/9 )[]$
  []
 
-(./ExpectedUpperBound.tex [4])) (./LowerBounds.tex
+(./ExpectedUpperBound.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]))
+(./LowerBounds.tex
 Overfull \hbox (11.41418pt too wide) in paragraph at lines 23--24
 \T1/aer/m/n/9 con-tained in $\OMS/cmsy/m/n/9 P[]$\T1/aer/m/n/9 . Let $\OML/cmm/
 m/it/9 n \OMS/cmsy/m/n/9 2 \U/msb/m/n/9 N$ \T1/aer/m/n/9 be given and let $\OML
@@ -427,19 +434,19 @@ Overfull \hbox (255.2562pt too wide) in paragraph at lines 101--109
  [][]|  [] 
  []
 
-
+[7]
 Overfull \hbox (22.4136pt too wide) in paragraph at lines 121--135
 [][] 
  []
 
-[7]
+
 Overfull \hbox (2.93216pt too wide) in paragraph at lines 153--155
 \T1/aer/m/n/9 We have de-vised ad-ja-cency la-bel-ing schemes for sparse graphs
 
  []
 
-) (./WWW.bbl [8 <./Figures/synthetic-300k-alpha22.pdf> <./Figures/enron-mail.pd
-f>]
+[8 <./Figures/synthetic-300k-alpha22.pdf> <./Figures/enron-mail.pdf>])
+(./WWW.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
@@ -454,7 +461,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  3938 strings out of 494469
  54478 string characters out of 6166582
- 129429 words of memory out of 5000000
+ 127429 words of memory out of 5000000
  7071 multiletter control sequences out of 15000+600000
  62284 words of font info for 95 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
@@ -482,7 +489,7 @@ ols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on WWW.pdf (10 pages, 368404 bytes).
+Output written on WWW.pdf (10 pages, 371305 bytes).
 PDF statistics:
  152 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

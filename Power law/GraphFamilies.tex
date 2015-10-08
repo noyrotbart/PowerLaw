@@ -23,6 +23,22 @@ The family of $\alpha$-proper power-law graphs is denoted $\PLC$.
 \end{definition}
 Note that we allow slightly more noise in the sizes of $V_1$ and $V_2$ than in the remaining sets; without it, it seems tricky to prove a better lower bound than $\Omega(\sqrt[\alpha+1]{n})$ on label sizes.
 
+Other definitions of power-law graphs are given in the literature. One is the shifted power law distribution [Sank,Eom] which is defined as follows. Let $c_1 > 0$ be a constant. A graph $G$ is \emph{power law bounded} for parameters $1 < \alpha = O(1)$ and $t\geq 0$ if for every integer $d\geq 0$, the number of vertices of $G$ of degree in $[2^d,2^{d+1})$ is at most
+\[
+  c_1n(t+1)^{\alpha - 1}\sum_{i = 2^d}^{2^{d+1} - 1}(i+t)^{-\alpha}.
+\]
+As experimentally verified in [Sank], the value of $t$ is typically very small. If $t = O(1)$, the bound above becomes $O(n\sum_{i = 2^d}^{2^{d+1} - 1}i^{-\alpha})$. In this case, it is easy to see that our family $\PLB$ is rich enough to contain these power law bounded graphs (for sufficiently big constant $C'$) and so our upper bound also applies to power law bounded graphs. It is possible to extend our upper bound to super-constant $t$ where the bound is stronger the smaller $t$ is; we omit the details. Regarding lower bounds, our family $\PLC$ is restrictive enough so that any lower bound for this family also holds for power law bounded graphs when $t = O(1)$.
+
+Comment from CWN: papers Sank and Eom should be cited and added to bib file. The papers are, respectively:
+
+Pawel Brach, Marek Cygan, Jakub Lacki, Piotr Sankowski
+Algorithmic Complexity of Power Law Networks
+arXiv:1507.02426 [cs.DS]. To appear at SODA'16.
+
+Y.-H. Eom and S. Fortunato.
+Characterizing and modeling citation dynamics.
+PLoS ONE, 6(9):e24926, 09 2011.
+
 We show the following properties of $\PLC$. 
 %The proofs of Propositions~\ref{prop:powerlawsparse} and~\ref{prop:Contained} are in App.~\ref{App:GraphFamilies}.
 \begin{proposition}\label{prop:maxvertexproper}\label{prop:maxdegree}
