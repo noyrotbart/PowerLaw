@@ -75,8 +75,9 @@ Let $k$ be an arbitrary integer between $\sqrt[\alpha]{n/\log n}$ and $n-1$. We 
   & \leq \left(\frac C{\alpha - 1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)\sqrt[\alpha]{n} + Cn\int_k^d x^{-\alpha}dx\\
   & \leq \left(\frac C{\alpha - 1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)\sqrt[\alpha]{n} + Cn\left[\frac 1{\alpha - 1}x^{-\alpha+1}\right]_\infty^k\\
   & \leq \left(\left(\frac C{\alpha - 1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)\left(\frac{\sqrt[\alpha]nd^{\alpha-1}}n\right) + \frac {C}{\alpha - 1}\right)nk^{-\alpha +1}\\
-  & \leq \left(\left(\frac C{\alpha - 1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)\left(\frac C{\alpha-1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)^{\alpha - 1} \\
-  &+ \frac{C}{\alpha - 1}\right)nk^{-\alpha+1} \leq C'nk^{-\alpha+1},
+  & \leq \left(\frac C{\alpha - 1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)\left(\frac C{\alpha-1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)^{\alpha - 1}  nk^{-\alpha+1} \\
+  & +  \left(\frac{C}{\alpha - 1}\right) nk^{-\alpha+1} \\
+  & \leq C'nk^{-\alpha+1},
 \end{align*}
 as desired.
 \end{proof}
