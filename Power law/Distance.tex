@@ -2,3 +2,25 @@
 \section{Distance labeling scheme}\label{Sec:Distance}
 In this section we propose a distance labeling scheme for power law graphs. 
 
+The \emph{distance} between two vertices in an undirected graph is the length of the shortest path connecting
+the two vertices, if it exists, and $\infty$ if no such path exists.
+
+Let $f : \mathbb{N} \longrightarrow \mathbb{N}$ be a map such that
+$f(n) \leq  -1$ for all $n$. An $f(n)$-\emph{distance labelling scheme} is a labelling
+scheme such that, for any graph $G$, its decoder given labels $\mathcal{L}(u)$ and $\mathcal{L}(v)$ of two nodes $u$ and $v$
+will output the distance between $u$ and $v$ if the distance is at most $f(\vert V(G) \vert)$, and output ``no'' if the distance
+is  strictly greater than $f(\vert G \vert)$. If $f(n) = n-1$,
+an $f(n)$distance labelling scheme is simply called a \emph{distance labelling scheme}.
+
+BLURB ON DISTANCE RESEARCH
+
+In this section we devise an $f(n)$-distance labelling scheme for the family $\mathcal{P}_{\alpha}$ that
+works particular well (i.e., has shorter labels than any known labelling schemes) for small distances. As
+$\mathcal{P}_{\alpha}$ morally contains all power-law graphs and power-law graphs in general
+have very small expected distances, the labelling scheme should work well for practical purposes in power-law graphs.
+
+Recall that $\mathcal{P}_{\alpha}$ is the family of graphs $G$ such that for all integers $k$
+with $\sqrt[\alpha]{n/\log n} \leq k \leq n -1$, we have $\sum_{i=k}^{n-1} \vert V_i \vert \leq C'\left( \frac{n}{k^{\alpha-1}}\right)$.
+Our scheme assigns labels of size at most $
+
+
