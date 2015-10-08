@@ -1,23 +1,25 @@
 \subsection{Labeling scheme for random graphs}
-Graphs in $\PLB$ have a fixed degree sequence. However, certain graph generation models for power-law graphs are inherently random. For graphs obtained from such models, their degree sequences are instead probability distributions. In this section, we show that applying our labeling scheme for $\PLB$ to random graphs with the power law distribution, we get a good expected worst-case label size.
+Graphs in $\PLB$ have a fixed degree sequence. However, certain graph generation models for power-law graphs are inherently random; one example is the preferential attachment model. For graphs obtained from such models, their degree sequences are instead probability distributions. In this section, we show that applying our labeling scheme for $\PLB$ to random graphs with the power law distribution, we get a good expected worst-case label size.
 
 Using the definition of Mitzenmacher, a random variable $X$ is said to have the \emph{power law} distribution (w.r.t.~$\alpha > 1$) if
 \[
   Pr[X\geq x] \sim cx^{-\alpha+1},
 \]
-for some constant $c > 0$, i.e., $\lim_{x\to\infty}Pr[X\geq x]/cx^{-\alpha+1} = 1$.
+for a constant $c > 0$, i.e., $\lim_{x\to\infty}Pr[X\geq x]/cx^{-\alpha+1} = 1$.
 
-Let $\epsilon > 0$ be fixed. Consider a graph $G$ obtained from some random process leading to a power law distribution on its vertex degrees (e.g., obtained from the preferential attachment model). Order the vertices of $G$ as $v_1,\ldots,v_n$ where the ordering is independent of the random process leading to $G$. For $i=1,\ldots,n$, let indicator variable $X_i$ be $1$ iff $v_i$ has degree at least $d = \sqrt[\alpha]{n/\log n}$. There is a constant $N_0\in\mathbb N$ (depending on $\epsilon$) such that if $n\geq N_0$ then for each $i$,
+Let $\epsilon > 0$ be fixed. Consider a graph $G$ picked from a family $\mathcal F$ of random graphs whose degree sequences have the power law distribution. Order the vertices of $G$ arbitrarily as $v_1,\ldots,v_n$. For $i=1,\ldots,n$, let indicator variable $X_i$ be $1$ iff $v_i$ has degree at least $d = \sqrt[\alpha]{n/\log n}$. There is a constant $N_0\in\mathbb N$ (depending on $\epsilon$) such that if $n\geq N_0$ then for all $i$,
 \[
-  E[X_i] = Pr[X_i = 1]\leq (1+\epsilon)cd^{-\alpha+1}.
+  E[X_i] = \mbox{Pr}[X_i = 1]\leq (1+\epsilon)cd^{-\alpha+1}.
 \]
 
-With the same labeling scheme as for $\PLB$ with degree threshold $d$, we get a labeling scheme with an expected label size of
+With the same labeling scheme as for $\PLB$ with degree threshold $d$, denote by $E_n$ the expected label size of an $n$-vertex graph from $\mathcal F$. Then for all $n\geq N_0$,
 \begin{align*}
-  E[\mbox{label size}] & = \sum_{x=0}^n Pr\left[\sum_{i=1}^n X_i = x\right]O((x+d\log n))\\
+  E_n & = \sum_{x=0}^n \mbox{Pr}\left[\sum_{i=1}^n X_i = x\right]O((x+d\log n))\\
                        & = O\left(d\log n + E\left[\sum_{i=1}^n X_i\right]\right)\\
                        & = O\left(d\log n + \sum_{i=1}^n E[X_i]\right)\\
                        & = O\left(d\log n + nd^{-\alpha+1}\right)\\
                        & = O\left(\sqrt[\alpha]n(\log n)^{1-1/\alpha}\right).
 \end{align*}
-
+\begin{theorem}
+Let $\mathcal F$ be a family of graphs with degree sequences having the power law distribution w.r.t.~$\alpha > 1$. Then there is a labeling scheme for $\mathcal F$ such that the expected worst-case label size of any graph $G\in\mathcal F$ is $O(\sqrt[\alpha]n(\log n)^{1-1/\alpha})$ where $n$ is the number of vertices of $G$.
+\end{theorem}

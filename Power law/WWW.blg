@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: WWW.aux
+The style file: abbrv.bst
+Database file #1: lit.bib
+Warning--can't use both volume and number fields in gonzalez2012powergraph
+Warning--can't use both volume and number fields in moon1965minimal
+You've used 54 entries,
+            2118 wiz_defined-function locations,
+            827 strings with 12922 characters,
+and the built_in function-call counts, 20855 in all, are:
+= -- 2146
+> -- 903
+< -- 26
++ -- 362
+- -- 300
+* -- 1447
+:= -- 3300
+add.period$ -- 183
+call.type$ -- 54
+change.case$ -- 310
+chr.to.int$ -- 0
+cite$ -- 56
+duplicate$ -- 842
+empty$ -- 1650
+format.name$ -- 300
+if$ -- 4507
+int.to.chr$ -- 0
+int.to.str$ -- 54
+missing$ -- 55
+newline$ -- 274
+num.names$ -- 108
+pop$ -- 329
+preamble$ -- 1
+purify$ -- 258
+quote$ -- 0
+skip$ -- 605
+stack$ -- 0
+substring$ -- 1411
+swap$ -- 243
+text.length$ -- 26
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 212
+warning$ -- 2
+while$ -- 214
+width$ -- 56
+write$ -- 621
+(There were 2 warnings)
