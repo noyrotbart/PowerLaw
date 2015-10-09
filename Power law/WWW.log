@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.23)  9 OCT 2015 15:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.23)  9 OCT 2015 15:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -362,7 +362,11 @@ LaTeX Warning: Citation `stanton2012streaming' on page \thepage  undefined on i
 nput line 6.
 
 
-Overfull \hbox (3.38988pt too wide) in paragraph at lines 15--18
+LaTeX Warning: Citation `buchegger2009peerson' on page \thepage  undefined on i
+nput line 8.
+
+
+Overfull \hbox (3.38988pt too wide) in paragraph at lines 17--20
 \T1/aer/m/n/9 net-works is \T1/aer/m/it/9 power-law graphs\T1/aer/m/n/9 : rough
 ly, $\OML/cmm/m/it/9 n$\T1/aer/m/n/9 -vertex graphs where
  []
@@ -374,24 +378,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Overfull \hbox (3.60703pt too wide) in paragraph at lines 35--41
+Overfull \hbox (3.60703pt too wide) in paragraph at lines 37--43
 \T1/aer/m/n/9 high (``fat'') and low de-gree (``thin'') ver-tices based on a th
 resh-
  []
 
 
-Overfull \hbox (2.51987pt too wide) in paragraph at lines 43--47
+Overfull \hbox (2.51987pt too wide) in paragraph at lines 45--49
 \subsecfnt graphs[]. \T1/aer/m/n/9 To this end we de-fine a re-stric-tive sub-c
 lass of power-
  []
 
 
-Overfull \hbox (4.3694pt too wide) in paragraph at lines 50--56
+Overfull \hbox (4.3694pt too wide) in paragraph at lines 52--58
 \T1/aer/m/n/9 (300K-1M ver-tices) data sets, we ob-serve that: (i) Our thresh-
  []
 
 
-Overfull \hbox (8.98903pt too wide) in paragraph at lines 57--58
+Overfull \hbox (8.98903pt too wide) in paragraph at lines 59--60
 \T1/aer/m/n/9 Barabasi-Albert model [17] and the Aiello-Chung-Lu model [4].
  []
 
@@ -405,9 +409,6 @@ Overfull \hbox (7.06264pt too wide) in paragraph at lines 35--36
 []\T1/aer/m/it/9 The max-i-mum de-gree in an $\OML/cmm/m/it/9 n$\T1/aer/m/it/9 
 -vertex graph
  []
-
-
-Underfull \vbox (badness 5359) has occurred while \output is active []
 
 
 Overfull \hbox (20.0528pt too wide) in paragraph at lines 61--65
@@ -443,28 +444,32 @@ m/it/9 n \OMS/cmsy/m/n/9 2 \U/msb/m/n/9 N$ \T1/aer/m/n/9 be given and let $\OML
  []
 
 [5]) (./Distance.tex
-Overfull \hbox (5.65428pt too wide) in paragraph at lines 65--67
+Overfull \hbox (5.65428pt too wide) in paragraph at lines 45--47
 []\T1/aer/m/n/9 Similarly, for each node $\OML/cmm/m/it/9 v$ \T1/aer/m/n/9 ther
 e are at most $\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 n[]\OT1/cmr/m/n/9 )[] =
  []
 
 
-Overfull \hbox (7.90233pt too wide) in paragraph at lines 68--69
+Overfull \hbox (7.90233pt too wide) in paragraph at lines 48--49
 []\T1/aer/m/n/9 In to-tal, each la-bel thus has size at most $\OML/cmm/m/it/9 O
 \OT1/cmr/m/n/9 (\OML/cmm/m/it/9 n[] [] n\OT1/cmr/m/n/9 )$
  []
 
-[6]) (./Experimental.tex
-Overfull \hbox (22.31279pt too wide) in paragraph at lines 71--2
+) (./Experimental.tex
+Overfull \hbox (22.31279pt too wide) in paragraph at lines 51--2
 \T1/aer/m/n/9 largest la-bel sizes of [38] for sparse graphs is $\OML/cmm/m/it/
 9 O\OT1/cmr/m/n/9 ((\OML/cmm/m/it/9 n= [] n\OT1/cmr/m/n/9 ) [] [] \OML/cmm/m/it
 /9 n\OT1/cmr/m/n/9 )$\T1/aer/m/n/9 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--2
+Underfull \hbox (badness 10000) in paragraph at lines 51--2
 
  []
+
+[6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 LaTeX Warning: Reference `App:ExpRes' on page \thepage  undefined on input line
@@ -489,7 +494,7 @@ Overfull \hbox (255.2562pt too wide) in paragraph at lines 101--109
  [][]|  [] 
  []
 
-[7]
+[7 <./Figures/synthetic-300k-alpha22.pdf> <./Figures/enron-mail.pdf>]
 Overfull \hbox (22.4136pt too wide) in paragraph at lines 121--135
 [][] 
  []
@@ -500,29 +505,26 @@ Overfull \hbox (2.93216pt too wide) in paragraph at lines 153--155
 
  []
 
-[8 <./Figures/synthetic-300k-alpha22.pdf> <./Figures/enron-mail.pdf>])
-(./WWW.bbl
+) [8] (./WWW.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10])
-[11
-
-] (./WWW.aux)
+) [10]
+(./WWW.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4301 strings out of 493117
- 61616 string characters out of 6135433
+ 4302 strings out of 493117
+ 61638 string characters out of 6135433
  140927 words of memory out of 5000000
- 7622 multiletter control sequences out of 15000+600000
+ 7623 multiletter control sequences out of 15000+600000
  62284 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,15n,47p,903b,425s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -551,10 +553,10 @@ nts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/typ
 e1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/
 times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on WWW.pdf (11 pages, 347436 bytes).
+Output written on WWW.pdf (10 pages, 345146 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 155 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

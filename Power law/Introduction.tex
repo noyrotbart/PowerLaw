@@ -2,10 +2,12 @@
 
 
 \section{Introduction}
-A body of work on large power-law graphs deals with the difficulties of storing them.
-Compression techniques~\cite{boldi2004webgraph,boldi2011layered}, as  well as the dissemination  of such graphs over several machines~\cite{gonzalez2012powergraph, stanton2012streaming} are some of the ideas suggested to treat this task.
-An additional  approach to solve these difficulties is to disseminate the structural information of the graph to its vertices. Known as peer-to-peer, it  allows for an inference of the graph's local topology  using only local information stored in each vertex without using costly access to large, global data structures.
-One way of doing so is via a \emph{ labeling scheme}: an algorithm that assigns a bit string--a \emph{label}--to each vertex so that a query between any two vertices can be deduced solely from their respective labels. 
+A body of work on large real-world networks  deals with the difficulties of storing them.
+Compression techniques~\cite{boldi2004webgraph,boldi2011layered}, as  well as the dissemination  of these networks underlying graphs over several machines~\cite{gonzalez2012powergraph, stanton2012streaming} are some of the ideas suggested to treat this task.
+An additional  approach to solve these difficulties is to disseminate the structural information of the graph to its vertices. Known as peer-to-peer, it  allows for an inference of the graph's local topology  using only local information stored in each vertex without using costly access to large, global data structures. 
+As mentioned by   Buchegger et al.~\cite{buchegger2009peerson}  peer-to-peer  networks are particularly useful to address privacy concerns.
+
+To that end, a useful tool is the notion of a \emph{ labeling scheme}: an algorithm that assigns a bit string--a \emph{label}--to each vertex so that a query between any two vertices can be deduced solely from their respective labels. 
 Labeling schemes are extremely well studied topic \cite{}, under the objective of  minimizing the \emph{maximum label size}: the maximum number of bits used in a label of any vertex. Among applications for them are   XML search engines~\cite{cohen2010labeling}, mapping services~\cite{abraham2011hub} and internet routing~\cite{krioukov2004compact}.
 
 Similarly to~\cite{}, we mainly restrict our attention to the atomic operation of \emph{adjacency} queries. 
