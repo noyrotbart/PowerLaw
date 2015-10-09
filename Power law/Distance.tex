@@ -1,22 +1,19 @@
 % !TEX root = Www.tex
 \section{Distance labeling scheme}\label{Sec:Distance}
-In this section we propose a distance labeling scheme for power law graphs. 
+Chung and Lu \cite{chung2004average}  proved that the diameter of  power law random graphs \footnote{subject to mild conditions, and with $\alpha > 2$.}  is almost surely $\Theta(\log n)$ and the average distance is $O(\log \log n)$. 
+In this section we demonstrate the usefulness of the fat/thin separation by introducing  a distance labeling scheme for small distances in power law graphs. 
 
-The \emph{distance} between two nodes in an undirected graph is the length of the shortest path connecting
-the two nodes, if it exists, and $\infty$ if no such path exists.
 
-Let $f : \mathbb{N} \longrightarrow \mathbb{N}$ be a map such that
-$f(n) \leq  -1$ for all $n$. An $f(n)$-\emph{distance labelling scheme} is a labelling
+
+The \emph{distance} between two nodes in an undirected graph is the length of the shortest path connecting the two nodes, if it exists, and $\infty$ if no such path exists.
+Let $f : \mathbb{N} \longrightarrow \mathbb{N}$ be a map such that $f(n) \leq  -1$ for all $n$. An $f(n)$-\emph{distance labelling scheme} is a labelling
 scheme such that, for any graph $G$, its decoder given labels $\mathcal{L}(u)$ and $\mathcal{L}(v)$ of two nodes $u$ and $v$
 will output the distance between $u$ and $v$ if the distance is at most $f(\vert V(G) \vert)$, and output ``no'' if the distance
-is  strictly greater than $f(\vert G \vert)$. If $f(n) = n-1$,
-an $f(n)$distance labelling scheme is simply called a \emph{distance labelling scheme}.
-
-For sparse graphs,
-Alstrup et al.\ \cite{DBLP:journals/corr/AlstrupDKP15} obtain a distance labelling scheme with maximum label size
-$O(\frac{n}{D} \log^2 D)$ where $D = (\log n)/(\log \frac{m+n}{n})$ and $m$ is the number of edges
-in the graph.  Using similar methods, Gawrychowski et al.\ obtain an upper bond of \cite{DBLP:journals/corr/GawrychowskiKU15}
-$O(\frac{n}{D} \log D)$ with sublinear decoding time. Few general results on lower bounds exist. The lower bound of $\Omega(\sqrt{n})$ for adjacency given in the present paper is trivially also a lower bound for distance; for total label size, the best known lower bound remains $\Omega(n^{3/2})$ as proved by Gavoille et al.\ cite{Gavoille2001}.
+is  strictly greater than $f(\vert G \vert)$. If $f(n) = n-1$.
+Labeling schemes for distance for sparse graphs have been recently investigated in~\cite{DBLP:journals/corr/AlstrupDKP15} and~\cite{DBLP:journals/corr/GawrychowskiKU15}.
+The latter achieved the best bound known, namely $O(\frac{n}{D} \log D)$ where $D = (\log n)/(\log \frac{m+n}{n})$ and $m$ is the number of edges
+in the graph.  
+In addition to the lower bound of $\Omega(\sqrt{n})$ for adjacency given in the present paper (which trivially also a lower bound for distance), Gavoille et al.~\cite{gavoillea2004distance} proved a lower bound of  $\Omega(n^{3/2})$ on the total label size.
 
 We now devise an $f(n)$-distance labelling scheme for $c$-sparse graphs,
 works particular well (i.e., has shorter labels than any known labelling schemes) for small distances. As
@@ -30,9 +27,9 @@ that assigns labels of length at most $O(n^{f(n)/(f(n) + 1)} \log f(n))$.
 \end{lemma}
 
 \begin{proof}
-As for adjacency labelling, the scheme is based on \emph{thin} and \emph{fat} nodes. Let $G$ be a $c$-sparse graph. Call
-a node of $G$ \emph{fat} if it has degree at least $n^{1/(f(n)+1)}$ and \emph{thin} otherwise.
-The label of each node $v$ now contains (i) a table of distances to all fat nodes (if the distance is more than $f(n)$, it is simply ignored), and (ii) a table of distances to all thin nodes $w$ that are at most distance $f(n)$ away from $v$
+%As for adjacency labelling, the scheme is based on \emph{thin} and \emph{fat} nodes.
+ Let $G$ be a $c$-sparse graph. Call a node of $G$ \emph{fat} if it has degree at least $n^{1/(f(n)+1)}$ and \emph{thin} otherwise.
+The label of each node $v$ now contains (i) a table of distances to all fat nodes that are at distance at most $f(n)$ from $v$ and (ii) a table of distances to all thin nodes $w$ that are at most distance $f(n)$ away from $v$
 where the shortest path between $v$ and $w$ does not pass through any fat node.
 Clearly, as $f(n)$ is computable and distances in $G$ are computable, there is a computable encoder
 assigning labels. Furthermore, as all nodes of $G$ are either thin or fat, it is clearly possible for an encoder to compute
@@ -53,7 +50,4 @@ In total, each label thus has size at most $O(n^{f(n)/(f(n)+1)} \log n)$ bits.
 
 For $f(n) = \log n$, Lemma \ref{lem:sparse_small_dist} yields a labelling scheme having label size
 at most $O\left(n^{(\log n)/(1+ \log n)} \log\log n \right)$. Unsurprisingly, as we are only considering distances up
-to $f(n)$, this label size is asymptotically smaller than for the labelling
-schemes working for all distances in sparse graphs, e.g. the largest label sizes of \cite{DBLP:journals/corr/GawrychowskiKU15} for sparse graphs is $O((n/\log n) \log\log n)$.
-For power law random graphs with \emph{expected} \textcolor{blue}{JGS: FIXME! Make sure this ties in with Christian's section}, Chung and Lu show in \cite{chung2004average} that, subject to mild conditions, the diameter of power law graphs with $\alpha > 2$ is almost surely $\Theta(\log n)$. We thus expect our labelling scheme to have
-superior performance for such graphs.
+to $f(n)$, this label size is asymptotically smaller than for the labelling schemes working for all distances in sparse graphs, e.g. the largest label sizes of \cite{DBLP:journals/corr/GawrychowskiKU15} for sparse graphs is $O((n/\log n) \log\log n)$.

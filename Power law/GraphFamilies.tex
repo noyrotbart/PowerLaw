@@ -23,7 +23,6 @@ The family of $\alpha$-proper power-law graphs is denoted $\PLC$.
 \end{definition}
 Note that we allow slightly more noise in the sizes of $V_1$ and $V_2$ than in the remaining sets; without it, it seems tricky to prove a better lower bound than $\Omega(\sqrt[\alpha+1]{n})$ on label sizes.
 
-\subsection{Comparison to other suggested models}
 Other definitions of power-law graphs are given in the literature. One is the shifted power law distribution \cite{Sankowski2016PowerLaw,eom2011characterizing} which is defined as follows. Let $c_1 > 0$ be a constant. A graph $G$ is \emph{power law bounded} for parameters $1 < \alpha = O(1)$ and $t\geq 0$ if for every integer $d\geq 0$, the number of vertices of $G$ of degree in $[2^d,2^{d+1})$ is at most
 \[
   c_1n(t+1)^{\alpha - 1}\sum_{i = 2^d}^{2^{d+1} - 1}(i+t)^{-\alpha}.
@@ -88,5 +87,7 @@ Let $k$ be an arbitrary integer between $\sqrt[\alpha]{n/\log n}$ and $n-1$. We 
 \end{align*}
 as desired.
 \end{proof}
+\subsection{Comparison to other suggested models}
+
 
 

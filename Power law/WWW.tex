@@ -79,9 +79,7 @@
 \author{Casper Petersen, Noy Rotbart,\\ Jakob Grue Simonsen and Christian Wulff-Nilsen \\ \\
 \small{Department of Computer Science, University of Copenhagen} \\
 \small{Universitetsparken 5, 2100 Copenhagen}\\
- \small{\texttt{\{cazz,noyro,simonsen,koolooz\}@diku.dk}} \\
- \small{phone: (+45) 29611674}
- }
+ \small{\texttt{\{cazz,noyro,simonsen,koolooz\}@diku.dk}}  }
  
 
 \date{28 September 2015}
@@ -90,9 +88,13 @@
 The study of web graph compression assumes a centralised data structure which is undesired in peer-to-peer networks.
 We propose an investigation on web graph dissemination using a theoretically appropriate method, adjacency labeling scheme. These are  methods that assigns labels to the vertices of a graph such that adjacency between them 
 can be inferred directly from the assigned labels, without using a  centralized data structure.
-We first provide a lower bound for the family of power-law graphs.  This  family has been used to model many types of networks, e.g. the Internet AS-level graph. Furthermore, we  provide an almost matching  upper bound for this family.
+We first provide a lower bound for the family of power-law graphs. 
+% This  family has been used to model many types of networks, e.g. the Internet AS-level graph. 
+Furthermore, we  provide an almost matching  upper bound for this family.
 %We also provide an asymptotically near-optimal  labeling scheme for sparse graphs.
-This upper bound is attained by pre-determining a threshold separating nodes of large degree and small degree that attempts to balance the storage required among the vertices. We then  validate the efficiency of our separation by  an experimental evaluation  using both synthetic data and real-world networks of up to hundreds of thousands of vertices. 
+This upper bound is attained by pre-determining a threshold separating nodes of large degree and small degree that attempts to balance the storage required among the vertices. 
+We use this technique further and produce a distance labeling scheme for the family.
+Finally, we validate the usefulness of the label and the efficiency of our separation by  an experimental evaluation  using both synthetic data and real-world networks of small to medium scale. 
 \end{abstract}
 
 % A category with the (minimum) three required fields
