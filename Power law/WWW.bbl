@@ -117,6 +117,12 @@ B.~Bollob{\'{a}}s, O.~Riordan, J.~Spencer, and G.~E. Tusn{\'{a}}dy.
 \newblock The degree sequence of a scale-free random graph process.
 \newblock {\em Random Struct. Algorithms}, 18(3):279--290, 2001.
 
+\bibitem{Sankowski2016PowerLaw}
+P.~Brach, M.~Cygan, J.~Lacki, and P.~Sankowski.
+\newblock Algorithmic complexity of power law networks.
+\newblock In {\em To appear in Proceedings of the thirty third annual ACM-SIAM
+  symposium on Discrete algorithms}, SODA '16, 2014.
+
 \bibitem{brady2006compact}
 A.~Brady and L.~J. Cowen.
 \newblock Compact routing on power law graphs with additive stretch.
@@ -168,6 +174,11 @@ E.~Cohen, H.~Kaplan, and T.~Milo.
 S.~Dahlgaard, M.~B.~T. Knudsen, and N.~Rotbart.
 \newblock Dynamic and multi-functional labeling schemes.
 \newblock In {\em Algorithms and Computation}, pages 141--153. Springer, 2014.
+
+\bibitem{eom2011characterizing}
+Y.~Eom, S.~Fortunato, and M.~Perc.
+\newblock Characterizing and modeling citation dynamics.
+\newblock {\em PLoS ONE}, 6(9):e24926, 2011.
 
 \bibitem{fischer2009short}
 J.~Fischer.
