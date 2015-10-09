@@ -45,7 +45,7 @@
 
 \begin{document}
 
-\title{Peer-to-Peer Power-Law Graphs}
+\title{Distributing Power-Law Graphs}
 %
 % You need the command \numberofauthors to handle the 'placement
 % and alignment' of the authors beneath the title.
@@ -85,13 +85,10 @@
 \date{28 September 2015}
 \maketitle
 \begin{abstract}
-The study of web graph compression assumes a centralised data structure which is undesired in peer-to-peer networks.
-We propose an investigation on web graph dissemination using a theoretically appropriate method, adjacency labeling scheme. These are  methods that assigns labels to the vertices of a graph such that adjacency between them 
-can be inferred directly from the assigned labels, without using a  centralized data structure.
-We first provide a lower bound for the family of power-law graphs. 
-% This  family has been used to model many types of networks, e.g. the Internet AS-level graph. 
-Furthermore, we  provide an almost matching  upper bound for this family.
-%We also provide an asymptotically near-optimal  labeling scheme for sparse graphs.
+Storing  power law graphs is by now a well studied topic.
+We study the storage of  web graph  in a distributed manner,  using so called adjacency labeling schemes. 
+Using those, the vertices of a graph are assigned labels that can singlehandedly determine an adjacency relation between two queried vertices.
+We  provide a lower bound, and  an almost matching  upper bound for the family of power-law graphs.
 This upper bound is attained by pre-determining a threshold separating nodes of large degree and small degree that attempts to balance the storage required among the vertices. 
 We use this technique further and produce a distance labeling scheme for the family.
 Finally, we validate the usefulness of the label and the efficiency of our separation by  an experimental evaluation  using both synthetic data and real-world networks of small to medium scale. 
@@ -114,7 +111,7 @@ Finally, we validate the usefulness of the label and the efficiency of our separ
 \input{Distance}
 \input{Experimental}
 
-
+\newpage
 \bibliographystyle{abbrv}
 \bibliography{lit}  % sigproc.bib is the name of the Bibliography in this case
 \balancecolumns

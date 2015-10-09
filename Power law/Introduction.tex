@@ -2,17 +2,16 @@
 
 
 \section{Introduction}
-A body of work on web graphs deals with the difficulties of storing them. 
-Due to their size, studying web graphs is difficult to store in main memory. This led first to compression techniques~\cite{boldi2004webgraph,boldi2011layered}, and thereafter to study on the dissemination  of such graphs over several machines~\cite{gonzalez2012powergraph}. Our study sets theoretical limits to the space required for such  efforts.
-
-One possible approach to solve these difficulties is to disseminate the structural information of the graph to its vertices. Known as peer to peer, such dissemination allows for an inference of the graph's local topology  using only local information stored in each vertex without using costly access to large, global data structures.
+A body of work on large power-law graphs deals with the difficulties of storing them.
+Compression techniques~\cite{boldi2004webgraph,boldi2011layered}, as  well as the dissemination  of such graphs over several machines~\cite{gonzalez2012powergraph, stanton2012streaming} are some of the ideas suggested to treat this task.
+An additional  approach to solve these difficulties is to disseminate the structural information of the graph to its vertices. Known as peer-to-peer, it  allows for an inference of the graph's local topology  using only local information stored in each vertex without using costly access to large, global data structures.
 One way of doing so is via a \emph{ labeling scheme}: an algorithm that assigns a bit string--a \emph{label}--to each vertex so that a query between any two vertices can be deduced solely from their respective labels. 
-Labeling schemes are extremely well studied topic \cite{}, under the objective of  minimizing the \emph{maximum label size}: the maximum number of bits used in a label of any vertex. They were also found practical use in  XML search engines~\cite{cohen2010labeling}, mapping services~\cite{abraham2011hub} and routing~\cite{krioukov2004compact}.
+Labeling schemes are extremely well studied topic \cite{}, under the objective of  minimizing the \emph{maximum label size}: the maximum number of bits used in a label of any vertex. Among applications for them are   XML search engines~\cite{cohen2010labeling}, mapping services~\cite{abraham2011hub} and internet routing~\cite{krioukov2004compact}.
 
-Similarly to~\cite{}, we restrict our attention to the atomic operation of \emph{adjacency} queries. 
+Similarly to~\cite{}, we mainly restrict our attention to the atomic operation of \emph{adjacency} queries. 
 Adjacency labeling schemes for general graphs  require a label size of $n/2+O(1)$~\cite{moon1965minimal, alstrup2014adjacency}.
 Trees, planar graphs, and bounded degree graphs, on the other hand,   enjoy labels of logarithmic size~\cite{Alstrup02, gavoille2007shorter, adjiashvili2014labeling}. To the best of our knowledge, we are the first to study adjacency labeling schemes for classes of graphs whose statistical properties--in particular their \emph{degree distribution}--more closely resemble that of real-world networks.
-% and to our knowledge no attempts at general, space-efficient algorithms for local storage of the graph structure. 
+
 One class of graphs extensively used for modelling real-world networks is \emph{power-law graphs}: roughly, $n$-vertex graphs where the number of vertices of degree $k$ is proportional to $n/k^{\alpha}$ for some positive $\alpha$. Power-law graphs (also called scale-free graphs in the literature) have been used, e.g., to model the Internet AS-level graph \cite{DBLP:journals/ton/SiganosFFF03,DBLP:conf/podc/AkellaCKS03}, and many other types of network (see, e.g., \cite{mitzenmacher2004brief,clauset2009power} for overviews). 
 The adequacy of fit of power-law graph models to actual data, as well as the empirical correctness of the conjectured mechanisms giving rise to power-law behaviour, have been subject to criticism (see, e.g., \cite{DBLP:journals/jacm/AchlioptasCKM09,clauset2009power}). 
 In spite of such criticism, and because their degree distribution affords a reasonable approximation of the degree distribution of many networks, the class of power-law graphs remains a popular tool in network modelling whose statistical behaviour is well-understood: e.g., for power-law graphs with $2<\alpha<3$, the range most often seen in the modeling of real-world networks \cite{clauset2009power}, it is known that with high probability the average distance between any two vertices is  $O(\log \log n)$, the diameter is $O(\log n)$ and there exists a dense subgraph of $n^{c/\log \log n}$ vertices~\cite{chung2004average}. 
@@ -23,8 +22,9 @@ Experimental evaluation for some labeling schemes for various properties on gene
 
 Adjacency labeling schemes are tightly coupled with  the graph-theory related concept of induced universal graphs.
 Given a  graph family  $\mathcal{F}$, the aim  is to find smallest $N$ such that a graph of  $N$ vertices contains all graphs in $\mathcal{F}$ as induced subgraphs. 
-Kannan, Naor and Rudich~\cite{Kannan92} showed that an $f(n) \log n$ adjacency labeling scheme for $\mathcal{F}$  constructs an induced universal graph for this family of  $2^{f(n)}$ vertices. Some  of the adjacency labeling schemes reported earlier  contributed a better bound than was known of  induced universal graphs (see e.g~\cite{BCLR,Alstrup02}).
-In the context of  sparse graphs,  a body of work on universal graphs\footnote{A graph that  contains each graph from the graph family as subgraph, not necessarily induced.} for this family was  investigated both by  Babai et al.~\cite{babai1982graphs} and  by Alon and Asodi~\cite{Alon2002universal}. 
+Kannan, Naor and Rudich~\cite{Kannan92} showed that an $f(n) \log n$ adjacency labeling scheme for $\mathcal{F}$  constructs an induced universal graph for this family of  $2^{f(n)}$ vertices. 
+%Some  of the adjacency labeling schemes reported earlier  contributed a better bound than was known of  induced universal graphs (see e.g~\cite{BCLR,Alstrup02}).
+%In the context of  sparse graphs,  a body of work on universal graphs\footnote{A graph that  contains each graph from the graph family as subgraph, not necessarily induced.} for this family was  investigated both by  Babai et al.~\cite{babai1982graphs} and  by Alon and Asodi~\cite{Alon2002universal}. 
 
 \subsection{Our contribution}
 
