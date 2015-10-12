@@ -1,7 +1,7 @@
 % !TEX root = WWW.tex
 \section{Experimental Study}
 
-We now  perform an experimental evaluation of our labeling scheme on a number of large networks.
+We now  perform an experimental evaluation of our labeling scheme on a number of power-law networks.
 The source code for our experiments can be found at:\\ \url{www.diku.dk/\~simonsen/suppmat/podc15/powerlaw.zip}
 
 \subsection{Experimental Framework}\label{Sec:Experimental}
@@ -91,16 +91,17 @@ s300$^{\alpha=2.8}$    & 300,000        & 227,247        & 2.8    & 1,842 & --\\
 Figure \ref{fig:findings} shows the distribution of maximum label sizes for one synthetic and one real-world data set. The maximum label size
 for the predicted and empirical thresholds as well as upper bounds on the label sizes from different label schemes in the literature can be seen in Table \ref{t:labelsizes} for two synthetic
 data sets and all three real-world data sets. 
-Plots for the remaining data sets can be found in Appendix~\ref{App:ExpRes}.
+%Plots for the remaining data sets can be found in Appendix~\ref{App:ExpRes}.
 
-\begin{figure}[!ht]
+
+\begin{figure*}[!ht]
 \centering
 \subfloat[\small syn300$^{\alpha=2.2}$]{
-    \includegraphics[width=0.5\textwidth]{Figures/synthetic-300k-alpha22.pdf}
+    \includegraphics[width=0.4\textwidth]{Figures/synthetic-300k-alpha22.pdf}
     \label{f:fsyn300k}
 }\hspace*{-2.5em}
 \subfloat[\small \textsc{enron}]{
-    \includegraphics[width=0.5\textwidth]{Figures/enron-mail.pdf}
+    \includegraphics[width=0.4\textwidth]{Figures/enron-mail.pdf}
     \label{f:fenron}
 }%
 \caption{Maximum label sizes of different threshold values for the   syn300$^{\alpha=2.2}$ and \textsc{enron} data sets.
@@ -108,18 +109,18 @@ Plots for the remaining data sets can be found in Appendix~\ref{App:ExpRes}.
 %Fig.\ \ref{f:fsyn300k} shows the syn300$^{\alpha=2.2}$ dataset, Fig.\ \ref{f:fenron} the \textsc{enron} dataset. 
 The triangles and crosses represent that for the tested threshold the largest label belong to fat, resp. thin node. The star indicate the position of the predicted threshold.}
 \label{fig:findings}%
-\end{figure}
+\end{figure*}
 
 Table~\ref{t:labelsizes}  shows
-%\footnote{ For a full version of the table see Appendix~\ref{Section:TablesInDetail}.}
+%%\footnote{ For a full version of the table see Appendix~\ref{Section:TablesInDetail}.}
  the maximum label sizes achieved using different labeling schemes on our data sets. ``Predicted'' shows the experimental maximum label size obtained by running our scheme on the graphs, ``Empirical'' is the label size attained by using the empirical threshold. The remaining columns show non-experimental upper bounds for different label schemes: ``Bound'' is the upper bound guaranteed in Theorem~\ref{prop:labelingMain}, ``$C$-sparse'' is  the labeling scheme for sparse graphs defined in Theorem~\ref{sparse-label}, ``BD'' is the $\lceil \frac{\Delta}{2} \rceil \lceil \log n\rceil$ bounded degree graph  labeling of~\cite{adjiashvili2014labeling}, and AKTZ is the $\lceil n/2\rceil+6$ general graph  labeling of~\cite{alstrup2014adjacency}.
 Both ``Empirical'' and  ``Bound'' using simple concatenation of labels to represent the fat bit string\footnote{Our labeling schemes introduced in this paper all make use of a succinctly represented ``fat bit string''; for our experiments, we use simple concatenation of labels instead of a bit string; this incurs a $(\log n)/\alpha$ factor on the label size, but simplifies the implementation.}.
  
 
-\begin{table}
+\begin{table*}
 \small
-\begin{tabular}{l|llllll}
-Data set             &Pre. &Emp. & Bound     &$C$-sp. &BD \cite{adjiashvili2014labeling} &AKTZ\\\hline
+\begin{tabular}{cccccccc}
+Data set&Predicted &Empirical & Upper-Bound     &$C$-sparse &Bounded Degree \cite{adjiashvili2014labeling} &AKTZ \cite{alstrup2014adjacency}\\\hline
 s1M$^{\alpha=2.4}$  &$4,841$    &$4,821$    & $25,012 $ &$30,079$     &$426,820$ &$500,006$\\\hline
 s1M$^{\alpha=2.6}$  &$3,361$    &$3,201$    & $15,282 $ &$26,551$     &$121,680$ &$500,006$\\\hline
 s1M$^{\alpha=2.8}$  &$2,101$    &$2,061$    & $10,081 $ &$24,566$     &$16,920$  &$500,006$\\\hline
@@ -131,10 +132,9 @@ s300$^{\alpha=2.8}$ &$1,350$    &$1,312$    & $6,244 $  &$12,849$     &$17,499$ 
 \textsc{enron}      &$2,609$    &$2,577$    & $15,835 $ &$9,735$      &$11,056$  &$18,352$\\\hline
 \textsc{internet}   &$1,426$    &$1,156$    & $8,181 $  &$4,700$      &$17,925$  &$11,487$\\\hline 
 \end{tabular}
-\caption{Label size in bits of labeling schemes. The two leftmost columns are experimental results; the remaining are upper bounds on label sizes computed from the characteristics of the data sets.
-		Pre. stands for predicted, Emp. for empirical, AKTZ for the labeling scheme in \cite{alstrup2014adjacency}.}
+\caption{Label size in bits of labeling schemes. The two leftmost columns are experimental results; the remaining are upper bounds on label sizes computed from the characteristics of the data sets.}
 \label{t:labelsizes}
-\end{table}
+\end{table*}
 
 Our findings are as follows. For Performance Indicator (i), our labeling scheme obtains maximum label size at most 3\% larger than what would have been obtained by using the empirical threshold for all synthetic data sets.
 This is expected---the synthetic data sets are graphs generated specifically to have power-law distributed degree distribution. For the real-world data sets, the labeling scheme

@@ -54,7 +54,7 @@ $$
 fat nodes in $G$. Thus, a table of distances to all fat nodes takes up at most $O(n^{\frac{f(n)}{f(n)+1}} \log f(n))$ bits.
 
 Similarly, for each node $v$ there are at most $(n^{1/(f(n)+1)})^{f(n)} = n^{f(n)/(f(n)+1)}$ nodes at distance at most $f(n)$ away from $v$ where the shortest path consists only of thin nodes. Hence, the associated table of distances
-takes up at most $O(n^{f(n)/(f(n)+1)} \log n)$ bits.
+takes up at most \\$O(n^{f(n)/(f(n)+1)} \log n)$ bits.
 
 In total, each label thus has size at most $O(n^{f(n)/(f(n)+1)} \log n)$ bits.
 \end{proof}
@@ -62,6 +62,6 @@ In total, each label thus has size at most $O(n^{f(n)/(f(n)+1)} \log n)$ bits.
 For $f(n) = \log n$, Lemma \ref{lem:sparse_small_dist} yields a labelling scheme having label size
 at most $O\left(n^{(\log n)/(1+ \log n)} \log\log n \right)$. Unsurprisingly, as we are only considering distances up
 to $f(n)$, this label size is asymptotically smaller than for the labelling
-schemes working for all distances in sparse graphs, e.g. the largest label sizes of \cite{DBLP:journals/corr/GawrychowskiKU15} for sparse graphs is $O((n/\log n) \log\log n)$.
-For power law random graphs with \emph{expected} \textcolor{blue}{JGS: FIXME! Make sure this ties in with Christian's section}, Chung and Lu show in \cite{chung2004average} that, subject to mild conditions, the diameter of power law graphs with $\alpha > 2$ is almost surely $\Theta(\log n)$. We thus expect our labelling scheme to have
+schemes working for all distances in sparse graphs, e.g. the largest label sizes of \cite{DBLP:journals/corr/GawrychowskiKU15} for sparse graphs is $O(n \frac{\log \log n}{ \log n})$.
+For power law random graphs with \emph{expected}, Chung and Lu show in \cite{chung2004average} that, subject to mild conditions, the diameter of power law graphs with $\alpha > 2$ is almost surely $\Theta(\log n)$. We thus expect our labelling scheme to have
 superior performance for such graphs.
