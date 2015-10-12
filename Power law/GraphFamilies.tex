@@ -3,12 +3,15 @@
  \section{Graph Families Related to Power-Law Graphs}\label{Sec:GraphFamilies}
 In this section we define two families of graphs $\PLB$ and $\PLC$ with $\PLC\subseteq\PLB$. Family $\PLB$ is rich enough to contain the graphs whose degree distribution is approximately, or perfectly, power-law distributed, and our upper bound on the label size for our labeling scheme holds for any graph in $\PLB$. Family $\PLC$ is used to show our lower bound. In the following, let $i_1 = \Theta(\sqrt[\alpha]n)$ be the smallest integer such that $\lfloor Cn/i_1^\alpha\rfloor \leq 1$, and let $C'\geq(\frac C{\alpha-1} + \frac{i_1}{\sqrt[\alpha] n} + 5)^{\alpha} + \frac{C}{\alpha - 1}$ be a constant; we shall use $C'$ in the remainder of the paper.
 \begin{definition} \label{def:general-family}
-Let $\alpha > 1$ be a real number. $\PLB$ is the family of graphs $G$ such that if $n = \vert V(G)\vert$ then for all integers $k$ between $\sqrt[\alpha]{n/\log n}$ and $n-1$, $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$.
+Let $\alpha > 1$ be a real number. $\PLB$ is the family of graphs $G$ such that if $n = \vert V(G)\vert$ then for all integers $k$ between  some constant $C_2$ and $n-1$, $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$.
 \end{definition}
 
 The class of $\alpha$\emph{-proper} power law graphs contains graphs where  the number of vertices of degree $k$
 must be $C \frac{n}{k^{\alpha}}$ rounded either up or down and the number of vertices of degree $k$ is non-increasing
 with $k$. Note that the function $k \mapsto  C \frac{1}{k^{\alpha}}$ is strictly decreasing.
+The constant $C_2$ captures the notion of a cutoff as defined in~\cite{clauset2009power} (Sec. 3.1), intuitively requiring that the power law distribution applies only for nodes of degree higher than $C_2$.
+Finally, note that the value of  the cutoff constant $C_2$ can be as high as  $\sqrt[\alpha]{n/\log n}$.
+
  
 \begin{definition}\label{def:proper}
 Let $\alpha > 1$ be a real number. We say that an $n$-vertex graph  $G=(V,E)$ is an  $\alpha$-\emph{proper power-law graph} 
@@ -22,12 +25,6 @@ if
 The family of $\alpha$-proper power-law graphs is denoted $\PLC$.
 \end{definition}
 Note that we allow slightly more noise in the sizes of $V_1$ and $V_2$ than in the remaining sets; without it, it seems tricky to prove a better lower bound than $\Omega(\sqrt[\alpha+1]{n})$ on label sizes.
-
-Other definitions of power-law graphs are given in the literature. One is the shifted power law distribution \cite{Sankowski2016PowerLaw,eom2011characterizing} which is defined as follows. Let $c_1 > 0$ be a constant. A graph $G$ is \emph{power law bounded} for parameters $1 < \alpha = O(1)$ and $t\geq 0$ if for every integer $d\geq 0$, the number of vertices of $G$ of degree in $[2^d,2^{d+1})$ is at most
-\[
-  c_1n(t+1)^{\alpha - 1}\sum_{i = 2^d}^{2^{d+1} - 1}(i+t)^{-\alpha}.
-\]
-As experimentally verified in \cite{Sankowski2016PowerLaw}, the value of $t$ is typically very small. If $t = O(1)$, the bound above becomes $O(n\sum_{i = 2^d}^{2^{d+1} - 1}i^{-\alpha})$. In this case, it is easy to see that our family $\PLB$ is rich enough to contain these power law bounded graphs (for sufficiently big constant $C'$) and so our upper bound also applies to power law bounded graphs. It is possible to extend our upper bound to super-constant $t$ where the bound is stronger the smaller $t$ is; we omit the details. Regarding lower bounds, our family $\PLC$ is restrictive enough so that any lower bound for this family also holds for power law bounded graphs when $t = O(1)$.
 
 We show the following properties of $\PLC$. 
 %The proofs of Propositions~\ref{prop:powerlawsparse} and~\ref{prop:Contained} are in App.~\ref{App:GraphFamilies}.
@@ -87,7 +84,16 @@ Let $k$ be an arbitrary integer between $\sqrt[\alpha]{n/\log n}$ and $n-1$. We 
 \end{align*}
 as desired.
 \end{proof}
-\subsection{Comparison to other suggested models}
+\subsection{Comparison to other suggested deterministic models}
+Numerous probabilistic and  deterministic  definitions of power-law graphs are given in the literature.
+A recent deterministic model, called  shifted power law distribution \cite{eom2011characterizing} has recently proven to capture a vast number of such definitions, both in theory and experimentally in \cite{Sankowski2016PowerLaw}.
+We show that our definition of $\PLB$ contains graphs that adhere to the model, which is defined as follows.
+ Let $c_1 > 0$ be a constant. A graph $G$ is \emph{power law bounded} for parameters $1 < \alpha = O(1)$ and $t\geq 0$ if for every integer $d\geq 0$, the number of vertices of $G$ of degree in $[2^d,2^{d+1})$ is at most
+\[
+  c_1n(t+1)^{\alpha - 1}\sum_{i = 2^d}^{2^{d+1} - 1}(i+t)^{-\alpha}.
+\]
+As experimentally verified in \cite{Sankowski2016PowerLaw}, the value of $t$ is typically very small. If $t = O(1)$, the bound above becomes $O(n\sum_{i = 2^d}^{2^{d+1} - 1}i^{-\alpha})$. In this case, it is easy to see that our family $\PLB$ is rich enough to contain these power law bounded graphs (for sufficiently big constant $C'$) and so our upper bound also applies to power law bounded graphs. It is possible to extend our upper bound to super-constant $t$ where the bound is stronger the smaller $t$ is; we omit the details. Regarding lower bounds, our family $\PLC$ is restrictive enough so that any lower bound for this family also holds for power law bounded graphs when $t = O(1)$.
+
 
 
 
