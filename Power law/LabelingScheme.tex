@@ -1,4 +1,4 @@
-% !TEX root = Main.tex
+% !TEX root = WWW.tex
 
 \section{The Labeling Schemes}
 \label{sec:lab_schem}
@@ -7,11 +7,12 @@ We now construct algorithms for labeling schemes for $c$-sparse graphs and for t
 There is a $\sqrt{2cn\log n} + 2\log n + 1$ labeling scheme for $\Sparse$.
 \end{theorem}
 \begin{proof}
-Let $G=(V,E)$ be an $n$-vertex $c$-sparse graph. Let $f(n)$ be the degree threshold for $n$-vertex graphs; we choose $f(n)$ below. Let $k$ denote the number of fat vertices of $G$, and assign each to each fat vertex a unique identifier between $1$ and $k$. Each thin vertex is given a unique identifier between $k+1$ and $n$.
+Let $G=(V,E)$ be an $n$-vertex $c$-sparse graph. Let $f(n)$ be the degree threshold for $n$-vertex graphs; we choose $f(n)$ below. Let $k$ denote the number of fat vertices of $G$, and assign each fat vertex a unique identifier between $1$ and $k$. Each thin vertex is given a unique identifier between $k+1$ and $n$.
 
 For a $v\in V$, the first part of the label $\la(v)$ is a single bit indicating whether $v$ is thin or fat followed by a string of $\log n$ bits representing its identifier. If $v$ is thin, the last part of $\la(v)$ is the concatenation of the identifiers of the neighbors of $v$. If $v$ is fat, the last part of $\la(v)$ is a \emph{fat bit string} of length $k$ where the $i$th bit is $1$ iff $v$ is incident to the (fat) vertex with identifier $i$.
 
 Decoding a pair $(\la(u),\la(v))$ is now straightforward: if one of the vertices, say $u$, is thin, $u$ and $v$ are adjacent iff the identifier of $v$ is part of the label of $u$. If both $u$ and $v$ are fat then they are adjacent iff the $i$th bit of the fat bit string of $\la(u)$ is $1$ where $i$ is the identifier of $v$.
+Both decoding processes can be computed in $O(\log n)$ time using standard assumptions.
 
 Since $|E|\leq cn$, we have $k\leq 2cn/f(n)$. A fat vertex thus has label size $1 + \log n + k\leq 1 + \log n + 2cn/f(n)$ and a thin vertex has label size at most $1 + \log n + f(n)\log n$. To minimize the maximum possible label size, we solve $2cn/x = x\log n$. Solving this gives $x = \sqrt{2cn/\log n}$ and setting $f(n) = \lceil x\rceil$ gives a label size of at most $1 + \log n + (\sqrt{2cn/\log n} + 1)\log n\leq 1 + 2\log n + \sqrt{2cn\log n}$.
 \end{proof}

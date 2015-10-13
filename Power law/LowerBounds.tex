@@ -28,13 +28,13 @@ Let $v_1,\ldots,v_{i_1}$ be an ordering of $V(H)$, form a set $V_H\subseteq V$ o
 
 We next add additional edges to $G$ in three phases to ensure that it is an $\alpha$-proper power law graph while maintaining the property that $H$ is an induced subgraph of $G$. For $i = 1,\ldots,n$, during the construction of $G$ we say that a vertex $v\in V_i$ is \emph{unprocessed} if its degree in the current graph $G$ is strictly less than $i$. If the degree of $v$ is exactly $i$, $v$ is \emph{processed}.
 
-\paragraph{Phase $1$:}
+\paragraph{Phase $1$}
 Let $V' = V\setminus (V_1\cup V_H)$. Phase $1$ is as follows: while there exists a pair of unprocessed vertices $(u,v)\in V'\times V_H$, add $(u,v)$ to $E$.
 
 When Phase $1$ terminates, $H$ is clearly still an induced subgraph of $G$. Furthermore, all vertices of $V_H$ are processed. To see this, note that the sum of degrees of vertices of $V_H$ when they are all processed is $O(i_1^2) = O(n^{2/\alpha})$ which is $o(n)$ since $\alpha > 2$. Furthermore, prior to Phase $1$, each of the $\Theta(n)$ vertices of $V'$ have degree $0$ and can thus have their degrees increased by at least $1$ before being processed.
 
-\paragraph{Phase $2$:}
-Phase $2$ is as follows: while there exists a pair of unprocessed vertices $(u,v)\in V'\times V'$, add $(u,v)$ to $E$. At termination, at most one vertex of $V'$ remains unprocessed. If such a vertex exists we process it by connecting it to $O(\sqrt[\alpha]n)$ vertices of $V_1$; as $\vert V_1\vert = \Theta(n)$ there are enough vertices of $V_1$ to accomodate this. Furthermore, prior to adding these edges, all vertices of $V_1$ have degree $0$, and hence the bound allowed for vertices of this set is not exceeded.
+\paragraph{Phase $2$}
+While there exists a pair of unprocessed vertices $(u,v)\in V'\times V'$, add $(u,v)$ to $E$. At termination, at most one vertex of $V'$ remains unprocessed. If such a vertex exists we process it by connecting it to $O(\sqrt[\alpha]n)$ vertices of $V_1$; as $\vert V_1\vert = \Theta(n)$ there are enough vertices of $V_1$ to accomodate this. Furthermore, prior to adding these edges, all vertices of $V_1$ have degree $0$, and hence the bound allowed for vertices of this set is not exceeded.
 
-\paragraph{Phase $3$:}
-In Phase $3$, we add edges between pairs of unprocessed vertices of $V_1$ until no such pair exists. If no unprocessed vertices remain we have the desired $\alpha$-proper power law graph $G$. Otherwise, let $w\in V_1$ be the unprocessed vertex of degree $0$. We add a single edge from $w$ to another vertex $w'$ of $V_1$, thereby processing $w$ and moving $w'$ from $V_1$ to $V_2$. Note that the sizes of $V_1$ and $V_2$ are kept in their allowed ranges due to the first two conditions in Definition~\ref{def:proper}. This proves Theorem~\ref{centralLowerBound}.
+\paragraph{Phase $3$}
+We add edges between pairs of unprocessed vertices of $V_1$ until no such pair exists. If no unprocessed vertices remain we have the desired $\alpha$-proper power law graph $G$. Otherwise, let $w\in V_1$ be the unprocessed vertex of degree $0$. We add a single edge from $w$ to another vertex $w'$ of $V_1$, thereby processing $w$ and moving $w'$ from $V_1$ to $V_2$. Note that the sizes of $V_1$ and $V_2$ are kept in their allowed ranges due to the first two conditions in Definition~\ref{def:proper}. This proves Theorem~\ref{centralLowerBound}.
