@@ -32,10 +32,12 @@
 Storing  power-law graphs is a fundamental and  well studied topic.
 We study the storage of  power-law graphs in a distributed manner,  using so called \emph{adjacency labeling schemes}.
 Using those, the vertices of a graph are assigned labels that can singlehandedly determine an adjacency relation between two queried vertices. 
-We  provide a lower bound, and  an almost matching  upper bound for the family of power-law graphs.
-This upper bound is attained by pre-determining a threshold separating nodes of large degree and small degree that attempts to balance the storage required among the vertices. 
-We use this technique further and produce a distance labeling scheme for the family.
-Finally, we validate the quality of our adjacency labeling scheme, with emphasise  on quality of our threshold selection by  an experimental evaluation,  using both synthetic data and real-world networks of small to medium scale. 
+Since the number of nodes of high degree is low in such networks, a natural idea is to make connections between low and high degree nodes the sole responsibility of those with low degree. 
+We show that this simple observation leads to a good labeling scheme for the  family of power-law graphs.
+This is achieved using a careful selection of a \emph{threshold} to distinguish fat from thin nodes.
+Moreover, we show that theoretically this strategy is very close to the best possible. 
+We then   validate the quality of our adjacency labeling scheme, with emphasise  on quality of our threshold selection by  an experimental evaluation,  using both synthetic data and real-world networks.
+Finally, we use the  technique  to produce a  theoretically interesting distance labeling scheme for the family.
 \end{abstract}
 
 \category{H.4}{Information Systems Applications}{Miscellaneous}

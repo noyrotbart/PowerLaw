@@ -141,13 +141,12 @@ results in practice requiring very little space (labels smaller than a kilobyte 
 
 
 \subsection{Future work}
-
-It would be of interest to test the performance of the labeling scheme on more real-world data sets.
-Our labeling schemes are designed for static networks, and it will be interesting to convert it  into a fully dynamic labeling schemes that handles insertions and deletions. We point out that this can be done easily in practice, by allowing re-labeling of fat nodes that become thin, or vice-versa. As such changes can be suppressed, it seems plausible that the label size can be maintained using very few acts of re-labeling.
+Our labeling schemes are designed for static networks, and while it seems not difficult to extend our idea to dynamic networks, an analysis is required to account for the communication and number of re-labels such an extension will incur.
+%deletions    We point out that this can be done easily in practice, by allowing re-labeling of fat nodes that become thin, or vice-versa. As such changes can be suppressed, it seems plausible that the label size can be maintained using very few acts of re-labeling.
 Labeling schemes for power law graphs can likely be devised for the realistic case where the scheme only has incomplete knowledge of the graph, for example when the expected frequency of vertices of each degree is known, but not the exact frequency of each vertex.
 
 As our labeling scheme can be extended to handle directed graphs by using a single bit more per label, it would be interesting to investigate the overhead incurred by distributing the storage of the graph topology to the labels (as per our labeling scheme) compared to the substantial body of work on storing directed power-law graphs directly in main memory (so-called ``web-graph compression'') \cite{guillaume2002efficient,asano2003compact, asano2008efficient,claude2010fast}.
-The  label sizes attained in Sec.~\ref{Sec:Experimental} can be reduced by using the succinctly represented ``fat bit string'' as well as an additional rule that prevents storing  an edge in two  labels; doing so would yield a small multiplicative reduction in label size, making our labeling scheme even more practical. 
 
 Lastly, the entropy of both the Chung-Liu and the BA model was recently determined to be similar. It is thus quite surprising that the label size difference is as large as we have proved. It is thus conjectured that the number of nodes of large label size is very small for this family.
+Closing the  gap of the multiplicative logarithmic factor may be  of interest to the theory community.
 

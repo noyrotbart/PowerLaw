@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.23)  14 OCT 2015 19:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.23)  14 OCT 2015 21:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -347,13 +347,13 @@ LaTeX Font Info:    Try loading font information for T1+aett on input line 30.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Overfull \hbox (1.26794pt too wide) in paragraph at lines 42--43
+Overfull \hbox (1.26794pt too wide) in paragraph at lines 44--45
 \T1/aer/m/n/9 H.4 [\T1/aer/bx/n/9 Information Sys-tems Ap-pli-ca-tions\T1/aer/m
 /n/9 ]: Mis-cel-la-neous;
  []
 
 (./Introduction.tex
-Overfull \hbox (2.13661pt too wide) in paragraph at lines 46--2
+Overfull \hbox (2.13661pt too wide) in paragraph at lines 48--2
 \T1/aer/m/n/9 Labeling schemes, Power-law graphs , Dis-tributed data struc-
  []
 
@@ -385,11 +385,17 @@ Overfull \hbox (14.43144pt too wide) in paragraph at lines 3--3
 []\secfnt GRAPH FAM-I-LIES RE-LATED TO POWER-
  []
 
-[2]
+
+Underfull \vbox (badness 1642) has occurred while \output is active []
+
+ [2]
 Overfull \hbox (7.06264pt too wide) in paragraph at lines 32--33
 []\T1/aer/m/it/9 The max-i-mum de-gree in an $\OML/cmm/m/it/9 n$\T1/aer/m/it/9 
 -vertex graph
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (20.0528pt too wide) in paragraph at lines 58--62
@@ -409,23 +415,23 @@ Overfull \hbox (18.63036pt too wide) in paragraph at lines 84--84
 [] 
  []
 
-
+[3]
 Overfull \hbox (6.38783pt too wide) in paragraph at lines 88--92
 \T1/aer/m/n/9 Numerous prob-a-bilis-tic and de-ter-min-is-tic def-i-ni-tions of
  power-
  []
 
-[3]) (./LabelingScheme.tex
+) (./LabelingScheme.tex
 Overfull \hbox (6.60562pt too wide) in paragraph at lines 31--35
 []$ \T1/aer/m/n/9 then by Def-i-ni-tion 1[] there are at most $\OML/cmm/m/it/9 
 C[]n=f\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 n\OT1/cmr/m/n/9 )[]$
  []
 
-(./ExpectedUpperBound.tex
+(./ExpectedUpperBound.tex [4])) (./ScaleFree.tex) (./LowerBounds.tex [5])
+(./Distance.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4]))
-(./ScaleFree.tex) (./LowerBounds.tex [5]) (./Distance.tex [6]
+ [6]
 Overfull \hbox (5.65428pt too wide) in paragraph at lines 56--58
 []\T1/aer/m/n/9 Similarly, for each node $\OML/cmm/m/it/9 v$ \T1/aer/m/n/9 ther
 e are at most $\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 n[]\OT1/cmr/m/n/9 )[] =
@@ -446,7 +452,11 @@ Overfull \hbox (11.69246pt too wide) in paragraph at lines 51--69
  [][] 
  []
 
-<Figures/synthetic-300k-alpha22.pdf, id=43, 421.575pt x 316.18124pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+<Figures/synthetic-300k-alpha22.pdf, id=47, 421.575pt x 316.18124pt>
 File: Figures/synthetic-300k-alpha22.pdf Graphic file (type pdf)
 
 <use Figures/synthetic-300k-alpha22.pdf>
@@ -454,22 +464,21 @@ Package pdftex.def Info: Figures/synthetic-300k-alpha22.pdf used on input line
 86.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
 
-<Figures/enron-mail.pdf, id=44, 421.575pt x 316.18124pt>
+<Figures/enron-mail.pdf, id=48, 421.575pt x 316.18124pt>
 File: Figures/enron-mail.pdf Graphic file (type pdf)
 
 <use Figures/enron-mail.pdf>
 Package pdftex.def Info: Figures/enron-mail.pdf used on input line 90.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
- [7]
+
 Overfull \hbox (3.97926pt too wide) in paragraph at lines 104--118
 [][] 
  []
 
-[8 <./Figures/synthetic-300k-alpha22.pdf> <./Figures/enron-mail.pdf>])
-(./WWW.bbl
+[8]) (./WWW.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
+ [9 <./Figures/synthetic-300k-alpha22.pdf> <./Figures/enron-mail.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -482,7 +491,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Here is how much of TeX's memory you used:
  4302 strings out of 493117
  61579 string characters out of 6135433
- 140910 words of memory out of 5000000
+ 139910 words of memory out of 5000000
  7618 multiletter control sequences out of 15000+600000
  65073 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -513,7 +522,7 @@ xmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dis
 t/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
 /type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on WWW.pdf (11 pages, 357929 bytes).
+Output written on WWW.pdf (11 pages, 357790 bytes).
 PDF statistics:
  162 PDF objects out of 1000 (max. 8388607)
  116 compressed objects within 2 object streams
