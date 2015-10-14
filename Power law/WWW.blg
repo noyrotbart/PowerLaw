@@ -5,45 +5,45 @@ The style file: abbrv.bst
 Database file #1: lit.bib
 Warning--can't use both volume and number fields in gonzalez2012powergraph
 Warning--can't use both volume and number fields in moon1965minimal
-You've used 57 entries,
+You've used 53 entries,
             2118 wiz_defined-function locations,
-            846 strings with 13555 characters,
-and the built_in function-call counts, 22065 in all, are:
-= -- 2264
-> -- 967
-< -- 27
-+ -- 387
-- -- 322
-* -- 1535
-:= -- 3495
-add.period$ -- 193
-call.type$ -- 57
-change.case$ -- 330
+            815 strings with 12928 characters,
+and the built_in function-call counts, 20719 in all, are:
+= -- 2135
+> -- 880
+< -- 28
++ -- 352
+- -- 292
+* -- 1405
+:= -- 3248
+add.period$ -- 182
+call.type$ -- 53
+change.case$ -- 303
 chr.to.int$ -- 0
-cite$ -- 59
-duplicate$ -- 890
-empty$ -- 1743
-format.name$ -- 322
-if$ -- 4767
+cite$ -- 55
+duplicate$ -- 858
+empty$ -- 1659
+format.name$ -- 292
+if$ -- 4518
 int.to.chr$ -- 0
-int.to.str$ -- 57
-missing$ -- 58
-newline$ -- 289
-num.names$ -- 114
-pop$ -- 349
+int.to.str$ -- 53
+missing$ -- 54
+newline$ -- 269
+num.names$ -- 106
+pop$ -- 338
 preamble$ -- 1
-purify$ -- 275
+purify$ -- 252
 quote$ -- 0
-skip$ -- 639
+skip$ -- 621
 stack$ -- 0
-substring$ -- 1476
-swap$ -- 256
-text.length$ -- 27
+substring$ -- 1387
+swap$ -- 263
+text.length$ -- 28
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 224
+type$ -- 208
 warning$ -- 2
-while$ -- 224
-width$ -- 59
-write$ -- 657
+while$ -- 210
+width$ -- 55
+write$ -- 612
 (There were 2 warnings)
