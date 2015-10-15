@@ -102,7 +102,7 @@ Both ``Empirical'' and  ``Bound'' using simple concatenation of labels to repres
 \begin{table*}
 \small
 \begin{tabular}{ccccccccc}
-Data set&Predicted &Empirical & Label Diff. & Threshold Diff.   & Upper-Bound     &$C$-sparse &Bounded Degree \cite{adjiashvili2014labeling} &AKTZ \cite{alstrup2014adjacency}\\\hline
+Data set&Predicted &Empirical & Label Diff. & Threshold Diff.   & Upper-Bound     &$c$-sparse &Bounded Degree \cite{adjiashvili2014labeling} &AKTZ \cite{alstrup2014adjacency}\\\hline
 s1M$^{\alpha=2.4}$  &$4,841$    &$4,821$  & $0.4\%$ & $0.002\%$  & $25,012 $ &$30,079$     &$426,820$ &$500,006$\\\hline
 s1M$^{\alpha=2.6}$  &$3,361$    &$3,201$   & $4.8\%$ & $0.08\%$  & $15,282 $ &$26,551$     &$121,680$ &$500,006$\\\hline
 s1M$^{\alpha=2.8}$  &$2,101$    &$2,061$    & $2\%$ & $0.17\%$  & $10,081 $ &$24,566$     &$16,920$  &$500,006$\\\hline
@@ -147,6 +147,9 @@ Labeling schemes for power law graphs can likely be devised for the realistic ca
 
 As our labeling scheme can be extended to handle directed graphs by using a single bit more per label, it would be interesting to investigate the overhead incurred by distributing the storage of the graph topology to the labels (as per our labeling scheme) compared to the substantial body of work on storing directed power-law graphs directly in main memory (so-called ``web-graph compression'') \cite{guillaume2002efficient,asano2003compact, asano2008efficient,claude2010fast}.
 
-Lastly, the entropy of both the Chung-Liu and the BA model was recently determined to be similar. It is thus quite surprising that the label size difference is as large as we have proved. It is thus conjectured that the number of nodes of large label size is very small for this family.
-Closing the  gap of the multiplicative logarithmic factor may be  of interest to the theory community.
+The entropy of both the Chung-Liu and the BA model was recently determined to be similar. It is thus quite surprising that the label size difference is as large as we have proved. It is thus conjectured that the number of nodes of large label size is very small for this family.
+Closing the  gap of the multiplicative logarithmic factor may be  of interest to the theory community. A much more interesting gap is that of distance.
+As we have seen, there is a large gap between labeling schemes for short distance and adjacency for power-law (and sparse) graphs.
+This gap effectively deemed the distance labels uninteresting for practical applications.
+
 
