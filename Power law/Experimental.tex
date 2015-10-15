@@ -5,8 +5,7 @@ We now  perform an experimental evaluation of our labeling scheme on a number of
 The source code for our experiments can be found at:\\ \url{www.diku.dk/\~simonsen/suppmat/podc15/powerlaw.zip}
 
 \subsection{Experimental Framework}\label{Sec:Experimental}
-\paragraph{Performance Indicators}
-Recall that our labeling scheme separates  the nodes according to a selected threshold from the range $0 \dots n$, which we select as a function of  the power-law parameter $\alpha$.
+Recall that our labeling scheme separates  the nodes according to a selected threshold from the range $0 \dots \Delta$,\footnote{Recall that $\Delta$ is the graph's maximum degree.} which we select as a function of  the power-law parameter $\alpha$.
 The following observation is the key to assess our labeling scheme's quality.
 Suppose we chose a threshold  $n_0$ for a graph $G$, and call  the maximum label size of a thin node, $T(n_0)$ and the maximum label size of a fat node $F(n_0)$.  The size of our labeling scheme for the graph $G$ is the larger of these two values.
 The critical observation is that, as our selection of threshold $n_0$ increases, $T(n_0)$ monotonically increases and  $F(n_0)$ monotonically decreases.
@@ -16,17 +15,18 @@ In the remainder of this section we call such threshold the \emph{empirical} thr
 In contrast, we set the threshold in our labeling scheme as $\lceil \sqrt[\alpha]{C n/(\alpha-1)} \rceil$, which we denote as the \emph{predicted} threshold.
 It is an approximation to the theoretically optimal threshold choice when degree distributions follow the power-law curve $k\mapsto Cn/k^\alpha$ perfectly, using integration as used in Proposition~\ref{prop:Contained}.
 
-%We set up the following performance indicators to measure (i) the difference in label size with predicted and empirical threshold, and (ii) the label size obtained by our labeling scheme on several data sets, compared to other labeling schemes.
-
-\emph{Performance Indicator i:} We measure the label sizes for the labeling schemes with the predicted and empirical thresholds. We interpret a small relative difference between these label sizes means that the predicted threshold can achieve small label sizes without examining the global properties of the network other than the power-law parameter $\alpha$. 
+Note that a slow encoder can always arrive at the empirical threshold by a binary search which would incur an $O(\log n)$ factor on its running time. 
+\paragraph{Performance Indicators}
+We use the following to determine the quality of our labeling scheme:
+\emph{Performance Indicator i:} We measure the difference in label sizes using the predicted and empirical thresholds. 
+ We also measure  the difference between the predicted and empirical threshold in percentages with respect to the maximum degree.
+We interpret a small relative differences in those as an evidence  that the predicted threshold can achieve small label sizes without examining the global properties of the network other than the power-law parameter $\alpha$. 
+This best captures how close our ''guess" of the right threshold was, and will, in practice, allow for a faster encoding time.
  
 \emph{Performance Indicator ii:} We  compare the label sizes attained by our labeling schemes to other labeling schemes, namely state-of-the art labeling schemes for the classes of bounded-degree, sparse and general graphs using the  labeling schemes suggested in \cite{adjiashvili2014labeling},  Theorem~\ref{sparse-label} and \cite{alstrup2014adjacency}.  We interpret small label sizes for our scheme, especially in comparison with ``small'' classes like the class of bounded-degree graphs, as a sign that our labeling scheme efficiently utilizing  the extra information about the graphs: namely that their degree distribution is reasonably well-approximated by a power-law.
 
 
-\emph{Performance Indicator iii:}
-The threshold can be selected from $0$ to the maximum degree.
- We measure  difference between the predicted and empirical threshold in percentages with respect to the maximum degree.
-This best captures how close our ''guess" of the right threshold was.
+
  
  %\footnote{Additional notes on these values are found in Appendix~\ref{Section:TotalStorage}.
 
