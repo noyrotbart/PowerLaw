@@ -18,7 +18,7 @@ While it is not known how to compute the   arboricity of a graph efficiently, it
 We can thus decompose the graph to $2\mathcal{E}$ forests in near linear time and label each forest using the recent $\log n + O(1)$ labeling scheme for trees~\cite{alstrup2015optimal},  and achieve a $2\mathcal{E} (\log n+O(1))$ labeling scheme for $G$.
 \end{proof}
 
-Note that if the encoder operates at the same time as the creation of the graph, Proposition \ref{Th:baLabeling} can be strengthened to yield  an $m \log n$ labeling scheme: simply store the  
- identifiers of the $m$ vertices attached with every vertex insertion.
-Theorem~\ref{centralLowerBound} and Proposition \ref{Th:baLabeling} strongly suggest that, for each sufficiently large $n$, the number of  power-law graphs with $n$ vertices  is vastly larger than the number of graphs with $n$ vertices created by the  BA model.  In contrast, other generative models such as   Waxman~\cite{waxman1988routing}, N-level Hierarchical~\cite{calvert1997modeling}.
+If the encoder operates at the same time as the creation of the graph, Proposition \ref{Th:baLabeling} can be strengthened to yield  an $m \log n$ labeling scheme, by   storing the  identifiers of the $\epsilon$ vertices to the node inserted.
+Theorem~\ref{centralLowerBound} and Proposition \ref{Th:baLabeling} strongly suggest that local properties of a power-law graph  are very different from those  of  a randomly generated graph using the BA model.
+  In contrast, other generative models such as   Waxman~\cite{waxman1988routing}, N-level Hierarchical~\cite{calvert1997modeling}.
 and Chung's~\cite{chung2006complex} (Chapter 3)  do not seem to have an obvious smaller label size than the one in Proposition~\ref{prop:labelingMain}.

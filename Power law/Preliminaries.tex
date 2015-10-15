@@ -1,4 +1,4 @@
-% !TEX root = Main.tex
+% !TEX root = Www.tex
 
 \section{Preliminaries}
 Throughout the paper, we consider $n$-vertex, undirected, finite graphs.
@@ -21,6 +21,9 @@ defined by $\mathrm{ddist}_G (k) := \frac{\vert V_k \vert} {n}$.
 
 We treat the family of \emph{power-law} graphs, which is defined in the literature as the class of $n$ vertex graphs $G$ such that $\mathrm{ddist}_G(k)$
 is proportional to $k^{-\alpha}$ for some real number $\alpha > 1$. Ideally, and ignoring rounding, we would like $\mathrm{ddist}_G(k) = Ck^{-\alpha}$ for all $k$ for constant $C$. As the degree distribution of a graph must be a probability distribution, we have $\sum_{k=1}^\infty C k^{-\alpha} = C \sum_{k=1}^\infty k^{-\alpha} = 1$, hence  $C = 1/\zeta(\alpha)$ where $\zeta$ is the Riemann zeta function. 
+
+
+
 %As the literature on power-law graphs usually allows some noise and deviation from the ``pure'' power-law distribution,  when devising our labeling scheme we consider a larger class of graphs, $\PLB$, that allows both a constant
 %factor deviation from each point on the curve $k\mapsto Ck^{-\alpha}$ and an arbitrarily large deviation for small values of $k$. The class $\PLB$ subsumes the above ``ideal'' class $\PL$, whence our upper bounds on the size of labeling schemes hold for both $\PLB$ and $\PL$. Conversely, our lower bounds are proved on a very restrictive subclass $\PLC$ of $\PL$ whence the lower bounds hold for both $\PLC$ and $\PL$.
 

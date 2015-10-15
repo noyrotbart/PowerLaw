@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.23)  15 OCT 2015 11:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.23)  15 OCT 2015 13:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -380,20 +380,31 @@ Overfull \hbox (4.3694pt too wide) in paragraph at lines 47--50
 
 Underfull \vbox (badness 5460) has occurred while \output is active []
 
-)
-(./Preliminaries.tex) (./GraphFamilies.tex
+
+<Figures/Principle1.pdf, id=16, 586.491pt x 335.70491pt>
+File: Figures/Principle1.pdf Graphic file (type pdf)
+
+<use Figures/Principle1.pdf>
+Package pdftex.def Info: Figures/Principle1.pdf used on input line 60.
+(pdftex.def)             Requested size: 100.79846pt x 57.69402pt.
+
+<Figures/Principle2.pdf, id=17, 585.29376pt x 359.91664pt>
+File: Figures/Principle2.pdf Graphic file (type pdf)
+
+<use Figures/Principle2.pdf>
+Package pdftex.def Info: Figures/Principle2.pdf used on input line 64.
+(pdftex.def)             Requested size: 100.79846pt x 61.98134pt.
+) (./Preliminaries.tex [2 <./Figures/Principle1.pdf> <./Figures/Principle2.pdf>
+]) (./GraphFamilies.tex
 Overfull \hbox (14.43144pt too wide) in paragraph at lines 3--3
 []\secfnt GRAPH FAM-I-LIES RE-LATED TO POWER-
  []
 
-[2]
+
 Overfull \hbox (7.06264pt too wide) in paragraph at lines 32--33
 []\T1/aer/m/it/9 The max-i-mum de-gree in an $\OML/cmm/m/it/9 n$\T1/aer/m/it/9 
 -vertex graph
  []
-
-
-Underfull \vbox (badness 6825) has occurred while \output is active []
 
 
 Overfull \hbox (20.0528pt too wide) in paragraph at lines 58--62
@@ -408,12 +419,12 @@ r of edges is at most $[] [][] \OML/cmm/m/it/9 k\OMS/cmsy/m/n/9 j\OML/cmm/m/it/
 9 V[]\OMS/cmsy/m/n/9 j$\T1/aer/m/n/9 .
  []
 
-
+[3]
 Overfull \hbox (18.63036pt too wide) in paragraph at lines 84--84
 [] 
  []
 
-[3]
+
 Overfull \hbox (6.38783pt too wide) in paragraph at lines 88--92
 \T1/aer/m/n/9 Numerous prob-a-bilis-tic and de-ter-min-is-tic def-i-ni-tions of
  power-
@@ -454,7 +465,7 @@ Overfull \hbox (11.69246pt too wide) in paragraph at lines 51--69
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-<Figures/synthetic-300k-alpha22.pdf, id=47, 421.575pt x 316.18124pt>
+<Figures/synthetic-300k-alpha22.pdf, id=73, 421.575pt x 316.18124pt>
 File: Figures/synthetic-300k-alpha22.pdf Graphic file (type pdf)
 
 <use Figures/synthetic-300k-alpha22.pdf>
@@ -462,7 +473,7 @@ Package pdftex.def Info: Figures/synthetic-300k-alpha22.pdf used on input line
 86.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
 
-<Figures/enron-mail.pdf, id=48, 421.575pt x 316.18124pt>
+<Figures/enron-mail.pdf, id=74, 421.575pt x 316.18124pt>
 File: Figures/enron-mail.pdf Graphic file (type pdf)
 
 <use Figures/enron-mail.pdf>
@@ -487,10 +498,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ] (./WWW.aux) ) 
 Here is how much of TeX's memory you used:
- 4302 strings out of 493117
- 61579 string characters out of 6135433
- 140910 words of memory out of 5000000
- 7618 multiletter control sequences out of 15000+600000
+ 4317 strings out of 493117
+ 61896 string characters out of 6135433
+ 138956 words of memory out of 5000000
+ 7631 multiletter control sequences out of 15000+600000
  65073 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,15n,47p,903b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -520,10 +531,10 @@ xmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dis
 t/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
 /type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on WWW.pdf (11 pages, 358439 bytes).
+Output written on WWW.pdf (11 pages, 379007 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
+ 188 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
