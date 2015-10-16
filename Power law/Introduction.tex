@@ -8,14 +8,6 @@ Another approach is to disseminate the structural information of the graph to it
 
 We posit that a useful tool for such a peer-to-peer strategy is the notion of a \emph{labeling scheme}: an algorithm that assigns a bit string--a \emph{label}--to each vertex so that a query between any two vertices can be deduced solely from their respective labels. 
 Labeling schemes are extremely well-studied in the algorithmic literature~\cite{katz2004labeling,gavoillea2004distance,brady2006compact,gavoille2007shorter,korman2007compact,Korman07,korman2007general,caminiti2008engineering,dahlgaard2014dynamic,rotbart2014evaluation,alstrup2014adjacency}; the main objective is to minimize the \emph{maximum label size}: the maximum number of bits used in a label of any vertex. Among applications for labeling schemes are  XML search engines~\cite{cohen2010labeling}, mapping services~\cite{abraham2011hub}, and internet routing~\cite{krioukov2004compact}.
-Adjacency labeling schemes for  numerous important graph families are by now well understood. 
-general graphs  require a label size of $n/2+O(1)$~\cite{moon1965minimal, alstrup2014adjacency}, while 
-trees, planar graphs, and bounded degree graphs enjoy labels of logarithmic size~\cite{Alstrup02, gavoille2007shorter, adjiashvili2014labeling}. 
-
-Routing labeling schemes for power-law graphs  have been investigated by Brady and Cowen~\cite{brady2006compact}, and by Chen et al.~\cite{chen2012compact}. Labeling schemes for other properties than adjacency have been investigated for various classes of graphs, e.g., distance~\cite{gavoillea2004distance}, and flow~\cite{katz2004labeling}. 
-Dynamic labeling schemes were studied by Korman and Peleg~\cite{korman2007compact,Korman07,korman2007general} and recently by Dahlgaard et. al~\cite{dahlgaard2014dynamic}.
-Experimental evaluation for some labeling schemes for various properties on general graphs have been performed by Caminiti et.~al~\cite{caminiti2008engineering}, Fischer~\cite{fischer2009short} and Rotbart et.~al~\cite{rotbart2014evaluation}.
-
 
 One class of graphs extensively used for modelling real-world networks is \emph{power-law graphs}: roughly, $n$-vertex graphs where the number of vertices of degree $k$ is proportional to $n/k^{\alpha}$ for some positive $\alpha$. Power-law graphs (also called scale-free graphs in the literature) have been used to model the Internet AS-level graph \cite{DBLP:journals/ton/SiganosFFF03,DBLP:conf/podc/AkellaCKS03}, and many other types of network (see, e.g., \cite{mitzenmacher2004brief,clauset2009power} for overviews). 
 The adequacy of fit of power-law graph models to actual data, as well as the empirical correctness of the conjectured mechanisms giving rise to power-law behaviour, have been subject to criticism (see, e.g., \cite{DBLP:journals/jacm/AchlioptasCKM09,clauset2009power}), but 
@@ -63,6 +55,16 @@ Using both real-world (23K-3M vertices) and synthetic (300K-1M vertices) data se
 }%(
 \caption{Two illustrations of the main idea: Figure (a) demonstrates the threshold assignment, figure (b) demonstrates the label assignment, in which fat (black) nodes do not store adjacency to thin (white) nodes.}
 \end{figure}
+
+\subsection{Related work}
+Adjacency labeling schemes for  numerous important graph families are by now well understood. 
+general graphs  require a label size of $n/2+O(1)$~\cite{moon1965minimal, alstrup2014adjacency}, while 
+trees, planar graphs, and bounded degree graphs enjoy labels of logarithmic size~\cite{Alstrup02, gavoille2007shorter, adjiashvili2014labeling}. 
+Routing labeling schemes for power-law graphs  have been investigated by Brady and Cowen~\cite{brady2006compact}, and by Chen et al.~\cite{chen2012compact}. Labeling schemes for other properties than adjacency have been investigated for various classes of graphs, e.g., distance~\cite{gavoillea2004distance}, and flow~\cite{katz2004labeling}. 
+Dynamic labeling schemes were studied by Korman and Peleg~\cite{korman2007compact,Korman07,korman2007general} and recently by Dahlgaard et. al~\cite{dahlgaard2014dynamic}.
+Experimental evaluation for some labeling schemes for various properties on general graphs have been performed by Caminiti et.~al~\cite{caminiti2008engineering}, Fischer~\cite{fischer2009short} and Rotbart et.~al~\cite{rotbart2014evaluation}.
+
+In the context of distributed graph computing systems,  a somewhat related paradigm of computation is the vertex centric computing model "think like a vertex". In this model  each vertex exchanges messages  only with nearby vertices, such that the locality and simplifies the design and implementation of such systems. Among the numerous systems proposed are Pregel~\cite{malewicz2010pregel}, Power-Graph~\cite{gonzalez2012powergraph} and GraphLab~\cite{low2012distributed}. For a recent survey on the topic see ~\cite{mccunethinking2015}.
 
 
 

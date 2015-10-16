@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.23)  16 OCT 2015 14:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.23)  16 OCT 2015 14:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -358,7 +358,7 @@ Overfull \hbox (2.13661pt too wide) in paragraph at lines 54--2
  []
 
 
-Overfull \hbox (3.38988pt too wide) in paragraph at lines 20--25
+Overfull \hbox (3.38988pt too wide) in paragraph at lines 12--17
 \T1/aer/m/n/9 net-works is \T1/aer/m/it/9 power-law graphs\T1/aer/m/n/9 : rough
 ly, $\OML/cmm/m/it/9 n$\T1/aer/m/n/9 -vertex graphs where
  []
@@ -367,32 +367,37 @@ ly, $\OML/cmm/m/it/9 n$\T1/aer/m/n/9 -vertex graphs where
 
 
 ]
-Overfull \hbox (1.09473pt too wide) in paragraph at lines 40--43
+Overfull \hbox (1.09473pt too wide) in paragraph at lines 32--35
 \subsecfnt scheme[]. \T1/aer/m/n/9 We use our re-stric-tive sub-class of power-
 law graphs
  []
 
 
-Overfull \hbox (5.54124pt too wide) in paragraph at lines 49--52
+Overfull \hbox (5.54124pt too wide) in paragraph at lines 41--44
 \T1/aer/m/n/9 Us-ing both real-world (23K-3M ver-tices) and syn-thetic (300K-
  []
 
-<Figures/Principle1.pdf, id=15, 586.491pt x 335.70491pt>
+<Figures/Principle1.pdf, id=16, 586.491pt x 335.70491pt>
 File: Figures/Principle1.pdf Graphic file (type pdf)
 
 <use Figures/Principle1.pdf>
-Package pdftex.def Info: Figures/Principle1.pdf used on input line 59.
+Package pdftex.def Info: Figures/Principle1.pdf used on input line 51.
 (pdftex.def)             Requested size: 115.91785pt x 66.35094pt.
 
-<Figures/Principle2.pdf, id=16, 585.29376pt x 359.91664pt>
+<Figures/Principle2.pdf, id=17, 585.29376pt x 359.91664pt>
 File: Figures/Principle2.pdf Graphic file (type pdf)
 
 <use Figures/Principle2.pdf>
-Package pdftex.def Info: Figures/Principle2.pdf used on input line 63.
+Package pdftex.def Info: Figures/Principle2.pdf used on input line 55.
 (pdftex.def)             Requested size: 115.91785pt x 71.27908pt.
 
-Overfull \hbox (7.22502pt too wide) in paragraph at lines 59--64
+Overfull \hbox (7.22502pt too wide) in paragraph at lines 51--56
  [][][] 
+ []
+
+
+Overfull \hbox (8.29434pt too wide) in paragraph at lines 67--68
+\T1/aer/m/n/9 pro-posed are Pregel [43], Power-Graph [33] and GraphLab [42].
  []
 
 ) (./Preliminaries.tex) (./GraphFamilies.tex [2 <./Figures/Principle1.pdf> <./F
@@ -409,12 +414,12 @@ r of edges is at most $[] [][] \OML/cmm/m/it/9 k\OMS/cmsy/m/n/9 j\OML/cmm/m/it/
 9 V[]\OMS/cmsy/m/n/9 j$\T1/aer/m/n/9 .
  []
 
-
+[3]
 Overfull \hbox (18.63036pt too wide) in paragraph at lines 96--96
 [] 
  []
 
-[3]
+
 Overfull \hbox (6.38783pt too wide) in paragraph at lines 101--105
 \T1/aer/m/n/9 Numerous prob-a-bilis-tic and de-ter-min-is-tic def-i-ni-tions of
  power-
@@ -473,54 +478,57 @@ Overfull \hbox (1.04263pt too wide) in paragraph at lines 106--120
 [][] 
  []
 
-[8]) (./WWW.bbl
+
+Underfull \vbox (badness 1337) has occurred while \output is active []
+
+ [8])
+[9 <./Figures/synthetic-300k-alpha22.pdf> <./Figures/enron-mail.pdf>]
+(./WWW.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9 <./Figures/synthetic-300k-alpha22.pdf> <./Figures/enron-mail.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10])
-[11
+ [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] (./WWW.aux) ) 
+) [11]
+(./WWW.aux) ) 
 Here is how much of TeX's memory you used:
- 4318 strings out of 493117
- 61881 string characters out of 6135433
- 142989 words of memory out of 5000000
- 7632 multiletter control sequences out of 15000+600000
+ 4321 strings out of 493117
+ 61941 string characters out of 6135433
+ 139001 words of memory out of 5000000
+ 7635 multiletter control sequences out of 15000+600000
  65073 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,15n,47p,903b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
-texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2014/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2014/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2014/texmf-dist
-/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2014/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2014/te
-xmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
-/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw
-/times/utmri8a.pfb>
-Output written on WWW.pdf (11 pages, 381718 bytes).
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2014/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2014/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2014/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2014/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2014/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on WWW.pdf (11 pages, 383512 bytes).
 PDF statistics:
  188 PDF objects out of 1000 (max. 8388607)
  136 compressed objects within 2 object streams
