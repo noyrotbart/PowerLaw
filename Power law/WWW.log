@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.17)  16 OCT 2015 15:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.17)  16 OCT 2015 16:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -309,110 +309,6 @@ Overfull \hbox (2.13661pt too wide) in paragraph at lines 54--2
  []
 
 
-LaTeX Warning: Citation `boldi2004webgraph' on page \thepage  undefined on inpu
-t line 6.
-
-
-LaTeX Warning: Citation `boldi2011layered' on page \thepage  undefined on input
- line 6.
-
-
-LaTeX Warning: Citation `gonzalez2012powergraph' on page \thepage  undefined on
- input line 6.
-
-
-LaTeX Warning: Citation `stanton2012streaming' on page \thepage  undefined on i
-nput line 6.
-
-
-LaTeX Warning: Citation `xie2014distributed' on page \thepage  undefined on inp
-ut line 6.
-
-
-LaTeX Warning: Citation `buchegger2009peerson' on page \thepage  undefined on i
-nput line 7.
-
-
-LaTeX Warning: Citation `katz2004labeling' on page \thepage  undefined on input
- line 10.
-
-
-LaTeX Warning: Citation `gavoillea2004distance' on page \thepage  undefined on 
-input line 10.
-
-
-LaTeX Warning: Citation `brady2006compact' on page \thepage  undefined on input
- line 10.
-
-
-LaTeX Warning: Citation `gavoille2007shorter' on page \thepage  undefined on in
-put line 10.
-
-
-LaTeX Warning: Citation `korman2007compact' on page \thepage  undefined on inpu
-t line 10.
-
-
-LaTeX Warning: Citation `Korman07' on page \thepage  undefined on input line 10
-.
-
-
-LaTeX Warning: Citation `korman2007general' on page \thepage  undefined on inpu
-t line 10.
-
-
-LaTeX Warning: Citation `caminiti2008engineering' on page \thepage  undefined o
-n input line 10.
-
-
-LaTeX Warning: Citation `dahlgaard2014dynamic' on page \thepage  undefined on i
-nput line 10.
-
-
-LaTeX Warning: Citation `rotbart2014evaluation' on page \thepage  undefined on 
-input line 10.
-
-
-LaTeX Warning: Citation `alstrup2014adjacency' on page \thepage  undefined on i
-nput line 10.
-
-
-LaTeX Warning: Citation `cohen2010labeling' on page \thepage  undefined on inpu
-t line 10.
-
-
-LaTeX Warning: Citation `abraham2011hub' on page \thepage  undefined on input l
-ine 10.
-
-
-LaTeX Warning: Citation `krioukov2004compact' on page \thepage  undefined on in
-put line 10.
-
-
-LaTeX Warning: Citation `DBLP:journals/ton/SiganosFFF03' on page \thepage  unde
-fined on input line 12.
-
-
-LaTeX Warning: Citation `DBLP:conf/podc/AkellaCKS03' on page \thepage  undefine
-d on input line 12.
-
-
-LaTeX Warning: Citation `mitzenmacher2004brief' on page \thepage  undefined on 
-input line 12.
-
-
-LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
- line 12.
-
-
-LaTeX Warning: Citation `DBLP:journals/jacm/AchlioptasCKM09' on page \thepage  
-undefined on input line 13.
-
-
-LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
- line 13.
-
-
 Overfull \hbox (3.38988pt too wide) in paragraph at lines 12--17
 \T1/aer/m/n/9 net-works is \T1/aer/m/it/9 power-law graphs\T1/aer/m/n/9 : rough
 ly, $\OML/cmm/m/it/9 n$\T1/aer/m/n/9 -vertex graphs where
@@ -451,76 +347,8 @@ Overfull \hbox (7.22502pt too wide) in paragraph at lines 51--56
  []
 
 
-LaTeX Warning: Citation `moon1965minimal' on page \thepage  undefined on input 
-line 61.
-
-
-LaTeX Warning: Citation `alstrup2014adjacency' on page \thepage  undefined on i
-nput line 61.
-
-
-LaTeX Warning: Citation `Alstrup02' on page \thepage  undefined on input line 6
-2.
-
-
-LaTeX Warning: Citation `gavoille2007shorter' on page \thepage  undefined on in
-put line 62.
-
-
-LaTeX Warning: Citation `adjiashvili2014labeling' on page \thepage  undefined o
-n input line 62.
-
-
-LaTeX Warning: Citation `brady2006compact' on page \thepage  undefined on input
- line 64.
-
-
-LaTeX Warning: Citation `chen2012compact' on page \thepage  undefined on input 
-line 64.
-
-
-LaTeX Warning: Citation `gavoillea2004distance' on page \thepage  undefined on 
-input line 64.
-
-
-LaTeX Warning: Citation `katz2004labeling' on page \thepage  undefined on input
- line 64.
-
-
-LaTeX Warning: Citation `korman2007compact' on page \thepage  undefined on inpu
-t line 65.
-
-
-LaTeX Warning: Citation `Korman07' on page \thepage  undefined on input line 65
-.
-
-
-LaTeX Warning: Citation `korman2007general' on page \thepage  undefined on inpu
-t line 65.
-
-
-LaTeX Warning: Citation `dahlgaard2014dynamic' on page \thepage  undefined on i
-nput line 65.
-
-
-LaTeX Warning: Citation `caminiti2008engineering' on page \thepage  undefined o
-n input line 66.
-
-
-LaTeX Warning: Citation `fischer2009short' on page \thepage  undefined on input
- line 66.
-
-
-LaTeX Warning: Citation `rotbart2014evaluation' on page \thepage  undefined on 
-input line 66.
-
-
 LaTeX Warning: Citation `malewicz2010pregel' on page \thepage  undefined on inp
 ut line 68.
-
-
-LaTeX Warning: Citation `gonzalez2012powergraph' on page \thepage  undefined on
- input line 68.
 
 
 LaTeX Warning: Citation `low2012distributed' on page \thepage  undefined on inp
@@ -532,11 +360,6 @@ ut line 68.
 
 ) (./Preliminaries.tex) (./GraphFamilies.tex [2 <./Figures/Principle1.pdf> <./F
 igures/Principle2.pdf>]
-
-LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
- line 18.
-
-
 Overfull \hbox (7.06264pt too wide) in paragraph at lines 43--44
 []\T1/aer/m/it/9 The max-i-mum de-gree in an $\OML/cmm/m/it/9 n$\T1/aer/m/it/9 
 -vertex graph
@@ -555,22 +378,10 @@ Overfull \hbox (18.63036pt too wide) in paragraph at lines 96--96
  []
 
 
-LaTeX Warning: Citation `eom2011characterizing' on page \thepage  undefined on 
-input line 102.
-
-
-LaTeX Warning: Citation `Sankowski2016PowerLaw' on page \thepage  undefined on 
-input line 102.
-
-
 Overfull \hbox (6.38783pt too wide) in paragraph at lines 101--105
 \T1/aer/m/n/9 Numerous prob-a-bilis-tic and de-ter-min-is-tic def-i-ni-tions of
  power-
  []
-
-
-LaTeX Warning: Citation `Sankowski2016PowerLaw' on page \thepage  undefined on 
-input line 108.
 
 ) (./LabelingScheme.tex
 Overfull \hbox (6.23996pt too wide) in paragraph at lines 31--35
@@ -578,79 +389,11 @@ Overfull \hbox (6.23996pt too wide) in paragraph at lines 31--35
 C[]n=^^\\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 n\OT1/cmr/m/n/9 )[]$
  []
 
-(./ExpectedUpperBound.tex
-
-LaTeX Warning: Citation `barabasi1999emergence' on page \thepage  undefined on 
-input line 3.
-
-[4]
-
-LaTeX Warning: Citation `mitzenmacher2004brief' on page \thepage  undefined on 
-input line 5.
-
-)) (./ScaleFree.tex
-
-LaTeX Warning: Citation `barabasi1999emergence' on page \thepage  undefined on 
-input line 9.
-
-
-LaTeX Warning: Citation `DBLP:journals/rsa/BollobasRST01' on page \thepage  und
-efined on input line 10.
-
-
-LaTeX Warning: Citation `goel2006bounded' on page \thepage  undefined on input 
-line 11.
-
-
-LaTeX Warning: Citation `kowalik2006approximation' on page \thepage  undefined 
-on input line 20.
-
-
-LaTeX Warning: Citation `arikati1997efficient' on page \thepage  undefined on i
-nput line 20.
-
-
-LaTeX Warning: Citation `alstrup2015optimal' on page \thepage  undefined on inp
-ut line 21.
-
-
-LaTeX Warning: Citation `waxman1988routing' on page \thepage  undefined on inpu
-t line 26.
-
-
-LaTeX Warning: Citation `calvert1997modeling' on page \thepage  undefined on in
-put line 26.
-
-
-LaTeX Warning: Citation `chung2006complex' on page \thepage  undefined on input
- line 27.
-
-) (./LowerBounds.tex
-
-LaTeX Warning: Citation `moon1965minimal' on page \thepage  undefined on input 
-line 5.
-
-
-LaTeX Warning: Citation `spinrad2003efficient' on page \thepage  undefined on i
-nput line 7.
-
-[5]) (./Distance.tex
+(./ExpectedUpperBound.tex [4])) (./ScaleFree.tex) (./LowerBounds.tex [5])
+(./Distance.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Warning: Citation `DBLP:journals/corr/AlstrupDKP15' on page \thepage  und
-efined on input line 16.
-
-
-LaTeX Warning: Citation `DBLP:journals/corr/GawrychowskiKU15' on page \thepage 
- undefined on input line 18.
-
-
-LaTeX Warning: Citation `Gavoille2001' on page \thepage  undefined on input lin
-e 19.
-
-[6]
+ [6]
 Overfull \hbox (20.11317pt too wide) in paragraph at lines 60--62
 []\T1/aer/m/n/9 Similarly, for each node $\OML/cmm/m/it/9 v$ \T1/aer/m/n/9 ther
 e are at most $[][] \OT1/cmr/m/n/9 =
@@ -662,72 +405,9 @@ Overfull \hbox (7.90233pt too wide) in paragraph at lines 63--64
 \OT1/cmr/m/n/9 (\OML/cmm/m/it/9 n[] [] n\OT1/cmr/m/n/9 )$
  []
 
-
-LaTeX Warning: Citation `DBLP:journals/corr/GawrychowskiKU15' on page \thepage 
- undefined on input line 69.
-
-
-LaTeX Warning: Citation `chung2004average' on page \thepage  undefined on input
- line 70.
-
-) (./Experimental.tex
-
-LaTeX Warning: Citation `adjiashvili2014labeling' on page \thepage  undefined o
-n input line 26.
-
-
-LaTeX Warning: Citation `alstrup2014adjacency' on page \thepage  undefined on i
-nput line 26.
-
-
-LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
- line 36.
-
-
-LaTeX Warning: Citation `hakimi1962realizability' on page \thepage  undefined o
-n input line 36.
-
-
-LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
- line 37.
-
-[7]
-
-LaTeX Warning: Citation `albert1999internet' on page \thepage  undefined on inp
-ut line 41.
-
-
-LaTeX Warning: Citation `leskovec2009community' on page \thepage  undefined on 
-input line 42.
-
-
-LaTeX Warning: Citation `newman' on page \thepage  undefined on input line 44.
-
-
-LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
- line 46.
-
-
-LaTeX Warning: Citation `newman' on page \thepage  undefined on input line 54.
-
-
-LaTeX Warning: Citation `leskovec2009community' on page \thepage  undefined on 
-input line 55.
-
-
-LaTeX Warning: Citation `albert1999internet' on page \thepage  undefined on inp
-ut line 56.
-
-
-LaTeX Warning: Citation `takac2012data' on page \thepage  undefined on input li
-ne 57.
-
+) (./Experimental.tex [7]
 
 LaTeX Warning: Citation `?' on page \thepage  undefined on input line 58.
-
-
-LaTeX Warning: Citation `yang2015defining' on page \thepage  undefined on input
- line 59.
 
 
 Overfull \hbox (15.94037pt too wide) in paragraph at lines 51--71
@@ -776,16 +456,8 @@ File: Figures/internet-ccdf.pdf Graphic file (type pdf)
 <use Figures/internet-ccdf.pdf>
 Package pdftex.def Info: Figures/internet-ccdf.pdf used on input line 23.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
-
-
-LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
- line 24.
-
-
-LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
- line 24.
-
-) <Figures/synthetic-300k-alpha22.pdf, id=78, 421.575pt x 316.18124pt>
+)
+<Figures/synthetic-300k-alpha22.pdf, id=78, 421.575pt x 316.18124pt>
 File: Figures/synthetic-300k-alpha22.pdf Graphic file (type pdf)
 
 <use Figures/synthetic-300k-alpha22.pdf>
@@ -800,30 +472,9 @@ File: Figures/synthetic-1M-26.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/synthetic-1M-26.pdf used on input line 92.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
 
-
-LaTeX Warning: Citation `adjiashvili2014labeling' on page \thepage  undefined o
-n input line 99.
-
-
-LaTeX Warning: Citation `alstrup2014adjacency' on page \thepage  undefined on i
-nput line 99.
-
-
-LaTeX Warning: Citation `adjiashvili2014labeling' on page \thepage  undefined o
-n input line 106.
-
-
-LaTeX Warning: Citation `alstrup2014adjacency' on page \thepage  undefined on i
-nput line 106.
-
-
-Overfull \hbox (1.41862pt too wide) in paragraph at lines 105--119
+Overfull \hbox (1.04263pt too wide) in paragraph at lines 105--119
 [][] 
  []
-
-
-LaTeX Warning: Citation `adjiashvili2014labeling' on page \thepage  undefined o
-n input line 128.
 
 [8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -833,56 +484,54 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9 <./Figures/barabasi-www.pdf> <./Figures/barabasi-www-ccdf.pdf> <./Figures/e
 nron-mail.pdf> <./Figures/enron-mail-ccdf.pdf> <./Figures/internet.pdf> <./Figu
-res/internet-ccdf.pdf>]
+res/internet-ccdf.pdf>]) (./WWW.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
- line 153.
-
-)
-No file WWW.bbl.
-
-Overfull \vbox (387.66086pt too high) has occurred while \output is active []
+ [10 <./Figures/synthetic-300k-alpha22.pdf> <./Figures/synthetic-1M-26.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-[10
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- <./Figures/synthetic-300k-alpha22.pdf> <./Figures/synthetic-1M-26.pdf>]
-(./WWW.aux) ) 
+ [11])
+[12
+
+] (./WWW.aux) ) 
 Here is how much of TeX's memory you used:
- 3994 strings out of 494469
- 55754 string characters out of 6166582
+ 3997 strings out of 494469
+ 55788 string characters out of 6166582
  131475 words of memory out of 5000000
- 7112 multiletter control sequences out of 15000+600000
+ 7113 multiletter control sequences out of 15000+600000
  65073 words of font info for 100 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
  44i,15n,47p,1003b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on WWW.pdf (10 pages, 534241 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
+vb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on WWW.pdf (12 pages, 550975 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
+ 255 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
