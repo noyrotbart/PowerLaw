@@ -25,7 +25,7 @@ have very small expected distances, the labelling scheme should work well for pr
 
 \begin{lemma}\label{lem:sparse_small_dist}
 For any computable $f : \mathbb{N} \longrightarrow \mathbb{N}$ such that
-$f(n) \leq n -1$ for all $n$, and for any $C_2 \geq \sqrt[\alpha-1+f(n)]{n}$ there is an $f(n)$-distance labelling scheme for $\PLBARG{C_2}{\alpha}$
+$f(n) \leq n -1$ for all $n$, and for any $C_2 \geq n^{1/(alpha-1+f(n))}$ there is an $f(n)$-distance labelling scheme for $\PLBARG{C_2}{\alpha}$
 that assigns labels of length at most $O(n^{f(n)/(f(n) + 1)} \log f(n))$.
 \end{lemma}
 
