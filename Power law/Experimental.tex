@@ -18,6 +18,7 @@ It is an approximation to the theoretically optimal threshold choice when degree
 Note that a slow encoder can always arrive at the empirical threshold by a binary search which would incur an $O(\log n)$ factor on its running time. 
 \paragraph{Performance Indicators}
 We use the following to determine the quality of our labeling scheme:
+
 \emph{Performance Indicator i:} We measure the difference in label sizes using the predicted and empirical thresholds. 
  We also measure  the difference between the predicted and empirical threshold in percentages with respect to the maximum degree.
 We interpret a small relative differences in those as an evidence  that the predicted threshold can achieve small label sizes without examining the global properties of the network other than the power-law parameter $\alpha$. 
@@ -105,18 +106,22 @@ Both ``Empirical'' and  ``Bound'' using simple concatenation of labels to repres
 \begin{table*}
 \small
 \begin{tabular}{ccccccccc}
+\hline \multicolumn{9}{c}{Real-Life}\\\hline
 Data set&Predicted &Empirical & Label Diff. & Threshold Diff.   & Upper-Bound     &$c$-sparse &Bounded Degree \cite{adjiashvili2014labeling} &AKTZ \cite{alstrup2014adjacency}\\\hline
-s1M$^{\alpha=2.4}$  &$4,841$    &$4,821$  & $0.4\%$ & $0.002\%$  & $25,012 $ &$30,079$     &$426,820$ &$500,006$\\\hline
-s1M$^{\alpha=2.6}$  &$3,361$    &$3,201$   & $4.8\%$ & $0.08\%$  & $15,282 $ &$26,551$     &$121,680$ &$500,006$\\\hline
-s1M$^{\alpha=2.8}$  &$2,101$    &$2,061$    & $2\%$ & $0.17\%$  & $10,081 $ &$24,566$     &$16,920$  &$500,006$\\\hline
-s300$^{\alpha=2.2}$ &$4,523$    &$4,447$  & $1.7\%$ & $0.05\%$  & $24,878 $ &$18,885$     &$103,607$ &$150,006$\\\hline
-s300$^{\alpha=2.4}$ &$2,775$    &$2,680$   & $3.5\%$  & $0.3\%$ & $14,404 $ &$15,420$     &$31,008$  &$150,006$\\\hline
-s300$^{\alpha=2.6}$ &$1,958$    &$1,920$  & $3.1\%$ & $0.35\%$   & $9,151 $  &$13,792$     &$13,395$  &$150,006$\\\hline
+\textsc{internet}   &$1,426$    &$1,156$  & $19.0\%$  & $0.8\%$  & $8,181 $  &$4,700$      &$17,925$  &$11,487$\\
+\textsc{enron}      &$2,609$    &$2,577$  & $1.3\%$ & $0.2\%$   & $15,835 $ &$9,735$      &$11,056$  &$18,352$\\
+\textsc{www}        &$5,245$    &$3,060$  & $41.7\%$  & $1\%$  & $29,225 $ &$28,445$     &$101,840$ &$162,870$ \\
+\textsc{pokec}        &$?$    &$?$  & $?\%$  & $?\%$  & $? $ &$?$     &$?$ &$?$ \\
+\textsc{LiveJournal}        &$?$    &$?$  & $?\%$  & $?\%$  & $? $ &$?$     &$?$ &$?$ \\
+\textsc{orkut}        &$?$    &$?$  & $?\%$  & $?\%$  & $? $ &$?$     &$?$ &$?$ \\\hline
+\multicolumn{9}{c}{Synthetic}\\\hline
+s1M$^{\alpha=2.4}$  &$4,841$    &$4,821$  & $0.4\%$ & $0.002\%$  & $25,012 $ &$30,079$     &$426,820$ &$500,006$\\
+s1M$^{\alpha=2.6}$  &$3,361$    &$3,201$   & $4.8\%$ & $0.08\%$  & $15,282 $ &$26,551$     &$121,680$ &$500,006$\\
+s1M$^{\alpha=2.8}$  &$2,101$    &$2,061$    & $2\%$ & $0.17\%$  & $10,081 $ &$24,566$     &$16,920$  &$500,006$\\
+s300$^{\alpha=2.2}$ &$4,523$    &$4,447$  & $1.7\%$ & $0.05\%$  & $24,878 $ &$18,885$     &$103,607$ &$150,006$\\
+s300$^{\alpha=2.4}$ &$2,775$    &$2,680$   & $3.5\%$  & $0.3\%$ & $14,404 $ &$15,420$     &$31,008$  &$150,006$\\
+s300$^{\alpha=2.6}$ &$1,958$    &$1,920$  & $3.1\%$ & $0.35\%$   & $9,151 $  &$13,792$     &$13,395$  &$150,006$\\
 s300$^{\alpha=2.8}$ &$1,350$    &$1,312$  & $2.8\%$ & $0.1\%$   & $6,244 $  &$12,849$     &$17,499$  &$150,006$\\\hline
-\textsc{www}        &$5,245$    &$3,060$  & $41.7\%$  & $1\%$  & $29,225 $ &$28,445$     &$101,840$ &$162,870$ \\\hline
-\textsc{enron}      &$2,609$    &$2,577$  & $1.3\%$ & $0.2\%$   & $15,835 $ &$9,735$      &$11,056$  &$18,352$\\\hline
-\textsc{internet}   &$1,426$    &$1,156$  & $19.0\%$  & $0.8\%$  & $8,181 $  &$4,700$      &$17,925$  &$11,487$\\\hline 
-\textsc{LiveJournal}   &$63,866$    &$28,880$  & $221\%$  & $0.5\%$  & $12,996 $  &$183,270$      &$??$  &$1,998,987$\\\hline 
 \end{tabular}
 \caption{Label size in bits of labeling schemes. The two leftmost columns are experimental results with an additional difference column following; the Threshold Diff. column is the report of performance indicator iii, and the remaining are upper bounds on label sizes computed from the characteristics of the data sets.}
 \label{t:labelsizes}
