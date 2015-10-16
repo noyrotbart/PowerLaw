@@ -206,11 +206,6 @@ S.~L. Hakimi.
 \newblock {\em Journal of the Society for Industrial \& Applied Mathematics},
   10(3):496--506, 1962.
 
-\bibitem{Kannan92}
-S.~Kannan, M.~Naor, and S.~Rudich.
-\newblock Implicit representation of graphs.
-\newblock In {\em SIAM Journal On Discrete Mathematics}, pages 334--343, 1992.
-
 \bibitem{katz2004labeling}
 M.~Katz, N.~A. Katz, A.~Korman, and D.~Peleg.
 \newblock Labeling schemes for flow and connectivity.
@@ -289,10 +284,21 @@ I.~Stanton and G.~Kliot.
 \newblock In {\em Proceedings of the 18th ACM SIGKDD international conference
   on Knowledge discovery and data mining}, pages 1222--1230. ACM, 2012.
 
+\bibitem{takac2012data}
+L.~Takac and M.~Zabovsky.
+\newblock Data analysis in public social networks.
+\newblock In {\em International Scientific Conference and International
+  Workshop Present Day Trends of Innovations}, pages 1--6, 2012.
+
 \bibitem{waxman1988routing}
 B.~M. Waxman.
 \newblock Routing of multipoint connections.
 \newblock {\em Selected Areas in Communications, IEEE Journal on},
   6(9):1617--1622, 1988.
+
+\bibitem{yang2015defining}
+J.~Yang and J.~Leskovec.
+\newblock Defining and evaluating network communities based on ground-truth.
+\newblock {\em Knowledge and Information Systems}, 42(1):181--213, 2015.
 
 \end{thebibliography}
