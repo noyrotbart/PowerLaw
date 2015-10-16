@@ -3,7 +3,7 @@
 
 \section{Introduction}
 A body of work on large, real-world networks  deals with the difficulties of storing them and to effectively resolve queries on them; examples of techniques are
-compression~\cite{boldi2004webgraph,boldi2011layered} and dissemination  the underlying graphs of these networks over several machines~\cite{gonzalez2012powergraph, stanton2012streaming}.
+compression~\cite{boldi2004webgraph,boldi2011layered} and dissemination  the underlying graphs of these networks over several machines~\cite{gonzalez2012powergraph, stanton2012streaming, xie2014distributed}.
 Another approach is to disseminate the structural information of the graph to its vertices. This \emph{peer-to-peer} strategy allows inferring the graph's local topology using only local information stored in each vertex without using costly access to large, global data structures, and can be particularly useful to address privacy concerns and ensure a high survivability rate ~\cite{buchegger2009peerson}.
 
 We posit that a useful tool for such a peer-to-peer strategy is the notion of a \emph{labeling scheme}: an algorithm that assigns a bit string--a \emph{label}--to each vertex so that a query between any two vertices can be deduced solely from their respective labels. 
@@ -25,7 +25,9 @@ In this paper, we perform the first theoretical and practical study of adjacency
 
 
 \subsection{Our contribution}
-For the family of power-law graphs we contribute:
+We first define two families of graphs, one that  contains and one that is contained by the standard definitions of power-law graphs in the literature.
+Using those we contribute the following results for the family of power-law graphs:
+
 \paragraph{An  $O(\sqrt[\alpha] n (\log n)^{1 - 1/\alpha})$ adjacency labeling scheme}
 The scheme is based on two ideas:
 (i) a labeling \emph{strategy} that  partitions the vertices of $G$ into high (``fat'') and low degree (``thin'') vertices based on a threshold degree, and (ii) a threshold \emph{prediction} that depends only on the coefficient $\alpha$ of a power-law curve fitted to the degree distribution of $G$. 
@@ -34,22 +36,20 @@ Our  scheme may be appealing in practice,  both due  to its simplicity and the r
 Using the same ideas, we get an  asymptotically near-tight  $O(\sqrt{n \log n})$ adjacency labeling scheme for sparse graphs.
 
 \paragraph{A lower bound of $\Omega(\sqrt[\alpha]{n})$ for any adjacency labeling scheme}
-To this end we define a  restrictive subclass of power-law graphs and show that it is contained in the bigger class we study for the upper bound; we show that this class requires label size $\Omega(\sqrt[\alpha]{n})$ for $n$-vertex graphs.
+%To this end we define a  restrictive subclass of power-law graphs and show that it is contained in the bigger class we study for the upper bound;
+We use our  restrictive subclass of power-law graphs and  show that it requires label size $\Omega(\sqrt[\alpha]{n})$ for $n$-vertex graphs.
 This lower bound shows that our upper bound above is asymptotically  optimal, bar a $(\log n)^{1 - 1/\alpha}$ factor.
 By the connections between adjacency labeling schemes and universal graphs, we also obtain upper and lower bounds for induced universal graphs for power-law graphs. 
 
 \paragraph{An $o(n)$ distance labeling scheme}
-Using similar strategy to the adjacency labeling scheme, and a small modification, we get this reult.
+Using similar strategy to the adjacency labeling scheme, and a small modification, we get this result.
 
 
 \paragraph{An experimental investigation  of our labeling scheme}
-Using both real-world (23K-325K vertices) and synthetic (300K-1M vertices) data sets, we observe that:
+Using both real-world (23K-3M vertices) and synthetic (300K-1M vertices) data sets, we observe that:
 (i) Our threshold \emph{prediction} performs close to optimal when using the labeling \emph{strategy} above. 
 (ii) our labeling scheme achieves maximum label size several orders of magnitude smaller than the state-of-the-art labeling schemes for more general graph families.
 
-%Lastly, our study also contributes to    the graph-theoretic concept of induced universal graphs. 
-%Given a  graph family of $n$ node graphs  $\mathcal{F}$, we look for the smallest  graph $G$ that contain all $\mathcal{F}$ as  induced sub-graphs.
-% A tight connection between this concept and adjacency labeling schemes was established in~\cite{Kannan92} which implies that  our labeling scheme and lower bound have implications to this field.
 
 \begin{figure}
 \centering
