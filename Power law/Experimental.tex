@@ -2,7 +2,7 @@
 \section{Experimental Study}
 
 We now  perform an experimental evaluation of our labeling scheme on a number of power-law networks.
-The source code for our experiments can be found at:\\ \url{www.diku.dk/\~simonsen/suppmat/podc15/powerlaw.zip}
+The source code for our experiments can be found at:\\ \url{www.diku.dk/~simonsen/suppmat/www16/powerlaw.zip}
 
 \subsection{Experimental Framework}\label{Sec:Experimental}
 Recall that our labeling scheme separates  the nodes according to a selected threshold from the range $0 \dots \Delta$,\footnote{Recall that $\Delta$ is the graph's maximum degree.} which we select as a function of  the power-law parameter $\alpha$.
@@ -78,7 +78,6 @@ Figure \ref{fig:findings} shows the distribution of maximum label sizes for one 
 for the predicted and empirical thresholds as well as upper bounds on the label sizes from different label schemes in the literature can be seen in Table \ref{t:labelsizes} for two synthetic
 data sets and all three real-world data sets. 
 %Plots for the remaining data sets can be found in Appendix~\ref{App:ExpRes}.
-\input{FiguresRealLife}
 
 \begin{figure*}[!ht]
 \centering
@@ -95,6 +94,9 @@ The triangles and crosses represent that for the tested threshold the largest la
 See~\cite{} for the remaining  figures for synthetic datasets.}
 \label{fig:findings}%
 \end{figure*}
+
+\input{FiguresRealLife}
+
 
 Table~\ref{t:labelsizes}  shows  the maximum label sizes achieved using different labeling schemes on our data sets. ``Predicted'' shows the experimental maximum label size obtained by running our scheme on the graphs, ``Empirical'' is the label size attained by using the empirical threshold. The remaining columns show non-experimental upper bounds for different label schemes: ``Bound'' is the upper bound guaranteed in Theorem~\ref{prop:labelingMain}, ``$c$-sparse'' is  the labeling scheme for sparse graphs defined in Theorem~\ref{sparse-label}, ``BD'' is the $\lceil \frac{\Delta}{2} \rceil \lceil \log n\rceil$ bounded degree graph  labeling of~\cite{adjiashvili2014labeling}, and AKTZ is the $\lceil n/2\rceil+6$ general graph  labeling of~\cite{alstrup2014adjacency}.
 Both ``Empirical'' and  ``Bound'' using simple concatenation of labels to represent the fat bit string\footnote{Our labeling schemes introduced in this paper all make use of a succinctly represented ``fat bit string''; for our experiments, we use simple concatenation of labels instead of a bit string; this incurs a $(\log n)/\alpha$ factor on the label size, but simplifies the implementation.}.
