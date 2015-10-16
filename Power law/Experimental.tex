@@ -40,7 +40,7 @@ The six \emph{synthetic} data sets are created by first generating a power-law d
 We use the range $2< \alpha < 3$ as suggested in~\cite{clauset2009power} as this range of $\alpha$ occurs most commonly in modeling of real-world networks. We generate graphs of $300,000$ and $1M.$ vertices denoted  s300$^{\alpha=x}$  and s1M$^{\alpha=x}$  respectively, for $x \in \{2.2,2.4,2.6,2.8\}$. 
 
 
-The three \emph{real-world} data sets originate  from articles that found the data to be well-approximated by a power-law. 
+The seven \emph{real-world} data sets originate  from articles that found the data to be well-approximated by a power-law. 
 The \textsc{www} data set  \cite{albert1999internet} contains information on links between webpages within the nd.edu domain. 
 The \textsc{enron} data set ~\cite{leskovec2009community}  contains email communication between  Enron employees (vertices are email addresses; there is a link between two addresses
 if a mail has been sent between them).
@@ -102,9 +102,13 @@ See~\cite{} for the remaining  figures for synthetic datasets.}
 \input{FiguresRealLife}
 
 
-Table~\ref{t:labelsizes}  shows  the maximum label sizes achieved using different labeling schemes on our data sets. ``Predicted'' shows the experimental maximum label size obtained by running our scheme on the graphs, ``Empirical'' is the label size attained by using the empirical threshold. The remaining columns show non-experimental upper bounds for different label schemes: ``Bound'' is the upper bound guaranteed in Theorem~\ref{prop:labelingMain}, ``$c$-sparse'' is  the labeling scheme for sparse graphs defined in Theorem~\ref{sparse-label}, ``BD'' is the $\lceil \frac{\Delta}{2} \rceil \lceil \log n\rceil$ bounded degree graph  labeling of~\cite{adjiashvili2014labeling}, and AKTZ is the $\lceil n/2\rceil+6$ general graph  labeling of~\cite{alstrup2014adjacency}.
-Both ``Empirical'' and  ``Bound'' using simple concatenation of labels to represent the fat bit string\footnote{Our labeling schemes introduced in this paper all make use of a succinctly represented ``fat bit string''; for our experiments, we use simple concatenation of labels instead of a bit string; this incurs a $(\log n)/\alpha$ factor on the label size, but simplifies the implementation.}.
- 
+Table~\ref{t:labelsizes}  shows  the maximum label sizes achieved using different labeling schemes on our data sets. ``Predicted'' shows the experimental maximum label size obtained by running our scheme on the graphs, ``Empirical'' is the label size attained by using the empirical threshold.
+``Label Diff.'' shows the ratio between the predicted and empirical label sizes, and  ``Threshold Diff.'' shows the ratio between the absolute difference of the threshold values and the maximum degree.
+ The remaining columns show non-experimental upper bounds for different label schemes: ``Bound'' is the upper bound guaranteed in Theorem~\ref{prop:labelingMain}, ``$c$-sparse'' is  the labeling scheme for sparse graphs defined in Theorem~\ref{sparse-label}, ``BD'' is the $\lceil \frac{\Delta}{2} \rceil \lceil \log n\rceil$ bounded degree graph  labeling of~\cite{adjiashvili2014labeling}, and AKTZ is the $\lceil n/2\rceil+6$ general graph  labeling of~\cite{alstrup2014adjacency}.
+Both ``Empirical'' and  ``Bound'' use simple concatenation of labels to represent the fat bit string. Our labeling schemes introduced in this paper all make use of a succinctly represented ``fat bit string''; for our experiments, we use simple concatenation of labels instead of a bit string; this incurs a $(\log n)/\alpha$ factor on the label size, but simplifies the implementation.
+The computation of the predicted and empirical bounds for the "Real-Life Large Graphs" datasets was done using an additional observation.
+If the labeling scheme is implemented with fat labels as bit strings rather than label concatenation then the following holds:
+Given a  graph $G=(V,E)$, and threshold $t$, with $v_t \in V$ nodes of degree larger than $t$, the label size is $\max{v_t,t \log n}$.
 
 \begin{table*}
 \small
@@ -114,11 +118,13 @@ Data set&Predicted &Empirical & Label Diff. & Threshold Diff.   & Upper-Bound   
 \textsc{internet}   &$1,426$    &$1,156$  & $19.0\%$  & $0.8\%$  & $8,181 $  &$4,700$      &$17,925$  &$11,487$\\
 \textsc{enron}      &$2,609$    &$2,577$  & $1.3\%$ & $0.2\%$   & $15,835 $ &$9,735$      &$11,056$  &$18,352$\\
 \textsc{www}        &$5,245$    &$3,060$  & $41.7\%$  & $1\%$  & $29,225 $ &$28,445$     &$101,840$ &$162,870$ \\
+\hline \multicolumn{9}{c}{Real-Life Large Graphs}\\\hline
 \textsc{google} & $3,311$ & $2,589$ & $127\%$ & $0.3\%$ & $6,505$ & $24,109$ & $63,320$ & $458,220$\\
 \textsc{Youtube}        &$10,596$    &$3,212$  & $329\%$  & $1.3\%$  & $21,7190$ &$25,872$     &$301,917$ &$578,920$ \\
 \textsc{WikiTalk}       & $6,972$ & $4,560$ & $152\%$ & $0.1\%$ & $16,664$ & $41,110$ & $1,100,352$ & $1,197,199$\\ 
 \textsc{LiveJournal}        &$61,898$    &$7,836$  & $790\%$  & $1.5\%$  & $8,313$ &$56,916$     &$162,976$ &$2,018,275$ \\\hline
 \multicolumn{9}{c}{Synthetic}\\\hline
+Data set&Predicted &Empirical & Label Diff. & Threshold Diff.   & Upper-Bound     &$c$-sparse &Bounded Degree \cite{adjiashvili2014labeling} &AKTZ \cite{alstrup2014adjacency}\\\hline
 s1M$^{\alpha=2.4}$  &$4,841$    &$4,821$  & $0.4\%$ & $0.002\%$  & $25,012 $ &$30,079$     &$426,820$ &$500,006$\\
 s1M$^{\alpha=2.6}$  &$3,361$    &$3,201$   & $4.8\%$ & $0.08\%$  & $15,282 $ &$26,551$     &$121,680$ &$500,006$\\
 s1M$^{\alpha=2.8}$  &$2,101$    &$2,061$    & $2\%$ & $0.17\%$  & $10,081 $ &$24,566$     &$16,920$  &$500,006$\\
@@ -127,7 +133,7 @@ s300$^{\alpha=2.4}$ &$2,775$    &$2,680$   & $3.5\%$  & $0.3\%$ & $14,404 $ &$15
 s300$^{\alpha=2.6}$ &$1,958$    &$1,920$  & $3.1\%$ & $0.35\%$   & $9,151 $  &$13,792$     &$13,395$  &$150,006$\\
 s300$^{\alpha=2.8}$ &$1,350$    &$1,312$  & $2.8\%$ & $0.1\%$   & $6,244 $  &$12,849$     &$17,499$  &$150,006$\\\hline
 \end{tabular}
-\caption{Label size in bits of labeling schemes. The two leftmost columns are experimental results with an additional difference column following; the Threshold Diff. column is the report of performance indicator iii, and the remaining are upper bounds on label sizes computed from the characteristics of the data sets.}
+\caption{Label size in bits of labeling schemes. The two leftmost columns are experimental results; Label Diff. and  Threshold Diff. column  report findings related to  performance indicator ii, and the remaining are upper bounds on label sizes computed from the characteristics of the data sets.}
 \label{t:labelsizes}
 \end{table*}
 
