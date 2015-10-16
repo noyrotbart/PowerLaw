@@ -1,41 +1,40 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.23)  16 OCT 2015 15:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.17)  16 OCT 2015 15:53
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**WWW.tex
+**WWW
 (./WWW.tex
-LaTeX2e <2014/05/01>
-Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 26 languages loaded.
 (./acm_proc_article-sp.cls
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/epsfig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count79
@@ -46,10 +45,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \epsfxsize=\dimen104
 \epsfysize=\dimen105
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks15
 \symAMSa=\mathgroup4
@@ -57,24 +56,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip41
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen106
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen107
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count80
@@ -142,7 +141,7 @@ Excerpts were taken from (Journal Style) 'esub2acm.cls'.
 \titleboxnoteflag=\count100
 Document Class: acm_proc_article-sp 2009/04/22 - V3.2SP - based on esub2acm.sty
  <23 April 96>
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/latexsym.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
@@ -174,19 +173,19 @@ LaTeX Info: Redefining \cite on input line 1236.
 \acmcopyr=\toks33
 \boilerplate=\toks34
 \copyrightetc=\toks35
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 )
 LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aer.fd
+(/usr/share/texlive/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 )))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -196,13 +195,13 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \c@lemma=\count112
 \c@conjecture=\count113
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/subfig/subfig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen123
@@ -240,15 +239,14 @@ f {#1: #2}\par \else \hbox to\hsize {\hfil \box \@tempboxa \hfil }\par \fi .
 \c@lotdepth=\count121
 \sf@top=\skip49
 \sf@bottom=\skip50
-) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+(/etc/texmf/tex/latex/config/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 137.
-)
-(./WWW.aux)
+Package color Info: Driver file: pdftex.def on input line 130.
+) (./WWW.aux)
 \openout1 = `WWW.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -263,7 +261,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
- (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count122
 \scratchdimen=\dimen131
@@ -276,75 +275,27 @@ LaTeX Font Info:    ... okay on input line 21.
 \MPnumerator=\count126
 \makeMPintoPDFobject=\count127
 \everyMPtoPDFconversion=\toks37
-) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Try loading font information for U+msa on input line 33.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 33.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+lasy on input line 33.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Try loading font information for T1+aett on input line 33.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
+(/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 Overfull \hbox (1.26794pt too wide) in paragraph at lines 50--51
@@ -358,12 +309,116 @@ Overfull \hbox (2.13661pt too wide) in paragraph at lines 54--2
  []
 
 
+LaTeX Warning: Citation `boldi2004webgraph' on page \thepage  undefined on inpu
+t line 6.
+
+
+LaTeX Warning: Citation `boldi2011layered' on page \thepage  undefined on input
+ line 6.
+
+
+LaTeX Warning: Citation `gonzalez2012powergraph' on page \thepage  undefined on
+ input line 6.
+
+
+LaTeX Warning: Citation `stanton2012streaming' on page \thepage  undefined on i
+nput line 6.
+
+
+LaTeX Warning: Citation `xie2014distributed' on page \thepage  undefined on inp
+ut line 6.
+
+
+LaTeX Warning: Citation `buchegger2009peerson' on page \thepage  undefined on i
+nput line 7.
+
+
+LaTeX Warning: Citation `katz2004labeling' on page \thepage  undefined on input
+ line 10.
+
+
+LaTeX Warning: Citation `gavoillea2004distance' on page \thepage  undefined on 
+input line 10.
+
+
+LaTeX Warning: Citation `brady2006compact' on page \thepage  undefined on input
+ line 10.
+
+
+LaTeX Warning: Citation `gavoille2007shorter' on page \thepage  undefined on in
+put line 10.
+
+
+LaTeX Warning: Citation `korman2007compact' on page \thepage  undefined on inpu
+t line 10.
+
+
+LaTeX Warning: Citation `Korman07' on page \thepage  undefined on input line 10
+.
+
+
+LaTeX Warning: Citation `korman2007general' on page \thepage  undefined on inpu
+t line 10.
+
+
+LaTeX Warning: Citation `caminiti2008engineering' on page \thepage  undefined o
+n input line 10.
+
+
+LaTeX Warning: Citation `dahlgaard2014dynamic' on page \thepage  undefined on i
+nput line 10.
+
+
+LaTeX Warning: Citation `rotbart2014evaluation' on page \thepage  undefined on 
+input line 10.
+
+
+LaTeX Warning: Citation `alstrup2014adjacency' on page \thepage  undefined on i
+nput line 10.
+
+
+LaTeX Warning: Citation `cohen2010labeling' on page \thepage  undefined on inpu
+t line 10.
+
+
+LaTeX Warning: Citation `abraham2011hub' on page \thepage  undefined on input l
+ine 10.
+
+
+LaTeX Warning: Citation `krioukov2004compact' on page \thepage  undefined on in
+put line 10.
+
+
+LaTeX Warning: Citation `DBLP:journals/ton/SiganosFFF03' on page \thepage  unde
+fined on input line 12.
+
+
+LaTeX Warning: Citation `DBLP:conf/podc/AkellaCKS03' on page \thepage  undefine
+d on input line 12.
+
+
+LaTeX Warning: Citation `mitzenmacher2004brief' on page \thepage  undefined on 
+input line 12.
+
+
+LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
+ line 12.
+
+
+LaTeX Warning: Citation `DBLP:journals/jacm/AchlioptasCKM09' on page \thepage  
+undefined on input line 13.
+
+
+LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
+ line 13.
+
+
 Overfull \hbox (3.38988pt too wide) in paragraph at lines 12--17
 \T1/aer/m/n/9 net-works is \T1/aer/m/it/9 power-law graphs\T1/aer/m/n/9 : rough
 ly, $\OML/cmm/m/it/9 n$\T1/aer/m/n/9 -vertex graphs where
  []
 
-[1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
@@ -377,14 +432,14 @@ Overfull \hbox (5.54124pt too wide) in paragraph at lines 41--44
 \T1/aer/m/n/9 Us-ing both real-world (23K-3M ver-tices) and syn-thetic (300K-
  []
 
-<Figures/Principle1.pdf, id=16, 586.491pt x 335.70491pt>
+<Figures/Principle1.pdf, id=15, 586.491pt x 335.70491pt>
 File: Figures/Principle1.pdf Graphic file (type pdf)
 
 <use Figures/Principle1.pdf>
 Package pdftex.def Info: Figures/Principle1.pdf used on input line 51.
 (pdftex.def)             Requested size: 115.91785pt x 66.35094pt.
 
-<Figures/Principle2.pdf, id=17, 585.29376pt x 359.91664pt>
+<Figures/Principle2.pdf, id=16, 585.29376pt x 359.91664pt>
 File: Figures/Principle2.pdf Graphic file (type pdf)
 
 <use Figures/Principle2.pdf>
@@ -396,12 +451,92 @@ Overfull \hbox (7.22502pt too wide) in paragraph at lines 51--56
  []
 
 
-Overfull \hbox (8.29434pt too wide) in paragraph at lines 68--69
-\T1/aer/m/n/9 pro-posed are Pregel [43], Power-Graph [33] and GraphLab [42].
- []
+LaTeX Warning: Citation `moon1965minimal' on page \thepage  undefined on input 
+line 61.
+
+
+LaTeX Warning: Citation `alstrup2014adjacency' on page \thepage  undefined on i
+nput line 61.
+
+
+LaTeX Warning: Citation `Alstrup02' on page \thepage  undefined on input line 6
+2.
+
+
+LaTeX Warning: Citation `gavoille2007shorter' on page \thepage  undefined on in
+put line 62.
+
+
+LaTeX Warning: Citation `adjiashvili2014labeling' on page \thepage  undefined o
+n input line 62.
+
+
+LaTeX Warning: Citation `brady2006compact' on page \thepage  undefined on input
+ line 64.
+
+
+LaTeX Warning: Citation `chen2012compact' on page \thepage  undefined on input 
+line 64.
+
+
+LaTeX Warning: Citation `gavoillea2004distance' on page \thepage  undefined on 
+input line 64.
+
+
+LaTeX Warning: Citation `katz2004labeling' on page \thepage  undefined on input
+ line 64.
+
+
+LaTeX Warning: Citation `korman2007compact' on page \thepage  undefined on inpu
+t line 65.
+
+
+LaTeX Warning: Citation `Korman07' on page \thepage  undefined on input line 65
+.
+
+
+LaTeX Warning: Citation `korman2007general' on page \thepage  undefined on inpu
+t line 65.
+
+
+LaTeX Warning: Citation `dahlgaard2014dynamic' on page \thepage  undefined on i
+nput line 65.
+
+
+LaTeX Warning: Citation `caminiti2008engineering' on page \thepage  undefined o
+n input line 66.
+
+
+LaTeX Warning: Citation `fischer2009short' on page \thepage  undefined on input
+ line 66.
+
+
+LaTeX Warning: Citation `rotbart2014evaluation' on page \thepage  undefined on 
+input line 66.
+
+
+LaTeX Warning: Citation `malewicz2010pregel' on page \thepage  undefined on inp
+ut line 68.
+
+
+LaTeX Warning: Citation `gonzalez2012powergraph' on page \thepage  undefined on
+ input line 68.
+
+
+LaTeX Warning: Citation `low2012distributed' on page \thepage  undefined on inp
+ut line 68.
+
+
+LaTeX Warning: Citation `mccunethinking2015' on page \thepage  undefined on inp
+ut line 68.
 
 ) (./Preliminaries.tex) (./GraphFamilies.tex [2 <./Figures/Principle1.pdf> <./F
 igures/Principle2.pdf>]
+
+LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
+ line 18.
+
+
 Overfull \hbox (7.06264pt too wide) in paragraph at lines 43--44
 []\T1/aer/m/it/9 The max-i-mum de-gree in an $\OML/cmm/m/it/9 n$\T1/aer/m/it/9 
 -vertex graph
@@ -420,10 +555,22 @@ Overfull \hbox (18.63036pt too wide) in paragraph at lines 96--96
  []
 
 
+LaTeX Warning: Citation `eom2011characterizing' on page \thepage  undefined on 
+input line 102.
+
+
+LaTeX Warning: Citation `Sankowski2016PowerLaw' on page \thepage  undefined on 
+input line 102.
+
+
 Overfull \hbox (6.38783pt too wide) in paragraph at lines 101--105
 \T1/aer/m/n/9 Numerous prob-a-bilis-tic and de-ter-min-is-tic def-i-ni-tions of
  power-
  []
+
+
+LaTeX Warning: Citation `Sankowski2016PowerLaw' on page \thepage  undefined on 
+input line 108.
 
 ) (./LabelingScheme.tex
 Overfull \hbox (6.23996pt too wide) in paragraph at lines 31--35
@@ -431,11 +578,79 @@ Overfull \hbox (6.23996pt too wide) in paragraph at lines 31--35
 C[]n=^^\\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 n\OT1/cmr/m/n/9 )[]$
  []
 
-(./ExpectedUpperBound.tex [4])) (./ScaleFree.tex) (./LowerBounds.tex [5])
-(./Distance.tex
+(./ExpectedUpperBound.tex
+
+LaTeX Warning: Citation `barabasi1999emergence' on page \thepage  undefined on 
+input line 3.
+
+[4]
+
+LaTeX Warning: Citation `mitzenmacher2004brief' on page \thepage  undefined on 
+input line 5.
+
+)) (./ScaleFree.tex
+
+LaTeX Warning: Citation `barabasi1999emergence' on page \thepage  undefined on 
+input line 9.
+
+
+LaTeX Warning: Citation `DBLP:journals/rsa/BollobasRST01' on page \thepage  und
+efined on input line 10.
+
+
+LaTeX Warning: Citation `goel2006bounded' on page \thepage  undefined on input 
+line 11.
+
+
+LaTeX Warning: Citation `kowalik2006approximation' on page \thepage  undefined 
+on input line 20.
+
+
+LaTeX Warning: Citation `arikati1997efficient' on page \thepage  undefined on i
+nput line 20.
+
+
+LaTeX Warning: Citation `alstrup2015optimal' on page \thepage  undefined on inp
+ut line 21.
+
+
+LaTeX Warning: Citation `waxman1988routing' on page \thepage  undefined on inpu
+t line 26.
+
+
+LaTeX Warning: Citation `calvert1997modeling' on page \thepage  undefined on in
+put line 26.
+
+
+LaTeX Warning: Citation `chung2006complex' on page \thepage  undefined on input
+ line 27.
+
+) (./LowerBounds.tex
+
+LaTeX Warning: Citation `moon1965minimal' on page \thepage  undefined on input 
+line 5.
+
+
+LaTeX Warning: Citation `spinrad2003efficient' on page \thepage  undefined on i
+nput line 7.
+
+[5]) (./Distance.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
+
+
+LaTeX Warning: Citation `DBLP:journals/corr/AlstrupDKP15' on page \thepage  und
+efined on input line 16.
+
+
+LaTeX Warning: Citation `DBLP:journals/corr/GawrychowskiKU15' on page \thepage 
+ undefined on input line 18.
+
+
+LaTeX Warning: Citation `Gavoille2001' on page \thepage  undefined on input lin
+e 19.
+
+[6]
 Overfull \hbox (20.11317pt too wide) in paragraph at lines 60--62
 []\T1/aer/m/n/9 Similarly, for each node $\OML/cmm/m/it/9 v$ \T1/aer/m/n/9 ther
 e are at most $[][] \OT1/cmr/m/n/9 =
@@ -447,12 +662,72 @@ Overfull \hbox (7.90233pt too wide) in paragraph at lines 63--64
 \OT1/cmr/m/n/9 (\OML/cmm/m/it/9 n[] [] n\OT1/cmr/m/n/9 )$
  []
 
-) (./Experimental.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
+LaTeX Warning: Citation `DBLP:journals/corr/GawrychowskiKU15' on page \thepage 
+ undefined on input line 69.
+
+
+LaTeX Warning: Citation `chung2004average' on page \thepage  undefined on input
+ line 70.
+
+) (./Experimental.tex
+
+LaTeX Warning: Citation `adjiashvili2014labeling' on page \thepage  undefined o
+n input line 26.
+
+
+LaTeX Warning: Citation `alstrup2014adjacency' on page \thepage  undefined on i
+nput line 26.
+
+
+LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
+ line 36.
+
+
+LaTeX Warning: Citation `hakimi1962realizability' on page \thepage  undefined o
+n input line 36.
+
+
+LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
+ line 37.
+
+[7]
+
+LaTeX Warning: Citation `albert1999internet' on page \thepage  undefined on inp
+ut line 41.
+
+
+LaTeX Warning: Citation `leskovec2009community' on page \thepage  undefined on 
+input line 42.
+
+
+LaTeX Warning: Citation `newman' on page \thepage  undefined on input line 44.
+
+
+LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
+ line 46.
+
+
+LaTeX Warning: Citation `newman' on page \thepage  undefined on input line 54.
+
+
+LaTeX Warning: Citation `leskovec2009community' on page \thepage  undefined on 
+input line 55.
+
+
+LaTeX Warning: Citation `albert1999internet' on page \thepage  undefined on inp
+ut line 56.
+
+
+LaTeX Warning: Citation `takac2012data' on page \thepage  undefined on input li
+ne 57.
+
 
 LaTeX Warning: Citation `?' on page \thepage  undefined on input line 58.
+
+
+LaTeX Warning: Citation `yang2015defining' on page \thepage  undefined on input
+ line 59.
 
 
 Overfull \hbox (15.94037pt too wide) in paragraph at lines 51--71
@@ -460,49 +735,57 @@ Overfull \hbox (15.94037pt too wide) in paragraph at lines 51--71
  []
 
 (./FiguresRealLife.tex
-<Figures/barabasi-www.pdf, id=73, 421.575pt x 316.18124pt>
+<Figures/barabasi-www.pdf, id=72, 421.575pt x 316.18124pt>
 File: Figures/barabasi-www.pdf Graphic file (type pdf)
 
 <use Figures/barabasi-www.pdf>
 Package pdftex.def Info: Figures/barabasi-www.pdf used on input line 6.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
 
-<Figures/barabasi-www-ccdf.pdf, id=74, 421.575pt x 316.18124pt>
+<Figures/barabasi-www-ccdf.pdf, id=73, 421.575pt x 316.18124pt>
 File: Figures/barabasi-www-ccdf.pdf Graphic file (type pdf)
 
 <use Figures/barabasi-www-ccdf.pdf>
 Package pdftex.def Info: Figures/barabasi-www-ccdf.pdf used on input line 9.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
 
-<Figures/enron-mail.pdf, id=75, 421.575pt x 316.18124pt>
+<Figures/enron-mail.pdf, id=74, 421.575pt x 316.18124pt>
 File: Figures/enron-mail.pdf Graphic file (type pdf)
 
 <use Figures/enron-mail.pdf>
 Package pdftex.def Info: Figures/enron-mail.pdf used on input line 13.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
 
-<Figures/enron-mail-ccdf.pdf, id=76, 421.575pt x 316.18124pt>
+<Figures/enron-mail-ccdf.pdf, id=75, 421.575pt x 316.18124pt>
 File: Figures/enron-mail-ccdf.pdf Graphic file (type pdf)
 
 <use Figures/enron-mail-ccdf.pdf>
 Package pdftex.def Info: Figures/enron-mail-ccdf.pdf used on input line 16.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
 
-<Figures/internet.pdf, id=77, 421.575pt x 316.18124pt>
+<Figures/internet.pdf, id=76, 421.575pt x 316.18124pt>
 File: Figures/internet.pdf Graphic file (type pdf)
 
 <use Figures/internet.pdf>
 Package pdftex.def Info: Figures/internet.pdf used on input line 20.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
 
-<Figures/internet-ccdf.pdf, id=78, 421.575pt x 316.18124pt>
+<Figures/internet-ccdf.pdf, id=77, 421.575pt x 316.18124pt>
 File: Figures/internet-ccdf.pdf Graphic file (type pdf)
 
 <use Figures/internet-ccdf.pdf>
 Package pdftex.def Info: Figures/internet-ccdf.pdf used on input line 23.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
-)
-<Figures/synthetic-300k-alpha22.pdf, id=79, 421.575pt x 316.18124pt>
+
+
+LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
+ line 24.
+
+
+LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
+ line 24.
+
+) <Figures/synthetic-300k-alpha22.pdf, id=78, 421.575pt x 316.18124pt>
 File: Figures/synthetic-300k-alpha22.pdf Graphic file (type pdf)
 
 <use Figures/synthetic-300k-alpha22.pdf>
@@ -510,74 +793,96 @@ Package pdftex.def Info: Figures/synthetic-300k-alpha22.pdf used on input line
 88.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
 
-<Figures/synthetic-1M-26.pdf, id=80, 421.575pt x 316.18124pt>
+<Figures/synthetic-1M-26.pdf, id=79, 421.575pt x 316.18124pt>
 File: Figures/synthetic-1M-26.pdf Graphic file (type pdf)
 
 <use Figures/synthetic-1M-26.pdf>
 Package pdftex.def Info: Figures/synthetic-1M-26.pdf used on input line 92.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
 
-Overfull \hbox (1.04263pt too wide) in paragraph at lines 105--119
+
+LaTeX Warning: Citation `adjiashvili2014labeling' on page \thepage  undefined o
+n input line 99.
+
+
+LaTeX Warning: Citation `alstrup2014adjacency' on page \thepage  undefined on i
+nput line 99.
+
+
+LaTeX Warning: Citation `adjiashvili2014labeling' on page \thepage  undefined o
+n input line 106.
+
+
+LaTeX Warning: Citation `alstrup2014adjacency' on page \thepage  undefined on i
+nput line 106.
+
+
+Overfull \hbox (1.41862pt too wide) in paragraph at lines 105--119
 [][] 
  []
+
+
+LaTeX Warning: Citation `adjiashvili2014labeling' on page \thepage  undefined o
+n input line 128.
 
 [8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [9 <./Figures/barabasi-www.pdf> <./Figures/barabasi-www-ccdf.pdf> <./Figures/e
 nron-mail.pdf> <./Figures/enron-mail-ccdf.pdf> <./Figures/internet.pdf> <./Figu
-res/internet-ccdf.pdf>]) (./WWW.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
+res/internet-ccdf.pdf>]
 
- [10 <./Figures/synthetic-300k-alpha22.pdf> <./Figures/synthetic-1M-26.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Citation `clauset2009power' on page \thepage  undefined on input
+ line 153.
+
+)
+No file WWW.bbl.
+
+Overfull \vbox (387.66086pt too high) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[10
 
- [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-) [12]
+ <./Figures/synthetic-300k-alpha22.pdf> <./Figures/synthetic-1M-26.pdf>]
 (./WWW.aux) ) 
 Here is how much of TeX's memory you used:
- 4356 strings out of 493117
- 62844 string characters out of 6135433
- 142009 words of memory out of 5000000
- 7660 multiletter control sequences out of 15000+600000
+ 3994 strings out of 494469
+ 55754 string characters out of 6166582
+ 131475 words of memory out of 5000000
+ 7112 multiletter control sequences out of 15000+600000
  65073 words of font info for 100 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 44i,15n,47p,1007b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2014/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2014/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2014/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2014/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2014/texmf-dist/f
-onts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2014/texmf-di
-st/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
-ype1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on WWW.pdf (12 pages, 512116 bytes).
+ 350 hyphenation exceptions out of 8191
+ 44i,15n,47p,1003b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb
+8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on WWW.pdf (10 pages, 534241 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
+ 249 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

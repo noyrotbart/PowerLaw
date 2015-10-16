@@ -18,20 +18,20 @@ $O(\frac{n}{D} \log^2 D)$ where $D = (\log n)/(\log \frac{m+n}{n})$ and $m$ is t
 in the graph.   Gawrychowski et al.\ obtain an upper bond of \cite{DBLP:journals/corr/GawrychowskiKU15}
 $O(\frac{n}{D} \log D)$ with sub-linear decoding time. Few general results on lower bounds exist. The lower bound of $\Omega(\sqrt{n})$ for adjacency given in the present paper is trivially also a lower bound for distance; for total label size, the best known lower bound remains $\Omega(n^{3/2})$ as proved by Gavoille et al.~\cite{Gavoille2001}.
 
-We now devise an $f(n)$-distance labelling scheme for $\PLBARG{C_2}{\alpha}$ working for any $C_2 \geq n^{1/(\alpha - 1 +f(n))}$.
+We now devise an $f(n)$-distance labelling scheme for $\PLBARG{\chi}{\alpha}$ working for any $\chi(n) \geq n^{1/(\alpha - 1 +f(n))}$.
 The scheme has shorter labels than any known labelling schemes for small distances. As
-the class of graphs with power law degree distribution is a subset of $\PLBARG{C_2}{\alpha}$, and as power-law graphs in general
+the class of graphs with power law degree distribution is a subset of $\PLBARG{\chi}{\alpha}$, and as power-law graphs in general
 have very small expected distances, the labelling scheme should work well for practical purposes in power-law graphs.
 
 \begin{lemma}\label{lem:sparse_small_dist}
 For any computable $f : \mathbb{N} \longrightarrow \mathbb{N}$ such that
-$f(n) \leq n -1$ for all $n$, and for any $C_2 \geq n^{1/(alpha-1+f(n))}$ there is an $f(n)$-distance labelling scheme for $\PLBARG{C_2}{\alpha}$
+$f(n) \leq n -1$ for all $n$, and for any $\chi(n) \geq n^{1/(alpha-1+f(n))}$ there is an $f(n)$-distance labelling scheme for $\PLBARG{\chi}{\alpha}$
 that assigns labels of length at most $O(n^{f(n)/(f(n) + 1)} \log f(n))$.
 \end{lemma}
 
 \begin{proof}
 As for adjacency labelling, the scheme is based on \emph{thin} and \emph{fat} nodes. Let $G$ be a graph
-in $\PLBARG{C_2}{\alpha}$ Call
+in $\PLBARG{\chi}{\alpha}$ Call
 a node of $G$ \emph{fat} if it has degree at least $n^{1/(\alpha - 1 + f(n)}$ and \emph{thin} otherwise.
 The label of each node $v$ now contains (i) a table of distances to all fat nodes (if the distance is more than $f(n)$, it is simply ignored), (ii) a table of distances to all thin nodes $w$ that are at most distance $f(n)$ away from $v$
 where the shortest path between $v$ and $w$ does not pass through any fat node, and (iii) a single bit signifiying whether the node is fat or thin.
@@ -48,9 +48,9 @@ Furthermore, as all nodes of $G$ are either thin or fat, it is clearly possible 
 all distances less than or equal to $f(n)$ between any pair of nodes. Note that as all distances we care for 
 are bounded above by $f(n)$, each such distance can be stored using at most $\log f(n)$ bits.
 
-As $G = G(V,E)$ is in $\PLCARG{C_2}$, we have 
+As $G = G(V,E)$ is in $\PLBARG{\chi}{\alpha}$, we have 
 \begin{align*}
-\sum_{i = C_2}^{n-1} \vert V_i \vert
+\sum_{i = \chi(n)}^{n-1} \vert V_i \vert
 &\leq \sum_{i = n^{\frac{1}{\alpha - 1 + f(n)}}}^{n-1} \vert V_i \vert \leq C' \left( \frac{n}{\left( n^{\frac{1}{\alpha - 1 + f(n)}}\right)^{\alpha - 1}}\right)\\
 &\leq C' n^{1 - (\alpha - 1)/{\alpha-1 + f(n)}} 
 = C' n^{f(n)/(\alpha - 1 + f(n))}

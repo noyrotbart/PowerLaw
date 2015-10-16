@@ -15,11 +15,11 @@ In the following, let $i_1 = \Theta(\sqrt[\alpha]n)$ be the smallest integer suc
 \begin{definition} \label{def:general-family}
 Let $\alpha > 1$ be a real number and let $\chi:\mathbb N\rightarrow\mathbb N$ be a function. $\PLBARG{\chi}{\alpha}$ is the family of graphs $G$ such that if $n = \vert V(G)\vert$ then for all integers $k$ between $\chi(n)$ and $n-1$, $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$. We shall usually suppress $\chi$ and $\alpha$, writing merely $\PLB$.
 \end{definition}
-The number $C_2$ captures the notion of a cutoff as defined in~\cite{clauset2009power} (Sec. 3.1); the intuition is  that the power law distribution need only apply for nodes of degree higher than $C_2$, rather than for all degrees. 
-Setting $C_2 = 1$ corresponds to the case where the entire range of degrees follows a power-law distribution, hence
-even for small values of $C_2$, $\PLB$ morally contains all graphs with power-law degree distribution.
-We will later prove upper bounds that hold for \emph{all} $C_2$ bounded by some function; in particular
-for the upper bound for adjacency labelling schemes, the bound holds for $C_2$ as high as  $\sqrt[\alpha]{n/\log n}$.
+The function $\chi$ captures the notion of a cutoff as defined in~\cite{clauset2009power} (Sec. 3.1); the intuition is  that for an $n$-vertex graph the power law distribution need only apply for nodes of degree higher than $\chi(n)$, rather than for all degrees. 
+Setting $\chi(n) = 1$ corresponds to the case where the entire range of degrees follows a power-law distribution, hence
+even for small values of $\chi(n)$, $\PLB$ morally contains all graphs with power-law degree distribution.
+We will later prove upper bounds that hold for \emph{all} $\chi$ bounded from above by some function; in particular
+for the upper bound for adjacency labelling schemes, the bound holds for $\chi(n)$ as high as  $\sqrt[\alpha]{n/\log n}$.
 
 The class $\PLC$ contains graphs where  the number of vertices of degree $k$
 must be $C \frac{n}{k^{\alpha}}$ rounded either up or down and the number of vertices of degree $k$ is non-increasing
@@ -78,13 +78,13 @@ $\vert V_k \vert\leq \lceil \frac{Cn}{k^\alpha}\rceil \leq \frac{Cn}{k^{\alpha}}
 \end{proof}
 
 \begin{proposition}\label{prop:Contained}
-For any $C_2 > 0$ and $\alpha > 1$,
-$\PLCARG{\alpha} \subseteq \PLBARG{C_2}{\alpha}$.
+For any $\chi$ and $\alpha > 1$,
+$\PLCARG{\alpha} \subseteq \PLBARG{\chi}{\alpha}$.
 \end{proposition}
 \begin{proof}
 Let $d = \lfloor(\frac C{\alpha - 1} + 2)\sqrt[\alpha]{n} + i_1 + 3\rfloor$. For any graph in $\PLC$ with $n$ vertices and for any $k$, $\vert V_k\vert\leq Ck^{-\alpha}n + 1$ and by Proposition~\ref{prop:maxvertexproper}, $\vert V_k\vert = 0$ when $k > d$.
 
-Let $k$ be an arbitrary integer between $C_2$ and $n-1$. We need to show that $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$. It suffices to show this for $k\leq d$. We have:
+Let $k$ be an arbitrary integer between $\chi(n)$ and $n-1$. We need to show that $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$. It suffices to show this for $k\leq d$. We have:
 \begin{align*}
   \sum_{i = k}^{n-1} {\vert V_i\vert} & \leq \sum_{i = k}^d(Ci^{-\alpha}n + 1)=    d - k + 1 + Cn\sum_{i = k}^d i^{-\alpha}\\
   & \leq \left(\frac C{\alpha - 1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)\sqrt[\alpha]{n} + Cn\int_k^d x^{-\alpha}dx\\
@@ -105,7 +105,7 @@ We show that our definition of $\PLB$ contains graphs that adhere to the model, 
 \[
   c_1n(t+1)^{\alpha - 1}\sum_{i = 2^d}^{2^{d+1} - 1}(i+t)^{-\alpha}.
 \]
-As experimentally verified in \cite{Sankowski2016PowerLaw}, the value of $t$ is typically very small. If $t = O(1)$, the bound above becomes $O(n\sum_{i = 2^d}^{2^{d+1} - 1}i^{-\alpha})$. In this case, our family $\PLB(C_2,\alpha)$ is rich enough to contain these power law bounded graphs for sufficiently large $C'$ and any choice of $C_2$ and $\alpha$. This follows since for any power law bounded graph with $n$ vertices, $|V_i| = O(ni^{-\alpha})$ so for any integer $k$ between $1$ and $n-1$, $\sum_{i = k}^{n-1}{\vert V_i\vert} = O(\frac{n}{k^{\alpha-1}})$. It follows that our upper bound also applies to power law bounded graphs. It is possible to extend our upper bound to super-constant $t$ where the bound is stronger the smaller $t$ is; we omit the details. Conversely, our family $\PLC$ is restrictive enough that
+As experimentally verified in \cite{Sankowski2016PowerLaw}, the value of $t$ is typically very small. If $t = O(1)$, the bound above becomes $O(n\sum_{i = 2^d}^{2^{d+1} - 1}i^{-\alpha})$. In this case, our family $\PLB(\chi,\alpha)$ is rich enough to contain these power law bounded graphs for sufficiently large $C'$ and any choice of $\chi$ and $\alpha$. This follows since for any power law bounded graph with $n$ vertices, $|V_i| = O(ni^{-\alpha})$ for $i = 1,\ldots,n-1$, so for any integer $k$ between $1$ and $n-1$, $\sum_{i = k}^{n-1}{\vert V_i\vert} = O(\frac{n}{k^{\alpha-1}})$. Thus our upper bound also applies to power law bounded graphs. It is possible to extend our upper bound to super-constant $t$ where the bound is stronger the smaller $t$ is; we omit the details. Conversely, our family $\PLC$ is restrictive enough that
 $\PLC$ is contained in the family of power law bounded graphs when $t = O(1)$, and the lower bound we derive thus
 also holds in that setting.
 

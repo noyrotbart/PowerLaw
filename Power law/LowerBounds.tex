@@ -18,7 +18,7 @@ $\left\lfloor\frac{\sqrt{c\lfloor n^2/c\rfloor}}2\right\rfloor \leq n/2$ bits. A
 \subsection{Lower bound for power-law graphs}
 In the remainder of this section we are assuming that $\alpha>2$ and  prove the following:
 \begin{theorem}\label{centralLowerBound}
-For any $n$, any labeling scheme for $n$-vertex graphs of $\PLBARG{C_2}{\alpha}$ requires label size $\Omega(\sqrt[\alpha]{n})$.
+For any $n$, any labeling scheme for $n$-vertex graphs of $\PLBARG{\chi}{\alpha}$ requires label size $\Omega(\sqrt[\alpha]{n})$.
 \end{theorem}
 More precisely, we present a lower bound for $\PLC$ which is contained in $\PLB$. Let $n\in\mathbb N$ be given and let $H = (V(H),E(H))$ be an arbitrary graph with $i_1$ vertices where $i_1 = \Theta(\sqrt[\alpha]n)$ is defined as in Section~\ref{Sec:GraphFamilies}. We show how to construct a graph $G = (V,E)$ in $\PLC$ with $n$ vertices that contains $H$ as an induced subgraph. Observe that a labeling of $G$ induces a labeling of $H$. As $H$ was chosen arbitrarily and as any labeling scheme for $k$-vertex graphs requires $\lfloor i_1/2 \rfloor$ label size in the worst case, Theorem~\ref{centralLowerBound} follows if we can show the existence of $G$.
 
