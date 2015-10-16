@@ -1,28 +1,39 @@
 % !TEX root = WWW.tex
 
- \section{Graph Families Related to Power-Law Graphs}\label{Sec:GraphFamilies}
-In this section we define two families of graphs $\PLB$ and $\PLC$ with $\PLC\subseteq\PLB$. Family $\PLB$ is rich enough to contain the graphs whose degree distribution is approximately, or perfectly, power-law distributed, and our upper bound on the label size for our labeling scheme holds for any graph in $\PLB$. Family $\PLC$ is used to show our lower bound. In the following, let $i_1 = \Theta(\sqrt[\alpha]n)$ be the smallest integer such that $\lfloor Cn/i_1^\alpha\rfloor \leq 1$, and let $C'\geq(\frac C{\alpha-1} + \frac{i_1}{\sqrt[\alpha] n} + 5)^{\alpha} + \frac{C}{\alpha - 1}$ be a constant; we shall use $C'$ in the remainder of the paper.
-\begin{definition} \label{def:general-family}
-Let $\alpha > 1$ be a real number. $\PLB$ is the family of graphs $G$ such that if $n = \vert V(G)\vert$ then for all integers $k$ between  some constant $C_2$ and $n-1$, $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$.
-\end{definition}
+ \section{Power-Law Graphs}\label{Sec:GraphFamilies}
 
-The class of $\alpha$\emph{-proper} power law graphs contains graphs where  the number of vertices of degree $k$
+In the literature \emph{power-law} graphs are usually defined as the class of $n$ vertex graphs $G$ such that $\mathrm{ddist}_G(k)$
+is proportional to $k^{-\alpha}$ for some real number $\alpha > 1$. Ideally, and ignoring rounding,  $\mathrm{ddist}_G(k) = Ck^{-\alpha}$ for all $k$ for constant $C$. As the degree distribution of a graph must be a probability distribution, we have $\sum_{k=1}^\infty C k^{-\alpha} = C \sum_{k=1}^\infty k^{-\alpha} = 1$, hence  $C = 1/\zeta(\alpha)$ where $\zeta$ is the Riemann zeta function. However, in the literature, concessions are usually made that relax
+the restrictions on $\mathrm{ddist}_G(k)$, for example that the power-law property need only hold for high-degree
+vertices (``above a cutoff''), or that $\mathrm{ddist}_G(k)$ is only \emph{approximately} equal to $Ck^{-\alpha}$,
+with some approximation error that falls off with $n$.
+To ensure that our results hold for all these variations of power-law graphs, 
+ we define two families of graphs $\PLB$ and $\PLC$ with $\PLC\subsetneq\PLB$. Family $\PLB$ is rich enough to contain the graphs whose degree distribution is approximately, or perfectly, power-law distributed, and our upper bound on the label size for our labeling scheme holds for any graph in $\PLB$. Family $\PLC$ is used to show our lower bound
+ and is restrictive enough that most definitions of power-law graph occurring in the literature will contain it. 
+ 
+In the following, let $i_1 = \Theta(\sqrt[\alpha]n)$ be the smallest integer such that $\lfloor Cn/i_1^\alpha\rfloor \leq 1$, and let $C'\geq(\frac C{\alpha-1} + \frac{i_1}{\sqrt[\alpha] n} + 5)^{\alpha} + \frac{C}{\alpha - 1}$ be a constant; we shall use $C'$ in the remainder of the paper.
+\begin{definition} \label{def:general-family}
+Let $\alpha > 1$ be a real number. $\PLBARG{C_2}$ is the family of graphs $G$ such that if $n = \vert V(G)\vert$ then for all integers $k$ between  some  $C_2$ (which may depend on $n$) and $n-1$, $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$. We shall usually suppress $C_2$, writing merely $\PLB$.
+\end{definition}
+The number $C_2$ captures the notion of a cutoff as defined in~\cite{clauset2009power} (Sec. 3.1); the intuition is  that the power law distribution need only apply for nodes of degree higher than $C_2$, rather than for all degrees. 
+Setting $C_2 = 1$ correspond to the case where the entire range of degrees follows a power-law distribution, hence
+even for small values of $C_2$, $\PLB$ morally contains all graphs with power-law degree distribution.
+We will later prove upper bounds that hold for \emph{all} $C_2$ bounded by some function; in particular
+for the upper bound for adjacency labelling schemes, the bound holds for $C_2$ as high as  $\sqrt[\alpha]{n/\log n}$.
+
+The class $\PLC$ contains graphs where  the number of vertices of degree $k$
 must be $C \frac{n}{k^{\alpha}}$ rounded either up or down and the number of vertices of degree $k$ is non-increasing
 with $k$. Note that the function $k \mapsto  C \frac{1}{k^{\alpha}}$ is strictly decreasing.
-The constant $C_2$ captures the notion of a cutoff as defined in~\cite{clauset2009power} (Sec. 3.1), intuitively requiring that the power law distribution applies only for nodes of degree higher than $C_2$.
-Finally, note that the value of  the cutoff constant $C_2$ can be as high as  $\sqrt[\alpha]{n/\log n}$.
 
- 
 \begin{definition}\label{def:proper}
-Let $\alpha > 1$ be a real number. We say that an $n$-vertex graph  $G=(V,E)$ is an  $\alpha$-\emph{proper power-law graph} 
-if
+Let $\alpha > 1$ be a real number and let $C = 1/\zeta(\alpha)$ where $\zeta$ is the Riemann zeta function. $\PLCARG{\alpha}$ is the set of graphs  $G=(V,E)$ such that
 \begin{enumerate}
 \item $\lfloor Cn\rfloor - i_1 - 1\leq\vert V_1\vert\leq\lceil Cn\rceil$,
 \item $\lfloor C\frac n{2^\alpha}\rfloor\leq\vert V_2\vert\leq\lceil C\frac n{2^\alpha}\rceil + 1$,
 \item for every $i$ with $3 \leq i \leq n$:  $\vert V_i \vert\in \{\lfloor C\frac{n}{i^{\alpha}} \rfloor, \lceil C \frac{n}{i^{\alpha}} \rceil\}$, and
 \item for every $i$ with $2 \leq i \leq n-1$: $\vert V_i \vert \geq \vert V_{i+1} \vert$.
 \end{enumerate}
-The family of $\alpha$-proper power-law graphs is denoted $\PLC$.
+We usually suppress $\alpha$, writing just $\PLC$.
 \end{definition}
 Note that we allow slightly more noise in the sizes of $V_1$ and $V_2$ than in the remaining sets; without it, it seems tricky to prove a better lower bound than $\Omega(\sqrt[\alpha+1]{n})$ on label sizes.
 
@@ -48,14 +59,14 @@ S^{-}_{k'} + k' & = -i_1 - 1 + \sum_{i=1}^{k'} \left(\left\lfloor Cn i^{-\alpha}
  & = n - \frac{Cn}{\alpha - 1}n^{-1+\frac{1}{\alpha}} - i_1 - 1\\
  & = n - \frac{C}{\alpha - 1}\sqrt[\alpha]{n} - i_1 - 1,
 \end{align*}
-giving $S_{k'} \geq S^{-}_{k'} \geq n - \frac{C}{\alpha - 1}\sqrt[\alpha]{n} - \lceil \sqrt[\alpha]{n} \rceil - i_1 - 1$. There are thus at most $\frac{C}{\alpha - 1} \sqrt[\alpha]{n} + \lfloor \sqrt[\alpha]{n} \rfloor + i_1 + 1$ vertices of degree strictly more than $k' = \lceil \sqrt[\alpha]{n} \rceil$. Since for every $1 \leq i \leq n-1$: $\vert V_i \vert \geq \vert V_{i+1} \vert$, it follows that the maximum degree of any $\alpha$-proper power-law graph is at most $\left(\frac{C}{\alpha - 1} + 2\right) \sqrt[\alpha]{n} + i_1 + 3$.
+giving $S_{k'} \geq S^{-}_{k'} \geq n - \frac{C}{\alpha - 1}\sqrt[\alpha]{n} - \lceil \sqrt[\alpha]{n} \rceil - i_1 - 1$. There are thus at most $\frac{C}{\alpha - 1} \sqrt[\alpha]{n} + \lfloor \sqrt[\alpha]{n} \rfloor + i_1 + 1$ vertices of degree strictly more than $k' = \lceil \sqrt[\alpha]{n} \rceil$. Since for every $1 \leq i \leq n-1$: $\vert V_i \vert \geq \vert V_{i+1} \vert$, it follows that the maximum degree of any graph in $\PLC$ is at most $\left(\frac{C}{\alpha - 1} + 2\right) \sqrt[\alpha]{n} + i_1 + 3$.
 \end{proof}
 
 \begin{proposition}\label{prop:powerlawsparse}
 For $\alpha > 2$, all graphs in $\PLC$ are sparse.
 \end{proposition}
 \begin{proof}
-By Proposition \ref{prop:maxvertexproper}, the maximum degree of an $n$-vertex $\alpha$-proper power-law
+By Proposition \ref{prop:maxvertexproper}, the maximum degree of an $n$-vertex graph in $\PLC$
 graph is at most $k' \triangleq \left(\frac{C}{\alpha - 1} + 2\right) \sqrt[\alpha]{n} + i_1 + 3$, whence
 the total number of edges is at most $\frac{1}{2}\sum_{k=1}^{k'} k \vert V_k\vert$. By definition,
 $\vert V_k \vert\leq \lceil \frac{Cn}{k^\alpha}\rceil \leq \frac{Cn}{k^{\alpha}} + 1$ for $k\neq 2$ and $\vert V_2\vert\leq\lceil\frac{Cn}{2^{\alpha}}\rceil + 1$, and thus
@@ -67,12 +78,13 @@ $\vert V_k \vert\leq \lceil \frac{Cn}{k^\alpha}\rceil \leq \frac{Cn}{k^{\alpha}}
 \end{proof}
 
 \begin{proposition}\label{prop:Contained}
-$\PLC \subseteq \PLB$.
+For any $C_2 > 0$ and $\alpha > 1$,
+$\PLCARG{\alpha} \subseteq \PLBARG{C_2}$.
 \end{proposition}
 \begin{proof}
-Let $d = \lfloor(\frac C{\alpha - 1} + 2)\sqrt[\alpha]{n} + i_1 + 3\rfloor$. For any $\alpha$-proper power-law graph with $n$ vertices and for any $k$, $\vert V_k\vert\leq Ck^{-\alpha}n + 1$ and by Proposition~\ref{prop:maxvertexproper}, $\vert V_k\vert = 0$ when $k > d$.
+Let $d = \lfloor(\frac C{\alpha - 1} + 2)\sqrt[\alpha]{n} + i_1 + 3\rfloor$. For any graph in $\PLC$ with $n$ vertices and for any $k$, $\vert V_k\vert\leq Ck^{-\alpha}n + 1$ and by Proposition~\ref{prop:maxvertexproper}, $\vert V_k\vert = 0$ when $k > d$.
 
-Let $k$ be an arbitrary integer between $\sqrt[\alpha]{n/\log n}$ and $n-1$. We need to show that $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$. It suffices to show this for $k\leq d$. We have:
+Let $k$ be an arbitrary integer between $C_2$ and $n-1$. We need to show that $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$. It suffices to show this for $k\leq d$. We have:
 \begin{align*}
   \sum_{i = k}^{n-1} {\vert V_i\vert} & \leq \sum_{i = k}^d(Ci^{-\alpha}n + 1)=    d - k + 1 + Cn\sum_{i = k}^d i^{-\alpha}\\
   & \leq \left(\frac C{\alpha - 1} + \frac{i_1}{\sqrt[\alpha]n} + 5\right)\sqrt[\alpha]{n} + Cn\int_k^d x^{-\alpha}dx\\
@@ -84,7 +96,8 @@ Let $k$ be an arbitrary integer between $\sqrt[\alpha]{n/\log n}$ and $n-1$. We 
 \end{align*}
 as desired.
 \end{proof}
-\subsection{Comparison to other suggested deterministic models}
+
+\subsection{Comparison to other deterministic models}
 Numerous probabilistic and  deterministic  definitions of power-law graphs are given in the literature.
 A recent deterministic model, called  shifted power law distribution \cite{eom2011characterizing} has recently proven to capture a vast number of such definitions, both in theory and experimentally in \cite{Sankowski2016PowerLaw}.
 We show that our definition of $\PLB$ contains graphs that adhere to the model, which is defined as follows.
@@ -92,7 +105,9 @@ We show that our definition of $\PLB$ contains graphs that adhere to the model, 
 \[
   c_1n(t+1)^{\alpha - 1}\sum_{i = 2^d}^{2^{d+1} - 1}(i+t)^{-\alpha}.
 \]
-As experimentally verified in \cite{Sankowski2016PowerLaw}, the value of $t$ is typically very small. If $t = O(1)$, the bound above becomes $O(n\sum_{i = 2^d}^{2^{d+1} - 1}i^{-\alpha})$. In this case, it is easy to see that our family $\PLB$ is rich enough to contain these power law bounded graphs (for sufficiently big constant $C'$) and so our upper bound also applies to power law bounded graphs. It is possible to extend our upper bound to super-constant $t$ where the bound is stronger the smaller $t$ is; we omit the details. Regarding lower bounds, our family $\PLC$ is restrictive enough so that any lower bound for this family also holds for power law bounded graphs when $t = O(1)$.
+As experimentally verified in \cite{Sankowski2016PowerLaw}, the value of $t$ is typically very small. If $t = O(1)$, the bound above becomes $O(n\sum_{i = 2^d}^{2^{d+1} - 1}i^{-\alpha})$. In this case, it is easy to see that our family $\PLB$ is rich enough to contain these power law bounded graphs (for sufficiently large $C'$), whence our upper bound also applies to power law bounded graphs. It is possible to extend our upper bound to super-constant $t$ where the bound is stronger the smaller $t$ is; we omit the details. Conversely, our family $\PLC$ is restrictive enough that
+$\PLC$ is contained in the family of power law bounded graphs when $t = O(1)$, and the lower bound we derive thus
+also holds in that setting.
 
 
 

@@ -1,8 +1,8 @@
 % !TEX root = WWW.tex
 \subsection{Labeling scheme for random graphs}
-Graphs in $\PLB$ have a fixed degree sequence. However, certain graph generation models for power-law graphs are inherently random; one example is the preferential attachment model. For graphs obtained from such models, their degree sequences are instead probability distributions. In this section, we show that applying our labeling scheme for $\PLB$ to random graphs with the power law distribution, we get a good expected worst-case label size.
+There are schemes using randomness to ``growing''  graphs with approximate power-law degree distribution. One such scheme is the preferential attachment model \cite{barabasi1999emergence}. For graphs obtained from such models, their degree sequences are instead probability distributions. We now show that applying our labeling scheme for $\PLB$ to random graphs with the power law distribution results in a small expected worst-case label size.
 
-Using the definition of Mitzenmacher, a random variable $X$ is said to have the \emph{power law} distribution (w.r.t.~$\alpha > 1$) if
+Using the definition of Mitzenmacher \cite{mitzenmacher2004brief}, a random variable $X$ is said to have the \emph{power law} distribution (w.r.t.~$\alpha > 1$) if
 \[
   Pr[X\geq x] \sim cx^{-\alpha+1},
 \]
