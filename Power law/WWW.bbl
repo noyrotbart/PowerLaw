@@ -172,6 +172,13 @@ C.~Gavoille and A.~Labourel.
   treewidth graphs.
 \newblock In {\em Algorithms--ESA 2007}, pages 582--593. Springer, 2007.
 
+\bibitem{Gavoille2001}
+C.~Gavoille, D.~Peleg, S.~P{\'e}rennes, and R.~Raz.
+\newblock Distance labeling in graphs.
+\newblock In {\em Proceedings of the twelfth annual ACM-SIAM symposium on
+  Discrete algorithms}, SODA '01, pages 210--219, Philadelphia, PA, USA, 2001.
+  Society for Industrial and Applied Mathematics.
+
 \bibitem{gavoillea2004distance}
 C.~Gavoille, D.~Peleg, S.~P{\'e}rennesc, and R.~Razb.
 \newblock Distance labeling in graphs.

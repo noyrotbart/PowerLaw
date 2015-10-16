@@ -3,7 +3,7 @@
 
 \section{Introduction}
 A body of work on large, real-world networks  deals with the difficulties of storing them and to effectively resolve queries on them; examples of techniques are
-compression~\cite{boldi2004webgraph,boldi2011layered} and dissemination  the underlying graphs of these networks over several machines~\cite{gonzalez2012powergraph, stanton2012streaming}.
+compression~\cite{boldi2004webgraph,boldi2011layered} and dissemination  the underlying graphs of these networks over several machines~\cite{gonzalez2012powergraph, stanton2012streaming, xie2014distributed}.
 Another approach is to disseminate the structural information of the graph to its vertices. This \emph{peer-to-peer} strategy allows inferring the graph's local topology using only local information stored in each vertex without using costly access to large, global data structures, and can be particularly useful to address privacy concerns and ensure a high survivability rate ~\cite{buchegger2009peerson}.
 
 We posit that a useful tool for such a peer-to-peer strategy is the notion of a \emph{labeling scheme}: an algorithm that assigns a bit string--a \emph{label}--to each vertex so that a query between any two vertices can be deduced solely from their respective labels. 
