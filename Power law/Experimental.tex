@@ -140,17 +140,17 @@ We have devised adjacency and distance labeling schemes for sparse graphs and gr
  Furthermore, we have shown experimentally that the labeling scheme for power-law graphs obtain
 results in practice requiring little  space, and that the theoretical threshold we use in our strategy is reasonably close to the optimum threshold.
 
-
 \subsection{Future work}
-Our labeling schemes are designed for static networks, and while it seems not difficult to extend our idea to dynamic networks, an analysis is required to account for the communication and number of re-labels such an extension will incur.
-%deletions    We point out that this can be done easily in practice, by allowing re-labeling of fat nodes that become thin, or vice-versa. As such changes can be suppressed, it seems plausible that the label size can be maintained using very few acts of re-labeling.
-Labeling schemes for power law graphs can likely be devised for the realistic case where the scheme only has incomplete knowledge of the graph, for example when the expected frequency of vertices of each degree is known, but not the exact frequency of each vertex.
-
-As our labeling scheme can be extended to handle directed graphs by using a single bit more per label, it would be interesting to investigate the overhead incurred by distributing the storage of the graph topology to the labels (as per our labeling scheme) compared to the substantial body of work on storing directed power-law graphs directly in main memory (so-called ``web-graph compression'') \cite{guillaume2002efficient,asano2003compact, asano2008efficient,claude2010fast}.
-
-The entropy of both the Chung-Liu and the BA model was recently determined to be similar. It is thus quite surprising that the label size difference is as large as we have proved. It is thus conjectured that the number of nodes of large label size is very small for this family.
-Closing the  gap of the multiplicative logarithmic factor may be  of interest to the theory community. A much more interesting gap is that of distance.
+We propose the following directions:
+\begin{itemize}
+\item{Our labeling schemes are designed for static networks, and while it seems not difficult to extend our idea to dynamic networks, an analysis is required to account for the communication and number of re-labels such an extension will incur.}
+\item{Labeling schemes for power law graphs can likely be devised for the realistic case where the scheme only has incomplete knowledge of the graph, for example when the expected frequency of vertices of each degree is known, but not the exact frequency of each vertex.}
+%As our labeling scheme can be extended to handle directed graphs by using a single bit more per label, 
+\item{One way to view labeling schemes as a hole is the extreme scenario where our data structure is disseminated across $n$ machines.
+This may lead to a better understanding of  overheads observed in other  distributed graph storage technics.}
+%\item{The entropy of both the Chung-Liu and the BA model was recently determined to be similar. It is thus quite surprising that the label size difference is as large as we have proved. It is thus conjectured that the number of nodes of large label size is very small for this family.}
+\item{Closing the  gap of the multiplicative logarithmic factor may be  of interest to the theory community. A much more interesting gap is that of distance.
 As we have seen, there is a large gap between labeling schemes for short distance and adjacency for power-law (and sparse) graphs.
-This gap effectively deemed the distance labels uninteresting for practical applications.
-
+This gap effectively deemed the distance labels uninteresting for practical applications.}
+\end{itemize}
 
