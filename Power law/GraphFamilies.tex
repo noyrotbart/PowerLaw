@@ -16,7 +16,7 @@ In the following, let $i_1 = \Theta(\sqrt[\alpha]n)$ be the smallest integer suc
 Let $\alpha > 1$ be a real number. $\PLBARG{C_2}$ is the family of graphs $G$ such that if $n = \vert V(G)\vert$ then for all integers $k$ between  some  $C_2$ (which may depend on $n$) and $n-1$, $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$. We shall usually suppress $C_2$, writing merely $\PLB$.
 \end{definition}
 The number $C_2$ captures the notion of a cutoff as defined in~\cite{clauset2009power} (Sec. 3.1); the intuition is  that the power law distribution need only apply for nodes of degree higher than $C_2$, rather than for all degrees. 
-Setting $C_2 = 1$ correspond to the case where the entire range of degrees follows a power-law distribution, hence
+Setting $C_2 = 1$ corresponds to the case where the entire range of degrees follows a power-law distribution, hence
 even for small values of $C_2$, $\PLB$ morally contains all graphs with power-law degree distribution.
 We will later prove upper bounds that hold for \emph{all} $C_2$ bounded by some function; in particular
 for the upper bound for adjacency labelling schemes, the bound holds for $C_2$ as high as  $\sqrt[\alpha]{n/\log n}$.
