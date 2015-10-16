@@ -51,22 +51,22 @@ $\alpha$ of the best-fitting power-law curve \cite{clauset2009power}. Additional
 \begin{tabular}{lccccl}\hline
 \multicolumn{6}{c}{Real-Life}\\\hline
 Data set  & $\vert V \vert$ & $\vert E\vert$ & $\alpha$  & $\Delta_{\max}$ & Source\\\hline
-\textsc{LiveJournal} &  3,997,962        &    34,681,198      & 2.97     & 14,815        & \cite{?}\\
-\textsc{www}      & 325,729        & 1,117,563     & 2.16 & 10,721            & \cite{albert1999internet}\\
-\textsc{enron}    &  36,692        &   183,830      & 1.97    &1,383         & \cite{leskovec2009community}\\
 \textsc{internet} &  22,963        &    48,436      & 2.09     & 2,390        & \cite{newman}\\
+\textsc{enron}    &  36,692        &   183,830      & 1.97    &1,383         & \cite{leskovec2009community}\\
+\textsc{www}      & 325,729        & 1,117,563     & 2.16 & 10,721            & \cite{albert1999internet}\\
 \textsc{pokec} & 1,632,803 & 30,622,564 & 3.5 & 14854 & \cite{takac2012data}\\
+\textsc{LiveJournal} &  3,997,962        &    34,681,198      & 2.97     & 14,815        & \cite{?}\\
 \textsc{orkut} & 3,072,441 & 117,185,083 & 2.96 & 33313 & \cite{yang2015defining}\\\hline
 
 
 \multicolumn{6}{c}{Synthetic}\\\hline
-s1M$^{\alpha=2.4}$    & 1,000,000       & 1,127,797      & 2.4    & 42,683 &-- \\
-s1M$^{\alpha=2.6}$    & 1,000,000       & 878,472        & 2.6    & 12,169 &-- \\
-s1M$^{\alpha=2.8}$    & 1,000,000       & 751,784         & 2.8   & 1,692  &-- \\
 s300$^{\alpha=2.2}$    & 300,000        & 491,926        & 2.2    & 10,906 & --\\
 s300$^{\alpha=2.4}$    & 300,000        & 327,631        & 2.4    & 3,265 & --\\
 s300$^{\alpha=2.6}$    & 300,000        & 261,949        & 2.6    & 1,410 & --\\
-s300$^{\alpha=2.8}$    & 300,000        & 227,247        & 2.8    & 1,842 & --\\\hline
+s300$^{\alpha=2.8}$    & 300,000        & 227,247        & 2.8    & 1,842 & --\\
+s1M$^{\alpha=2.4}$    & 1,000,000       & 1,127,797      & 2.4    & 42,683 &-- \\
+s1M$^{\alpha=2.6}$    & 1,000,000       & 878,472        & 2.6    & 12,169 &-- \\
+s1M$^{\alpha=2.8}$    & 1,000,000       & 751,784         & 2.8   & 1,692  &-- \\\hline
 \end{tabular}
 \caption{Data sets and their properties. All graphs are undirected and simple. $\Delta_{\max}$ is the maximum degree of any vertex in the data set.}
 \label{t:datasets}
@@ -78,7 +78,7 @@ Figure \ref{fig:findings} shows the distribution of maximum label sizes for one 
 for the predicted and empirical thresholds as well as upper bounds on the label sizes from different label schemes in the literature can be seen in Table \ref{t:labelsizes} for two synthetic
 data sets and all three real-world data sets. 
 %Plots for the remaining data sets can be found in Appendix~\ref{App:ExpRes}.
-
+\input{FiguresRealLife}
 
 \begin{figure*}[!ht]
 \centering
@@ -86,14 +86,13 @@ data sets and all three real-world data sets.
     \includegraphics[width=0.4\textwidth]{Figures/synthetic-300k-alpha22.pdf}
     \label{f:fsyn300k}
 }\hspace*{-2.5em}
-\subfloat[\small \textsc{enron}]{
-    \includegraphics[width=0.4\textwidth]{Figures/enron-mail.pdf}
-    \label{f:fenron}
+\subfloat[\small \textsc{\small s1M$^{\alpha=2.2}$}]{
+    \includegraphics[width=0.4\textwidth]{Figures/synthetic-1M-26}
+    \label{f:fsyn1M}
 }%
-\caption{Maximum label sizes of different threshold values for the   syn300$^{\alpha=2.2}$ and \textsc{enron} data sets.
-% Fat vertices are shown as red triangles and thin vertices as blue crosses.The black pentagram is the \emph{predicted} maximum label size.The transition between fat and thin vertices is the \emph{empirical} best maximum label size.
-%Fig.\ \ref{f:fsyn300k} shows the syn300$^{\alpha=2.2}$ dataset, Fig.\ \ref{f:fenron} the \textsc{enron} dataset. 
-The triangles and crosses represent that for the tested threshold the largest label belong to fat, resp. thin node. The star indicate the position of the predicted threshold.}
+\caption{Exemplary maximum label sizes of different threshold values for the synthetic data sets   syn300$^{\alpha=2.2}$ and s1M$^{\alpha=2.6}$. 
+The triangles and crosses represent that for the tested threshold the largest label belong to fat, resp. thin node. The star indicate the position of the predicted threshold.
+See~\cite{} for the remaining  figures for synthetic datasets.}
 \label{fig:findings}%
 \end{figure*}
 
@@ -131,9 +130,7 @@ The actual label sizes obtained in the experiments (the two leftmost columns of 
 the labeling scheme performs much better in practice than suggested by theory (down to less than a kilobyte per vertex for all data sets). 
 This phenomenon may be due to the degree distribution of the graphs of the data sets having only minor deviation from a power-law for small vertex degrees; our upper bounds on the label size are derived by using the very rich family $\PLB$ that allows very large deviation from a power-law for degrees between $1$ and $\sqrt[\alpha]{n/\log n} - 1$.
 
-Finally, note that our labeling scheme supports adjacency for \emph{directed} graphs by using one more bit per edge in each label to store the edge orientation. For data sets whose natural interpretation is as a directed graph (e.g., the \textsc{www} set where edges are outgoing and incoming links), the results of Table \ref{t:labelsizes} thus carry over with just one more bit
-added to the numbers in the two leftmost columns.
-
+Finally, note that our labeling scheme supports adjacency for \emph{directed} graphs by using one more bit per edge in each label to store the edge orientation.
 \section{Conclusion and Future Work}
 We have devised adjacency and distance labeling schemes for sparse graphs and graphs whose degree distribution approximately follows a power-law distribution.
  We have proven lower bounds for the class of power-law graphs showing that our strategy for adjacency labeling scheme is  almost  optimal. 

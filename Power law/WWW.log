@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.23)  16 OCT 2015 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.23)  16 OCT 2015 15:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -449,14 +449,57 @@ Overfull \hbox (7.90233pt too wide) in paragraph at lines 63--64
 
 ) (./Experimental.tex [7]
 
-LaTeX Warning: Citation `?' on page \thepage  undefined on input line 54.
+LaTeX Warning: Citation `?' on page \thepage  undefined on input line 58.
 
 
 Overfull \hbox (15.94037pt too wide) in paragraph at lines 51--71
  [][] 
  []
 
-<Figures/synthetic-300k-alpha22.pdf, id=73, 421.575pt x 316.18124pt>
+(./FiguresRealLife.tex
+<Figures/barabasi-www.pdf, id=73, 421.575pt x 316.18124pt>
+File: Figures/barabasi-www.pdf Graphic file (type pdf)
+
+<use Figures/barabasi-www.pdf>
+Package pdftex.def Info: Figures/barabasi-www.pdf used on input line 6.
+(pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
+
+<Figures/barabasi-www-ccdf.pdf, id=74, 421.575pt x 316.18124pt>
+File: Figures/barabasi-www-ccdf.pdf Graphic file (type pdf)
+
+<use Figures/barabasi-www-ccdf.pdf>
+Package pdftex.def Info: Figures/barabasi-www-ccdf.pdf used on input line 9.
+(pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
+
+<Figures/enron-mail.pdf, id=75, 421.575pt x 316.18124pt>
+File: Figures/enron-mail.pdf Graphic file (type pdf)
+
+<use Figures/enron-mail.pdf>
+Package pdftex.def Info: Figures/enron-mail.pdf used on input line 13.
+(pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
+
+<Figures/enron-mail-ccdf.pdf, id=76, 421.575pt x 316.18124pt>
+File: Figures/enron-mail-ccdf.pdf Graphic file (type pdf)
+
+<use Figures/enron-mail-ccdf.pdf>
+Package pdftex.def Info: Figures/enron-mail-ccdf.pdf used on input line 16.
+(pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
+
+<Figures/internet.pdf, id=77, 421.575pt x 316.18124pt>
+File: Figures/internet.pdf Graphic file (type pdf)
+
+<use Figures/internet.pdf>
+Package pdftex.def Info: Figures/internet.pdf used on input line 20.
+(pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
+
+<Figures/internet-ccdf.pdf, id=78, 421.575pt x 316.18124pt>
+File: Figures/internet-ccdf.pdf Graphic file (type pdf)
+
+<use Figures/internet-ccdf.pdf>
+Package pdftex.def Info: Figures/internet-ccdf.pdf used on input line 23.
+(pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
+)
+<Figures/synthetic-300k-alpha22.pdf, id=79, 421.575pt x 316.18124pt>
 File: Figures/synthetic-300k-alpha22.pdf Graphic file (type pdf)
 
 <use Figures/synthetic-300k-alpha22.pdf>
@@ -464,37 +507,47 @@ Package pdftex.def Info: Figures/synthetic-300k-alpha22.pdf used on input line
 88.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
 
-<Figures/enron-mail.pdf, id=74, 421.575pt x 316.18124pt>
-File: Figures/enron-mail.pdf Graphic file (type pdf)
+<Figures/synthetic-1M-26.pdf, id=80, 421.575pt x 316.18124pt>
+File: Figures/synthetic-1M-26.pdf Graphic file (type pdf)
 
-<use Figures/enron-mail.pdf>
-Package pdftex.def Info: Figures/enron-mail.pdf used on input line 92.
+<use Figures/synthetic-1M-26.pdf>
+Package pdftex.def Info: Figures/synthetic-1M-26.pdf used on input line 92.
 (pdftex.def)             Requested size: 201.59692pt x 151.20079pt.
 
-Overfull \hbox (1.04263pt too wide) in paragraph at lines 106--120
+Overfull \hbox (1.04263pt too wide) in paragraph at lines 105--119
 [][] 
  []
 
-[8]) [9 <./Figures/synthetic-300k-alpha22.pdf> <./Figures/enron-mail.pdf>]
-(./WWW.bbl
+[8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
+ [9 <./Figures/barabasi-www.pdf> <./Figures/barabasi-www-ccdf.pdf> <./Figures/e
+nron-mail.pdf> <./Figures/enron-mail-ccdf.pdf> <./Figures/internet.pdf> <./Figu
+res/internet-ccdf.pdf>]) (./WWW.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-) [11]
+ [10 <./Figures/synthetic-300k-alpha22.pdf> <./Figures/synthetic-1M-26.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+) [12]
 (./WWW.aux) ) 
 Here is how much of TeX's memory you used:
- 4321 strings out of 493117
- 61941 string characters out of 6135433
- 139001 words of memory out of 5000000
- 7635 multiletter control sequences out of 15000+600000
+ 4356 strings out of 493117
+ 62844 string characters out of 6135433
+ 142009 words of memory out of 5000000
+ 7660 multiletter control sequences out of 15000+600000
  65073 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,15n,47p,903b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,15n,47p,1007b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</
 usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></us
 r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/
@@ -521,10 +574,10 @@ f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/
 fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on WWW.pdf (11 pages, 383445 bytes).
+Output written on WWW.pdf (12 pages, 511735 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
+ 258 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
