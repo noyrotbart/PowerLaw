@@ -13,7 +13,7 @@ To ensure that our results hold for all these variations of power-law graphs,
  
 In the following, let $i_1 = \Theta(\sqrt[\alpha]n)$ be the smallest integer such that $\lfloor Cn/i_1^\alpha\rfloor \leq 1$, and let $C'\geq(\frac C{\alpha-1} + \frac{i_1}{\sqrt[\alpha] n} + 5)^{\alpha} + \frac{C}{\alpha - 1}$ be a constant; we shall use $C'$ in the remainder of the paper.
 \begin{definition} \label{def:general-family}
-Let $\alpha > 1$ be a real number. $\PLBARG{C_2,\alpha}$ is the family of graphs $G$ such that if $n = \vert V(G)\vert$ then for all integers $k$ between  some  $C_2$ (which may depend on $n$) and $n-1$, $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$. We shall usually suppress $C_2$ and $\alpha$, writing merely $\PLB$.
+Let $\alpha > 1$ be a real number. $\PLBARG{C_2}{\alpha}$ is the family of graphs $G$ such that if $n = \vert V(G)\vert$ then for all integers $k$ between  some  $C_2$ (which may depend on $n$) and $n-1$, $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$. We shall usually suppress $C_2$ and $\alpha$, writing merely $\PLB$.
 \end{definition}
 The number $C_2$ captures the notion of a cutoff as defined in~\cite{clauset2009power} (Sec. 3.1); the intuition is  that the power law distribution need only apply for nodes of degree higher than $C_2$, rather than for all degrees. 
 Setting $C_2 = 1$ corresponds to the case where the entire range of degrees follows a power-law distribution, hence
@@ -79,7 +79,7 @@ $\vert V_k \vert\leq \lceil \frac{Cn}{k^\alpha}\rceil \leq \frac{Cn}{k^{\alpha}}
 
 \begin{proposition}\label{prop:Contained}
 For any $C_2 > 0$ and $\alpha > 1$,
-$\PLCARG{\alpha} \subseteq \PLBARG{C_2}$.
+$\PLCARG{\alpha} \subseteq \PLBARG{C_2}{\alpha}$.
 \end{proposition}
 \begin{proof}
 Let $d = \lfloor(\frac C{\alpha - 1} + 2)\sqrt[\alpha]{n} + i_1 + 3\rfloor$. For any graph in $\PLC$ with $n$ vertices and for any $k$, $\vert V_k\vert\leq Ck^{-\alpha}n + 1$ and by Proposition~\ref{prop:maxvertexproper}, $\vert V_k\vert = 0$ when $k > d$.

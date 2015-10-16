@@ -18,20 +18,20 @@ $O(\frac{n}{D} \log^2 D)$ where $D = (\log n)/(\log \frac{m+n}{n})$ and $m$ is t
 in the graph.  Using similar methods, Gawrychowski et al.\ obtain an upper bond of \cite{DBLP:journals/corr/GawrychowskiKU15}
 $O(\frac{n}{D} \log D)$ with sublinear decoding time. Few general results on lower bounds exist. The lower bound of $\Omega(\sqrt{n})$ for adjacency given in the present paper is trivially also a lower bound for distance; for total label size, the best known lower bound remains $\Omega(n^{3/2})$ as proved by Gavoille et al.~\cite{Gavoille2001}.
 
-We now devise an $f(n)$-distance labelling scheme for $\PLBARG{C_2}$ working for any $C_2 \geq n^{1/(\alpha - 1 +f(n))}$.
+We now devise an $f(n)$-distance labelling scheme for $\PLBARG{C_2}{\alpha}$ working for any $C_2 \geq n^{1/(\alpha - 1 +f(n))}$.
 The scheme has shorter labels than any known labelling schemes for small distances. As
-the class of graphs with power law degree distribution is a subset of $\PLBARG{C_2}$, and as power-law graphs in general
+the class of graphs with power law degree distribution is a subset of $\PLBARG{C_2}{\alpha}$, and as power-law graphs in general
 have very small expected distances, the labelling scheme should work well for practical purposes in power-law graphs.
 
 \begin{lemma}\label{lem:sparse_small_dist}
 For any computable $f : \mathbb{N} \longrightarrow \mathbb{N}$ such that
-$f(n) \leq n -1$ for all $n$, and for any $C_2 \geq \sqrt[\alpha-1+f(n)]{n}$ there is an $f(n)$-distance labelling scheme for $\PLBARG{C_2}$
+$f(n) \leq n -1$ for all $n$, and for any $C_2 \geq \sqrt[\alpha-1+f(n)]{n}$ there is an $f(n)$-distance labelling scheme for $\PLBARG{C_2}{\alpha}$
 that assigns labels of length at most $O(n^{f(n)/(f(n) + 1)} \log f(n))$.
 \end{lemma}
 
 \begin{proof}
 As for adjacency labelling, the scheme is based on \emph{thin} and \emph{fat} nodes. Let $G$ be a graph
-in $\PLBARG{C_2}$ Call
+in $\PLBARG{C_2}{\alpha}$ Call
 a node of $G$ \emph{fat} if it has degree at least $n^{1/(\alpha - 1 + f(n)}$ and \emph{thin} otherwise.
 The label of each node $v$ now contains (i) a table of distances to all fat nodes (if the distance is more than $f(n)$, it is simply ignored), (ii) a table of distances to all thin nodes $w$ that are at most distance $f(n)$ away from $v$
 where the shortest path between $v$ and $w$ does not pass through any fat node, and (iii) a single bit signifiying whether the node is fat or thin.
