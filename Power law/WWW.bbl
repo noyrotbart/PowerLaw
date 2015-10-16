@@ -58,17 +58,6 @@ S.~R. Arikati, A.~Maheshwari, and C.~D. Zaroliagis.
 \newblock Efficient computation of implicit representations of sparse graphs.
 \newblock {\em Discrete Applied Mathematics}, 78(1):1--16, 1997.
 
-\bibitem{asano2003compact}
-Y.~Asano, T.~Ito, H.~Imai, M.~Toyoda, and M.~Kitsuregawa.
-\newblock Compact encoding of the web graph exploiting various power laws.
-\newblock In {\em Advances in Web-Age Information Management}, pages 37--46.
-  Springer, 2003.
-
-\bibitem{asano2008efficient}
-Y.~Asano, Y.~Miyawaki, and T.~Nishizeki.
-\newblock Efficient compression of web graphs.
-\newblock In {\em Computing and Combinatorics}, pages 1--11. Springer, 2008.
-
 \bibitem{barabasi1999emergence}
 A.-L. Barab{\'a}si and R.~Albert.
 \newblock Emergence of scaling in random networks.
@@ -136,11 +125,6 @@ F.~R. Chung and L.~Lu.
 \newblock {\em Complex Graphs and Networks}, volume 107.
 \newblock American mathematical society Providence, 2006.
 
-\bibitem{claude2010fast}
-F.~Claude and G.~Navarro.
-\newblock Fast and compact web graph representations.
-\newblock {\em ACM Transactions on the Web (TWEB)}, 4(4):16, 2010.
-
 \bibitem{clauset2009power}
 A.~Clauset, C.~R. Shalizi, and M.~E. Newman.
 \newblock Power-law distributions in empirical data.
@@ -199,12 +183,6 @@ G.~Goel and J.~Gustedt.
 J.~E. Gonzalez, Y.~Low, H.~Gu, D.~Bickson, and C.~Guestrin.
 \newblock Powergraph: Distributed graph-parallel computation on natural graphs.
 \newblock In {\em OSDI}, volume~12, page~2, 2012.
-
-\bibitem{guillaume2002efficient}
-J.-L. Guillaume, M.~Latapy, and L.~Viennot.
-\newblock Efficient and simple encodings for the web graph.
-\newblock In {\em Advances in Web-Age Information Management}, pages 328--337.
-  Springer, 2002.
 
 \bibitem{hakimi1962realizability}
 S.~L. Hakimi.
@@ -302,6 +280,13 @@ B.~M. Waxman.
 \newblock Routing of multipoint connections.
 \newblock {\em Selected Areas in Communications, IEEE Journal on},
   6(9):1617--1622, 1988.
+
+\bibitem{xie2014distributed}
+C.~Xie, L.~Yan, W.-J. Li, and Z.~Zhang.
+\newblock Distributed power-law graph computing: Theoretical and empirical
+  analysis.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  1673--1681, 2014.
 
 \bibitem{yang2015defining}
 J.~Yang and J.~Leskovec.
