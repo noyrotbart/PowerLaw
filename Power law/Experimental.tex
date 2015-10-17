@@ -115,12 +115,8 @@ Data set&Predicted &Empirical & Label Diff. & Threshold Diff.   & Upper-Bound   
 \textsc{internet}   &$1,426$    &$1,156$  & $19.0\%$  & $0.8\%$  & $8,181 $  &$4,700$      &$17,925$  &$11,487$\\
 \textsc{enron}      &$2,609$    &$2,577$  & $1.3\%$ & $0.2\%$   & $15,835 $ &$9,735$      &$11,056$  &$18,352$\\
 \textsc{www}        &$5,245$    &$3,060$  & $41.7\%$  & $1\%$  & $29,225 $ &$28,445$     &$101,840$ &$162,870$ \\
-<<<<<<< HEAD
 \hline \multicolumn{9}{c}{Real-Life Large Graphs}\\\hline
-\textsc{google} & $3,311$ & $2,060$ & $127\%$ & $0.3\%$ & $6,505$ & $24,109$ & $63,320$ & $458,220$\\
-=======
 \textsc{google} & $3,311$ & $2,060$ & $161\%$ & $0.5\%$ & $6,505$ & $24,109$ & $63,320$ & $458,220$\\
->>>>>>> origin/One
 \textsc{Youtube}        &$10,596$    &$3,212$  & $329\%$  & $1.3\%$  & $21,7190$ &$25,872$     &$301,917$ &$578,920$ \\
 \textsc{WikiTalk}       & $6,972$ & $4,560$ & $152\%$ & $0.1\%$ & $16,664$ & $41,110$ & $1,100,352$ & $1,197,199$\\ 
 \textsc{LiveJournal}        &$61,898$    &$7,836$  & $790\%$  & $1.5\%$  & $8,313$ &$56,916$     &$162,976$ &$2,018,275$ \\\hline
@@ -143,7 +139,7 @@ For Performance Indicator (i), both our experimental results and theoretical upp
 The actual label sizes obtained in the experiments (the two leftmost columns of Table \ref{t:labelsizes}) are substantially lower than the upper bounds, that is, the labeling scheme performs much better in practice than suggested by theory (down to less than a kilobyte per vertex for all data sets). 
 This phenomenon may be due to the degree distribution of the graphs of the data sets having only minor deviation from a power-law for small vertex degrees; our upper bounds on the label size are derived by using the very rich family $\PLB$ that allows very large deviation from a power-law for degrees between $1$ and $\sqrt[\alpha]{n/\log n} - 1$.
 
- For Performance Indicator (i), our labeling scheme obtains maximum label size at most 3.5\% larger than what would have been obtained by using the empirical threshold for all synthetic data sets.
+ For Performance Indicator (ii), our labeling scheme obtains maximum label size at most 3.5\% larger than what would have been obtained by using the empirical threshold for all synthetic data sets.
 This is expected---the synthetic data sets are graphs generated specifically to have power-law distributed degree distribution. 
 For the real-world data sets, the labeling scheme obtains maximum label much larger than the empirical threshold; this larger deviation is likely due to degree distributions of the data sets being close to, but not quite,
 power-law distributions due to natural phenomena or noise. E.g., for the \textsc{enron} data set there is sudden drop in frequency between nodes of degree $< 158$ and $\geq 158$. Despite the large difference in label size, we note that the threshold difference never exceeds $1.5\%$. This implies that using the theoretical threshold to speed up the labeling is a valid step even for graphs that are not perfectly power-law.
