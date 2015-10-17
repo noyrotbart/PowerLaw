@@ -45,9 +45,9 @@ The seven \emph{real-world} data sets originate  from articles that found the da
 The \textsc{www} data set  \cite{albert1999internet} contains information on links between webpages within the nd.edu domain. 
 The \textsc{enron} data set ~\cite{leskovec2009community}  contains email communication between  Enron employees (vertices are email addresses; there is a link between two addresses
 if a mail has been sent between them).
-The \textsc{internet} data set~\cite{newman} provides a snapshot the Internet structure at the level of  autonomous systems, reconstructed from BGP tables. 
+The \textsc{internet} data set~\cite{newman} provides a snapshot of the Internet structure at the level of  autonomous systems, reconstructed from BGP tables. 
 For all of these sets, we consider the underlying simple, undirected graphs. For each set, standard maximum likelihood methods were used to compute the parameter
-$\alpha$ of the best-fitting power-law curve \cite{clauset2009power}. Additional information on the data sets can be found in Table~\ref{t:datasets}.
+$\alpha$ of the best-fitting power-law curve \cite{clauset2009power}. Additional information on the data sets can be found in Table~\ref{t:data sets}.
 
 \begin{table}[!ht]
 \centering
@@ -74,7 +74,7 @@ s1M$^{\alpha=2.6}$    & 1,000,000       & 878,472        & 2.6    & 12,169 &-- \
 s1M$^{\alpha=2.8}$    & 1,000,000       & 751,784         & 2.8   & 1,692  &-- \\\hline
 \end{tabular}
 \caption{Data sets and their properties. All graphs are undirected and simple. $\Delta_{\max}$ is the maximum degree of any vertex in the data set.}
-\label{t:datasets}
+\label{t:data sets}
 \end{table}
 
 
@@ -95,7 +95,7 @@ for the predicted and empirical thresholds as well as upper bounds on the label 
 }%
 \caption{Exemplary maximum label sizes of different threshold values for the synthetic data sets   s300$^{\alpha=2.2}$ and s1M$^{\alpha=2.6}$. 
 The triangles and crosses represent that for the tested threshold the largest label belong to fat, resp. thin node. The star indicate the position of the predicted threshold.
-See~\cite{} for the remaining  figures for synthetic datasets.}
+See~\cite{} for the remaining  figures for synthetic data sets.}
 \label{fig:findings}%
 \end{figure*}
 
@@ -108,9 +108,9 @@ Table~\ref{t:labelsizes}  shows  the maximum label sizes achieved using differen
 ``Label Diff.'' shows the ratio between the predicted and empirical label sizes, and  ``Threshold Diff.'' shows the ratio between the absolute difference of the threshold values and the maximum degree.
  The remaining columns show non-experimental upper bounds for different label schemes: ``Bound'' is the upper bound guaranteed in Theorem~\ref{prop:labelingMain}, ``$c$-sparse'' is  the labeling scheme for sparse graphs defined in Theorem~\ref{sparse-label}, ``BD'' is the $\lceil \frac{\Delta}{2} \rceil \lceil \log n\rceil$ bounded degree graph  labeling of~\cite{adjiashvili2014labeling}, and AKTZ is the $\lceil n/2\rceil+6$ general graph  labeling of~\cite{alstrup2014adjacency}.
  
-For the dataset groups ``Real-Life" and ``Synthetic", the values of  ``Empirical'' and  ``Bound'' are represented using simple concatenation of labels to represent both the fat and thin bit strings. 
+For the data set groups ``Real-Life" and ``Synthetic", the values of  ``Empirical'' and  ``Bound'' are represented using simple concatenation of labels to represent both the fat and thin bit strings. 
 In comparison to our analysis, this may incur a factor of up to $(\log n)/\alpha$  on the fat nodes and discount a similar factor for the thin nodes.
-Due to the size of the datasets in the group  "Real-Life Large Graphs", the computation of their predicted and empirical bounds was done using the observation that in our original labeling scheme the following holds: Given a  graph $G=(V,E)$, and threshold $t$, with $v_t \in V$ nodes of degree larger than $t$, the label size is $\max{(v_t,t \log n)}$. 
+Due to the size of the data sets in the group  "Real-Life Large Graphs", the computation of their predicted and empirical bounds was done using the observation that in our original labeling scheme the following holds: Given a  graph $G=(V,E)$, and threshold $t$, with $v_t \in V$ nodes of degree larger than $t$, the label size is $\max{(v_t,t \log n)}$. 
 
 \begin{table*}
 \small
