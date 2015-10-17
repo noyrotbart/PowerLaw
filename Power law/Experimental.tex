@@ -147,8 +147,7 @@ This phenomenon may be due to the degree distribution of the graphs of the data 
 
  For Performance Indicator (ii), our labeling scheme obtains maximum label size at most 3.5\% larger than what would have been obtained by using the empirical threshold for all synthetic data sets.
 This is expected---the synthetic data sets are graphs generated specifically to have power-law distributed degree distribution. 
-For the real-world data sets, the labeling scheme obtains maximum label much larger than the empirical threshold; this larger deviation is likely due to degree distributions of the data sets being close to, but not quite,
-power-law distributions due to natural phenomena or noise. E.g., for the \textsc{enron} data set there is sudden drop in frequency between nodes of degree $< 158$ and $\geq 158$. Despite the large difference in label size, we note that the threshold difference never exceeds $1.5\%$. This implies that using the theoretical threshold to speed up the labeling is a valid step even for graphs that are not perfectly power-law.
+For the real-world data sets, the labeling scheme obtains maximum label that is much larger than the empirical threshold; this larger deviation is likely due to degree distributions of the data sets being close to, but not quite, power-law distributions due to natural phenomena or noise. E.g., for the \textsc{enron} data set there is sudden drop in frequency between nodes of degree $< 158$ and $\geq 158$. Despite the large difference in label size, we note that the threshold difference never exceeds $1.5\%$. This implies that using the theoretical threshold to speed up the labeling is a valid step even for graphs that are not perfectly power-law.
 
 
 Finally, note that our labeling scheme supports adjacency for \emph{directed} graphs by using one more bit per edge in each label to store the edge orientation.
