@@ -78,14 +78,13 @@ s1M$^{\alpha=2.8}$    & 1,000,000       & 751,784         & 2.8   & 1,692  &-- \
 
 
 \subsection{Findings}
-Figure \ref{fig:findings} shows the distribution of maximum label sizes for one synthetic and one real-world data set. The maximum label size
-for the predicted and empirical thresholds as well as upper bounds on the label sizes from different label schemes in the literature can be seen in Table \ref{t:labelsizes} for two synthetic
-data sets and all three real-world data sets. 
+Figure \ref{fig:findings} shows the distribution of maximum label sizes for two representative synthetic and  data sets. The maximum label size
+for the predicted and empirical thresholds as well as upper bounds on the label sizes from different label schemes in the literature can be seen in Table \ref{t:labelsizes}. 
 %Plots for the remaining data sets can be found in Appendix~\ref{App:ExpRes}.
 
 \begin{figure*}[!ht]
 \centering
-\subfloat[\small syn300$^{\alpha=2.2}$]{
+\subfloat[\small s300$^{\alpha=2.2}$]{
     \includegraphics[width=0.4\textwidth]{Figures/synthetic-300k-alpha22.pdf}
     \label{f:fsyn300k}
 }\hspace*{-2.5em}
@@ -93,7 +92,7 @@ data sets and all three real-world data sets.
     \includegraphics[width=0.4\textwidth]{Figures/synthetic-1M-26}
     \label{f:fsyn1M}
 }%
-\caption{Exemplary maximum label sizes of different threshold values for the synthetic data sets   syn300$^{\alpha=2.2}$ and s1M$^{\alpha=2.6}$. 
+\caption{Exemplary maximum label sizes of different threshold values for the synthetic data sets   s300$^{\alpha=2.2}$ and s1M$^{\alpha=2.6}$. 
 The triangles and crosses represent that for the tested threshold the largest label belong to fat, resp. thin node. The star indicate the position of the predicted threshold.
 See~\cite{} for the remaining  figures for synthetic datasets.}
 \label{fig:findings}%
@@ -105,10 +104,8 @@ See~\cite{} for the remaining  figures for synthetic datasets.}
 Table~\ref{t:labelsizes}  shows  the maximum label sizes achieved using different labeling schemes on our data sets. ``Predicted'' shows the experimental maximum label size obtained by running our scheme on the graphs, ``Empirical'' is the label size attained by using the empirical threshold.
 ``Label Diff.'' shows the ratio between the predicted and empirical label sizes, and  ``Threshold Diff.'' shows the ratio between the absolute difference of the threshold values and the maximum degree.
  The remaining columns show non-experimental upper bounds for different label schemes: ``Bound'' is the upper bound guaranteed in Theorem~\ref{prop:labelingMain}, ``$c$-sparse'' is  the labeling scheme for sparse graphs defined in Theorem~\ref{sparse-label}, ``BD'' is the $\lceil \frac{\Delta}{2} \rceil \lceil \log n\rceil$ bounded degree graph  labeling of~\cite{adjiashvili2014labeling}, and AKTZ is the $\lceil n/2\rceil+6$ general graph  labeling of~\cite{alstrup2014adjacency}.
-Both ``Empirical'' and  ``Bound'' use simple concatenation of labels to represent the fat bit string. Our labeling schemes introduced in this paper all make use of a succinctly represented ``fat bit string''; for our experiments, we use simple concatenation of labels instead of a bit string; this incurs a $(\log n)/\alpha$ factor on the label size, but simplifies the implementation.
-The computation of the predicted and empirical bounds for the "Real-Life Large Graphs" datasets was done using an additional observation.
-If the labeling scheme is implemented with fat labels as bit strings rather than label concatenation then the following holds:
-Given a  graph $G=(V,E)$, and threshold $t$, with $v_t \in V$ nodes of degree larger than $t$, the label size is $\max{v_t,t \log n}$.
+For the dataset groups "Real-Life" and "Synthetic" ``Empirical'' and  ``Bound'' use simple concatenation of labels to represent the fat bit string for "Real-Life" and "Synthetic" , this incurs a $(\log n)/\alpha$ factor on the label size.
+The computation of the predicted and empirical bounds for the "Real-Life Large Graphs" datasets was done using the observation that in our original labeling scheme the following holds: Given a  graph $G=(V,E)$, and threshold $t$, with $v_t \in V$ nodes of degree larger than $t$, the label size is $\max{v_t,t \log n}$.
 
 \begin{table*}
 \small
@@ -119,7 +116,7 @@ Data set&Predicted &Empirical & Label Diff. & Threshold Diff.   & Upper-Bound   
 \textsc{enron}      &$2,609$    &$2,577$  & $1.3\%$ & $0.2\%$   & $15,835 $ &$9,735$      &$11,056$  &$18,352$\\
 \textsc{www}        &$5,245$    &$3,060$  & $41.7\%$  & $1\%$  & $29,225 $ &$28,445$     &$101,840$ &$162,870$ \\
 \hline \multicolumn{9}{c}{Real-Life Large Graphs}\\\hline
-\textsc{google} & $3,311$ & $2,589$ & $127\%$ & $0.3\%$ & $6,505$ & $24,109$ & $63,320$ & $458,220$\\
+\textsc{google} & $3,311$ & $2,060$ & $127\%$ & $0.3\%$ & $6,505$ & $24,109$ & $63,320$ & $458,220$\\
 \textsc{Youtube}        &$10,596$    &$3,212$  & $329\%$  & $1.3\%$  & $21,7190$ &$25,872$     &$301,917$ &$578,920$ \\
 \textsc{WikiTalk}       & $6,972$ & $4,560$ & $152\%$ & $0.1\%$ & $16,664$ & $41,110$ & $1,100,352$ & $1,197,199$\\ 
 \textsc{LiveJournal}        &$61,898$    &$7,836$  & $790\%$  & $1.5\%$  & $8,313$ &$56,916$     &$162,976$ &$2,018,275$ \\\hline
@@ -137,15 +134,16 @@ s300$^{\alpha=2.8}$ &$1,350$    &$1,312$  & $2.8\%$ & $0.1\%$   & $6,244 $  &$12
 \label{t:labelsizes}
 \end{table*}
 
-Our findings are as follows. For Performance Indicator (i), our labeling scheme obtains maximum label size at most 3.5\% larger than what would have been obtained by using the empirical threshold for all synthetic data sets.
-This is expected---the synthetic data sets are graphs generated specifically to have power-law distributed degree distribution. For the real-world data sets, the labeling scheme
-obtains maximum label size at most 41.7\% larger than by using the empirical threshold; this larger deviation is likely due to degree distributions of the data sets being close to, but not quite,
-power-law distributions due to natural phenomena or noise. E.g., for the \textsc{enron} data set there is sudden drop in frequency between nodes of degree $< 158$ and $\geq 158$.
-
-For Performance Indicator (ii), both our experimental results and theoretical upper bounds for our labeling scheme are several orders of magnitudes lower than for labeling schemes aimed at more general classes of graphs, as expected. Of the more general classes of graphs, it is most interesting to compare the upper bound of bounded degree graphs---the most restrictive class of graphs that both contains the class of power-law graphs and has an efficient labeling scheme described in the literature~\cite{adjiashvili2014labeling}. As seen in Table \ref{t:labelsizes}, the upper bound on our labeling schemes for both power-law graphs and sparse graphs have better upper bounds on label sizes, but only marginally so for data sets with low maximum degree and low values of the power-law parameter $\alpha$, e.g. \textsc{Enron} ($\alpha = 1.97$). 
-The actual label sizes obtained in the experiments (the two leftmost columns of Table \ref{t:labelsizes}) are substantially lower than the upper bounds, that is,
-the labeling scheme performs much better in practice than suggested by theory (down to less than a kilobyte per vertex for all data sets). 
+Our findings are as follows.
+For Performance Indicator (i), both our experimental results and theoretical upper bounds for our labeling scheme are several orders of magnitudes lower than for labeling schemes aimed at more general classes of graphs, as expected. Of the more general classes of graphs, it is most interesting to compare the upper bound of bounded degree graphs---the most restrictive class of graphs that both contains the class of power-law graphs and has an efficient labeling scheme described in the literature~\cite{adjiashvili2014labeling}. As seen in Table \ref{t:labelsizes}, the upper bound on our labeling schemes for both power-law graphs and sparse graphs have better upper bounds on label sizes, but only marginally so for data sets with low maximum degree and low values of the power-law parameter $\alpha$, e.g. \textsc{Enron} ($\alpha = 1.97$). 
+The actual label sizes obtained in the experiments (the two leftmost columns of Table \ref{t:labelsizes}) are substantially lower than the upper bounds, that is, the labeling scheme performs much better in practice than suggested by theory (down to less than a kilobyte per vertex for all data sets). 
 This phenomenon may be due to the degree distribution of the graphs of the data sets having only minor deviation from a power-law for small vertex degrees; our upper bounds on the label size are derived by using the very rich family $\PLB$ that allows very large deviation from a power-law for degrees between $1$ and $\sqrt[\alpha]{n/\log n} - 1$.
+
+ For Performance Indicator (i), our labeling scheme obtains maximum label size at most 3.5\% larger than what would have been obtained by using the empirical threshold for all synthetic data sets.
+This is expected---the synthetic data sets are graphs generated specifically to have power-law distributed degree distribution. 
+For the real-world data sets, the labeling scheme obtains maximum label much larger than the empirical threshold; this larger deviation is likely due to degree distributions of the data sets being close to, but not quite,
+power-law distributions due to natural phenomena or noise. E.g., for the \textsc{enron} data set there is sudden drop in frequency between nodes of degree $< 158$ and $\geq 158$. Despite the large difference in label size, we note that the threshold difference never exceeds $1.5\%$. This implies that using the theoretical threshold to speed up the labeling is a valid step even for graphs that are not perfectly power-law.
+
 
 Finally, note that our labeling scheme supports adjacency for \emph{directed} graphs by using one more bit per edge in each label to store the edge orientation.
 \section{Conclusion and Future Work}
