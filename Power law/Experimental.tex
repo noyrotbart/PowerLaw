@@ -1,21 +1,22 @@
 % !TEX root = WWW.tex
 \section{Experimental Study}
 
-We now  perform an experimental evaluation of our labeling scheme on a number of power-law networks.
-The source code for our experiments can be found at:\\ \url{www.diku.dk/~simonsen/suppmat/www16/powerlaw.zip}
+We now  perform an experimental evaluation of our labeling scheme on a number of real-world networks.
+Source code for our experiments can be found at:\\ \url{www.diku.dk/~simonsen/suppmat/www16/powerlaw.zip}
 
 \subsection{Experimental Framework}\label{Sec:Experimental}
-Recall that our labeling scheme separates  the nodes according to a selected threshold from the range $0 \dots \Delta$,\footnote{Recall that $\Delta$ is the graph's maximum degree.} which we select as a function of  the power-law parameter $\alpha$.
+Recall that our labeling scheme separates  the nodes according to a selected threshold from the range $0$ to the maximal degree $\Delta$ of a node in the graph. The threshold is selected as a function of  the power-law parameter $\alpha$.
 The following observation is the key to assess our labeling scheme's quality.
-Suppose we chose a threshold  $n_0$ for a graph $G$, and call  the maximum label size of a thin node, $T(n_0)$ and the maximum label size of a fat node $F(n_0)$.  The size of our labeling scheme for the graph $G$ is the larger of these two values.
+Suppose we chosoe a threshold  $n_0$ for a graph $G$. Call  the maximum label size thin and fat nodes $T(n_0)$ and $F(n_0)$ respectively. Then, the maximum label assigned by our labelling scheme-hence the quality of the scheme--is the larger of these two values.
 The critical observation is that, as our selection of threshold $n_0$ increases, $T(n_0)$ monotonically increases and  $F(n_0)$ monotonically decreases.
-Our strategy thus arrives to optimality if we choose $n_0$ that minimises  the value $F(n_0)-T(n_0)$, in other words, where the curves of both functions intersect.
-In the remainder of this section we call such threshold the \emph{empirical} threshold.
+The optimum value of $n_0$ is thus the one that minimises  $F(n_0)-T(n_0)$, in other words, where the graphs of
+the functions $T(\cdot)$ and $F(\cdot)$ intersect.
+In the remainder of this section we call this optimum threshold the \emph{empirical} threshold.For large real-world graphs, computing the empirical threshold requires operations on the entire network: a slow encoder for a labeling scheme can always find the empirical threshold by a binary search, but this would incur an $O(\log n)$ factor on its running time. 
 
-In contrast, we set the threshold in our labeling scheme as $\lceil \sqrt[\alpha]{C n/(\alpha-1)} \rceil$, which we denote as the \emph{predicted} threshold.
-It is an approximation to the theoretically optimal threshold choice when degree distributions follow the power-law curve $k\mapsto Cn/k^\alpha$ perfectly, using integration as used in Proposition~\ref{prop:Contained}.
+In contrast, we set the threshold in our labeling scheme as $\lceil \sqrt[\alpha]{C n/(\alpha-1)} \rceil$, which we denote as the \emph{predicted} threshold. The predicted and the empirical threshold will be identical when the degree distribution of the data perfectly follows a power-law curve with parameter $\alpha$. As real-world data rarely follow a power-law
+graph perfectly, there could conceivably be substantial difference between the predicted and the empirical threshold.
 
-Note that a slow encoder can always arrive at the empirical threshold by a binary search which would incur an $O(\log n)$ factor on its running time. 
+
 \paragraph{Performance Indicators}
 We use the following to determine the quality of our labeling scheme:
 
