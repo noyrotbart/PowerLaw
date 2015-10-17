@@ -39,8 +39,8 @@ Due to their size, such graphs are not only compressed, but may be stored distri
 We study the storage of  power-law graphs in a completely distributed manner, using the well-known algorithmic technique of \emph{adjacency labeling schemes}.
 This theoretical tool assigns  labels to the vertices of a graph such that   adjacency between two vertices can be inferred using only the information in their corresponding labels. Thus, there is no need for a centralized data structure to hold the graph, and adjacency queries are resolved locally between two vertices. The quality of a labeling scheme is determined by the size of the largest label size it produces, so that each vertex is guaranteed to hold at most that number of bits.
 
-As the number of vertices of high degree is low in power-law graphs, a natural idea is to store the adjacency relation between low and high degree vertices the only in the vertices of  low degree. 
-We show that, using  a careful selection of the \emph{threshold} between vertices of high and low degree, this strategy alone produces not only good labeling schemes in practice, but that it is theoretically almost optimal. 
+As the number of vertices of high degree is low in power-law graphs, a natural idea is to store the adjacency relation between low and high degree vertic only in the vertices of  low degree. 
+We show that, using  a careful selection of the \emph{threshold} between vertices of high and low degree, this strategy alone produces not only good labeling schemes in practice, but that it is theoretically nearly optimal. 
 The examination of the labeling scheme in practice is done by an experimental evaluation using both synthetic data and real-world networks with up to 30 million nodes.
 The theoretical proof is done by proving near matching upper and lower bounds, both for deterministically and probabilistically  constructed power-law graphs.
 Finally, we use the  technique  to produce a  theoretically interesting distance labeling scheme for power-law graphs.

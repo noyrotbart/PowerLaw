@@ -54,7 +54,7 @@ As $G = G(V,E)$ is in $\PLBARG{\chi}{\alpha}$, we have
 \end{align*}
  Thus, a table of distances to all fat nodes takes up at most $O\left(n^{\frac{f(n)}{\alpha - 1 + f(n)}} \log f(n)\right)$ bits.
 
-Similarly, for each node $v$ there are at most $\left(n^{1/(\alpha - 1 + f(n))}\right)^{f(n)} = n^{f(n)/(\alpha - 1 + f(n))}$ nodes at distance at most $f(n)$ away from $v$ where the shortest path consists only of thin nodes. Hence, the associated table of distances
+Similarly, for each node $v$ there are at most $\left(n^{1/(\alpha - 1 + f(n))}\right)^{f(n)} \\= n^{f(n)/(\alpha - 1 + f(n))}$ nodes at distance at most $f(n)$ away from $v$ where the shortest path consists only of thin nodes. Hence, the associated table of distances
 takes up at most \\$O(n^{f(n)/(\alpha -1 + f(n))} \log n)$ bits.
 
 In total, each label thus has size at most $O(n^{f(n)/(f(n)+1)} \log n)$ bits.
