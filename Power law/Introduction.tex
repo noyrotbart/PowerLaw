@@ -8,7 +8,7 @@ Another approach is to disseminate the structural information of the graph to it
 In particular, it can be useful to address privacy concerns and ensure a high survivability rate~\cite{buchegger2009peerson}.
 
 We posit that a useful tool for such a peer-to-peer strategy is the notion of a \emph{labeling scheme}: an algorithm that assigns a bit string--a \emph{label}--to each vertex so that a query between any two vertices can be deduced solely from their respective labels. 
-Labeling schemes are extremely well-studied in the algorithmic literature~\cite{alstrup2014adjacency,brady2006compact,caminiti2008engineering,dahlgaard2014dynamic,gavoillea2004distance,gavoille2007shorter,katz2004labeling,korman2007general,korman2007compact,Korman07,rotbart2014evaluation}; the main objective is to minimize the \emph{maximum label size}: the maximum number of bits used in a label of any vertex. Among applications for labeling schemes are  XML search engines~\cite{cohen2010labeling}, mapping services~\cite{abraham2011hub}, and internet routing~\cite{krioukov2004compact}.
+Labeling schemes are extremely well-studied in the algorithmic literature~\cite{alstrup2014adjacency,brady2006compact,caminiti2008engineering,dahlgaard2014dynamic,gavoillea2004distance,gavoille2007shorter,katz2004labeling,korman2007general,korman2007compact,Korman07,rotbart2014evaluation}; the main objective is to minimize the \emph{maximum label size}: the maximum number of bits used in a label of any vertex. Among their applications are  XML search engines~\cite{cohen2010labeling}, mapping services~\cite{abraham2011hub}, and internet routing~\cite{krioukov2004compact}.
 
 One class of graphs extensively used for modelling real-world networks is \emph{power-law graphs}: roughly, $n$-vertex graphs where the number of vertices of degree $k$ is proportional to $n/k^{\alpha}$ for some positive $\alpha$. Power-law graphs (also called scale-free graphs in the literature) have been used to model the Internet AS-level graph \cite{DBLP:journals/ton/SiganosFFF03,DBLP:conf/podc/AkellaCKS03}, and many other types of network (see, e.g., \cite{clauset2009power,mitzenmacher2004brief} for overviews). 
 The adequacy of fit of power-law graph models to actual data, as well as the empirical correctness of the conjectured mechanisms giving rise to power-law behaviour, have been subject to criticism (see, e.g., \cite{DBLP:journals/jacm/AchlioptasCKM09,clauset2009power}).
@@ -22,20 +22,22 @@ Using those we contribute the following results for the family of power-law grap
 
 \paragraph{An  $O(\sqrt[\alpha] n (\log n)^{1 - 1/\alpha})$ adjacency labeling scheme}
 The scheme is based on two ideas:
-(i) a labeling \emph{strategy} that  partitions the vertices of $G$ into high (``fat'') and low degree (``thin'') vertices based on a threshold degree, and (ii) a threshold \emph{prediction} that depends only on the coefficient $\alpha$ of a power-law curve fitted to the degree distribution of $G$.  These ideas are illustrated in Figure~\ref{f:principle}.
-Real-world power-law graphs rarely exceed  $~10^{10}$ vertices, implying a label size of at most  ${10^{5}}$ bits, well within the processing capabilities of current hardware. 
+(i) a labeling \emph{strategy} that  partitions the vertices of $G$ into high (``fat'') and low degree (``thin'') vertices based on a threshold degree, and (ii) a threshold \emph{prediction} that depends only on the coefficient $\alpha$ of a power-law curve fitted to the degree distribution of $G$. These ideas are illustrated in Figure~\ref{f:principle}.
+Real-world power-law graphs rarely exceed  $~10^{10}$ vertices, implying a label size of  ${10^{5}}$ bits, well within the processing capabilities of current hardware. 
 Our  scheme may be appealing in practice,  both due  to its simplicity and the reasonable size of its labels.
 Using the same ideas, we get an  asymptotically near-tight  $O(\sqrt{n \log n})$ adjacency labeling scheme for sparse graphs.
-
+\vspace{-0.6cm}
 \paragraph{A lower bound of $\Omega(\sqrt[\alpha]{n})$ for any adjacency labeling scheme}
 We use our  restrictive subclass of power-law graphs and  show that it requires label size $\Omega(\sqrt[\alpha]{n})$ for $n$-vertex graphs.
 This lower bound shows that our upper bound above is asymptotically  optimal, bar a $(\log n)^{1 - 1/\alpha}$ factor.
 By the connections between adjacency labeling schemes and universal graphs, we also obtain upper and lower bounds for induced universal graphs for power-law graphs. 
 
+\vspace{-0.6cm}
 \paragraph{An $o(n)$ distance labeling scheme}
 As a theoretical contribution, we extend the ideas of our  adjacency labeling scheme to arrive to a $o(n)$ distance labeling scheme for power-law graphs.
 Our labeling scheme is designed to outperform competing labeling schemes for small distances, in according to Chung and Lu's findings~\cite{chung2004average} on the small expected diameter of power-law graphs.
 
+\vspace{-0.6cm}
 \paragraph{An experimental investigation  of our labeling scheme}
 Using both real-world (23K-3M vertices) and synthetic (300K-1M vertices) data sets, we observe the following:
 (i) Our threshold \emph{prediction} performs close to optimal when using the labeling \emph{strategy} above, in particular to graphs with  a degree distribution  close to  power-law. 
@@ -55,7 +57,7 @@ Using both real-world (23K-3M vertices) and synthetic (300K-1M vertices) data se
 \end{figure}
 
 \subsection{Related work}
-Adjacency labeling schemes for  numerous important graph families are by now well understood. 
+Adjacency labeling schemes for  key  graph families are by now well understood. 
 General graphs  require a label size of $n/2+O(1)$~\cite{moon1965minimal, alstrup2014adjacency}, while 
 trees, planar graphs, and bounded degree graphs enjoy labels of logarithmic size~\cite{Alstrup02, gavoille2007shorter, adjiashvili2014labeling}. 
 

@@ -15,7 +15,7 @@ In the remainder of this section we call this optimum threshold the \emph{empiri
 
 In contrast, we set the threshold in our labeling scheme as $\lceil \sqrt[\alpha]{C n/(\alpha-1)} \rceil$, which we denote as the \emph{predicted} threshold. The predicted and the empirical threshold will be identical when the degree distribution of the data perfectly follows a power-law curve with parameter $\alpha$. As real-world data rarely follow a power-law graph perfectly, there could conceivably be substantial difference between the predicted and the empirical threshold.
 
-
+\vspace{-0.2cm}
 \paragraph{Performance Indicators}
 We use the following to determine the quality of our labeling scheme:
 
@@ -32,7 +32,7 @@ This best captures how close our ''guess" of the right threshold was, and will, 
 
  
  %\footnote{Additional notes on these values are found in Appendix~\ref{Section:TotalStorage}.
-
+\vspace{-0.2cm}
 \paragraph{Test Sets}
 We employ both real-world and synthetic data sets. 
 
@@ -40,10 +40,9 @@ The six \emph{synthetic} data sets are created by first generating a power-law d
 We use the range $2< \alpha < 3$ as suggested in~\cite{clauset2009power} as this range of $\alpha$ occurs most commonly in modeling of real-world networks. We generate graphs of $300,000$ and $1M.$ vertices denoted  s300$^{\alpha=x}$  and s1M$^{\alpha=x}$  respectively, for $x \in \{2.2,2.4,2.6,2.8\}$. 
 
 
-The seven \emph{real-world} data sets originate  from articles that found the data to be well-approximated by a power-law. 
+The six \emph{real-world} data sets originate  from articles that found the data to be well-approximated by a power-law. 
 The data sets for themselves are from the Stanford  Large Dataset  Collection~\cite{snapnets}.
-For all of these sets, we consider the underlying simple, undirected graphs. For each set, standard maximum likelihood methods were used to compute the parameter
-$\alpha$ of the best-fitting power-law curve \cite{clauset2009power}. Additional information on the data sets can be found in Table~\ref{t:data sets}.
+For all of these sets, we consider the underlying simple, undirected graphs. For each set, standard maximum likelihood methods were used to compute the parameter $\alpha$ of the best-fitting power-law curve \cite{clauset2009power}. For additional information on the data sets see Table~\ref{t:data sets}.
 
 \begin{table}[!ht]
 \centering
@@ -57,7 +56,7 @@ Data set  & $\vert V \vert$ & $\vert E\vert$ & $\alpha$  & $\Delta_{\max}$ & Sou
 \textsc{google} & 875,713 & 5,105,039 & 2.73 & 6,332 & \cite{leskovec2009community}\\
 \textsc{Youtube} & 1,134,890 & 2,987,624 & 2.14 & 28,754 & \cite{yang2015defining}\\
 \textsc{wikitalk} & 2,394,385 & 5,021,410 & 2.42 & 100,032 & \cite{leskovec2010predicting}\\
-\textsc{LiveJournal} &  3,997,962        &    34,681,198      & 2.97     & 14,815        & \cite{yang2015defining}\\\hline
+%\textsc{LiveJournal} &  3,997,962        &    34,681,198      & 2.97     & 14,815        & \cite{yang2015defining}\\\hline
 
 
 \multicolumn{6}{c}{Synthetic Graphs}\\\hline
@@ -90,7 +89,7 @@ Data set&Predicted &Empirical & Label Diff. & Threshold Diff.   & Upper-Bound   
 \textsc{google} & $3,421$ & $2,617$ & $131\%$ & $0.2\%$ & $6,381$ & $23,568$ & $63,320$ & $437,863$\\
 \textsc{Youtube}        &$10,596$    &$3,212$  & $329\%$  & $1.3\%$  & $21,7190$ &$25,872$     &$301,917$ &$578,920$ \\
 \textsc{WikiTalk}       & $6,972$ & $4,282$ & $162\%$ & $0.1\%$ & $16,664$ & $41,110$ & $1,100,330$ & $1,197,199$\\ 
-\textsc{LiveJournal}        &$62,878$    &$7,874$  & $798\%$  & $1.6\%$  & $8,279$ &$56,644$     &$162,976$ &$1,998,987$ \\\hline
+%\textsc{LiveJournal}        &$62,878$    &$7,874$  & $798\%$  & $1.6\%$  & $8,279$ &$56,644$     &$162,976$ &$1,998,987$ \\\hline
 \multicolumn{9}{c}{Synthetic Graphs}\\\hline
 Data set&Predicted &Empirical & Label Diff. & Threshold Diff.   & Upper-Bound     &$c$-sparse &Bounded Degree \cite{adjiashvili2014labeling} &AKTZ \cite{alstrup2014adjacency}\\\hline
 s1M$^{\alpha=2.4}$  &$4,841$    &$4,821$  & $0.4\%$ & $0.002\%$  & $25,012 $ &$30,079$     &$426,820$ &$500,006$\\
@@ -120,15 +119,16 @@ Due to the size of the data sets in the group  "Real-Life Large Graphs", we comp
 
 Our findings are as follows.
 For Performance Indicator (i), both our experimental results and theoretical upper bounds for our labeling scheme are several orders of magnitudes lower than for labeling schemes aimed at more general classes of graphs, as expected. Of the more general classes of graphs, it is most interesting to compare the upper bound of bounded degree graphs---the most restrictive class of graphs that both contains the class of power-law graphs and has an efficient labeling scheme described in the literature~\cite{adjiashvili2014labeling}.
-The actual label sizes obtained in the experiments (the empirical labels) are substantially lower than the upper bounds, that is, the labeling scheme performs much better in practice than suggested by theory (down to less than 10 kilobytes per vertex for all data sets). 
+The actual label sizes obtained in the experiments (both the predicted and empirical labels) are substantially lower than the upper bounds, that is, the labeling scheme performs much better in practice than suggested by theory (down to less than 10 kilobytes per vertex for all data sets). 
 This phenomenon may be due to the degree distribution of the graphs of the data sets having only minor deviation from a power-law for small vertex degrees; our upper bounds on the label size are derived by using the very rich family $\PLB$ that allows very large deviation from a power-law for degrees between $1$ and $\sqrt[\alpha]{n/\log n} - 1$.
 
  For Performance Indicator (ii), the empirical threshold for synthetic data sets obtains maximum label size at most 3.5\% larger than the empirical obtained  threshold. By this, we verify that for graphs with degree distribution that adheres strongly to a power-law distribution, a good labeling scheme need not consult the graph to achieve good label size.
-For the real-world data sets, the labeling scheme obtains maximum label that is much larger than the empirical threshold.
-We argue that this is likely due to degree distributions of the data sets being close to, but not quite, power-law distributions due to natural phenomena or noise. E.g., for the \textsc{enron} data set there is sudden drop in frequency between nodes of degree $< 158$ and $\geq 158$. 
-Despite the large difference in label size, we note that the threshold difference never exceeds $1.5\%$. This implies that using the theoretical threshold to speed up the labeling is a valid step even for graphs that are not perfectly power-law.
+For the real-world data sets, the labeling scheme obtains maximum label that is larger than the empirical threshold.
+This difference is likely due to degree distributions of the data sets being close to, but not quite, power-law distributions due to natural phenomena or noise. E.g., for the \textsc{enron} data set there is sudden drop in frequency between nodes of degree $< 158$ and $\geq 158$. 
+Despite the  difference in label size, we note that the threshold difference never exceeds $1.3\%$. This implies that using the theoretical threshold to speed up the labeling is a valid step even for graphs that are not perfectly power-law. This increased bound also outperforms both the upper bound and the $c$-sparse labeling scheme by a large margin.
 
 Finally, note that our labeling scheme supports adjacency for \emph{directed} graphs by using one more bit per edge in each label to store the edge orientation.
+\clearpage \clearpage \clearpage
 \section{Conclusion and Future Work}
 We have devised adjacency and distance labeling schemes for sparse graphs and graphs whose degree distribution approximately follows a power-law distribution.
  We have proven lower bounds for the class of power-law graphs showing that our strategy for adjacency labeling scheme is  almost  optimal. 

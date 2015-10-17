@@ -11,7 +11,7 @@ Let $G=(V,E)$ be an $n$-vertex $c$-sparse graph. Let $\threshold{n}$ be the degr
 
 For a $v\in V$, the first part of the label $\la(v)$ is a single bit indicating whether $v$ is thin or fat followed by a string of $\log n$ bits representing its identifier. If $v$ is thin, the last part of $\la(v)$ is the concatenation of the identifiers of the neighbors of $v$. If $v$ is fat, the last part of $\la(v)$ is a \emph{fat bit string} of length $k$ where the $i$th bit is $1$ iff $v$ is incident to the (fat) vertex with identifier $i$.
 
-Decoding a pair $(\la(u),\la(v))$ is now straightforward: if one of the vertices, say $u$, is thin, $u$ and $v$ are adjacent iff the identifier of $v$ is part of the label of $u$. If both $u$ and $v$ are fat then they are adjacent iff the $i$th bit of the fat bit string of $\la(u)$ is $1$ where $i$ is the identifier of $v$.
+Decoding a pair $(\la(u),\la(v))$ is straightforward: if one of the vertices, say $u$, is thin, $u$ and $v$ are adjacent iff the identifier of $v$ is part of the label of $u$. If both $u$ and $v$ are fat then they are adjacent iff the $i$th bit of the fat bit string of $\la(u)$ is $1$ where $i$ is the identifier of $v$.
 Both decoding processes can be computed in $O(\log n)$ time using standard assumptions.
 
 Since $|E|\leq cn$, we have $k\leq 2cn/\threshold{n}$. A fat vertex thus has label size $1 + \log n + k\leq 1 + \log n + 2cn/\threshold{n}$ and a thin vertex has label size at most $1 + \log n + \threshold{n}\log n$. To minimize the maximum possible label size, we solve $2cn/x = x\log n$. Solving this gives $x = \sqrt{2cn/\log n}$ and setting $\threshold{n} = \lceil x\rceil$ gives a label size of at most $1 + \log n + (\sqrt{2cn/\log n} + 1)\log n\leq 1 + 2\log n + \sqrt{2cn\log n}$.
@@ -23,10 +23,11 @@ Since $|E|\leq cn$, we have $k\leq 2cn/\threshold{n}$. A fat vertex thus has lab
 %\end{remark}
 
 By Proposition~\ref{prop:powerlawsparse}, graphs in $\PLC$ are sparse for $\alpha > 2$. This gives a label size of $O(\sqrt{n\log n})$ with the labeling scheme in Theorem~\ref{sparse-label}. We now show that this label can be significantly improved, by constructing a labeling scheme for $\PLB$ which contains $\PLC$.
-
+\vspace{-0.1cm}
 \begin{theorem}\label{prop:labelingMain}
  There is a $\sqrt[\alpha]{C'n}(\log n)^{1 - 1/\alpha} + 2\log n + 1$ labeling scheme for $\PLB$.
 \end{theorem}
+\vspace{-0.3cm}
 \begin{proof}
 The proof is very similar to that of Theorem~\ref{sparse-label}. We let $\threshold{n}$ denote the degree threshold. If we pick $\threshold{n}\geq \sqrt[\alpha]{n/\log n}$ then by Definition~\ref{def:general-family}  there are at most $C'n / \threshold{n}^{\alpha -1}$ fat vertices. Defining labels in the same way as in Theorem~\ref{sparse-label} gives a label size for thin vertices of at most $1 + \log n + \threshold{n}\log n$ and a label size for fat vertices of at most
 $1 + \log n + C'n / \threshold{n}^{\alpha -1}$.
