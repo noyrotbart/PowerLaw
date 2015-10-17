@@ -20,11 +20,11 @@ graph perfectly, there could conceivably be substantial difference between the p
 \paragraph{Performance Indicators}
 We use the following to determine the quality of our labeling scheme:
 
-\emph{Performance Indicator i:} We  compare the label sizes attained by our labeling schemes to other labeling schemes, namely state-of-the art labeling schemes for the classes of bounded-degree, sparse and general graphs using the  labeling schemes suggested in \cite{adjiashvili2014labeling},  Theorem~\ref{sparse-label} and \cite{alstrup2014adjacency}.  We interpret small label sizes for our scheme, especially in comparison with ``small'' classes like the class of bounded-degree graphs, as a sign that our labeling scheme efficiently utilizing  the extra information about the graphs: namely that their degree distribution is reasonably well-approximated by a power-law.
+\emph{Performance Indicator i:} We  compare the label sizes attained by our labeling schemes to other labeling schemes, namely state-of-the art labeling schemes for the classes of bounded-degree, sparse and general graphs using the  labeling schemes suggested in \cite{adjiashvili2014labeling},  Theorem~\ref{sparse-label} and \cite{alstrup2014adjacency}.  We interpret small label sizes for our scheme, especially in comparison with ``small'' classes like the class of bounded-degree graphs, as a sign that our labeling scheme efficiently utilizes  the extra information about the graphs: namely that their degree distribution is reasonably well-approximated by a power-law.
 
 \emph{Performance Indicator ii:} We measure the difference in label sizes using the predicted and empirical thresholds. 
  We also measure  the difference between the predicted and empirical threshold in percentages with respect to the maximum degree.
-We interpret a small relative differences in those as an evidence  that the predicted threshold can achieve small label sizes without examining the global properties of the network other than the power-law parameter $\alpha$. 
+We interpret  small relative differences in those as an evidence  that the predicted threshold can achieve small label sizes without examining the global properties of the network other than the power-law parameter $\alpha$. 
 This best captures how close our ''guess" of the right threshold was, and will, in practice, allow for a faster encoding time.
  
 
