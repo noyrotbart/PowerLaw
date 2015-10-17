@@ -37,9 +37,9 @@ As a theoretical contribution, we extend the ideas of our  adjacency labeling sc
 Our labeling scheme is designed to outperform competing labeling schemes for small distances, in according to Chung and Lu's findings~\cite{chung2004average} on the small expected diameter of power-law graphs.
 
 \paragraph{An experimental investigation  of our labeling scheme}
-Using both real-world (23K-3M vertices) and synthetic (300K-1M vertices) data sets, we observe that:
-(i) Our threshold \emph{prediction} performs close to optimal when using the labeling \emph{strategy} above, in particular to graphs with  a degree distribution  close to  power-law.
-(ii) our labeling scheme achieves maximum label size several orders of magnitude smaller than the state-of-the-art labeling schemes for more general graph families.
+Using both real-world (23K-3M vertices) and synthetic (300K-1M vertices) data sets, we observe the following:
+(i) Our threshold \emph{prediction} performs close to optimal when using the labeling \emph{strategy} above, in particular to graphs with  a degree distribution  close to  power-law. 
+(ii) Our labeling scheme achieves maximum label size that is several orders of magnitude smaller than the state-of-the-art labeling schemes for more general graph families.
 
 
 \begin{figure}
@@ -56,14 +56,14 @@ Using both real-world (23K-3M vertices) and synthetic (300K-1M vertices) data se
 
 \subsection{Related work}
 Adjacency labeling schemes for  numerous important graph families are by now well understood. 
-general graphs  require a label size of $n/2+O(1)$~\cite{moon1965minimal, alstrup2014adjacency}, while 
+General graphs  require a label size of $n/2+O(1)$~\cite{moon1965minimal, alstrup2014adjacency}, while 
 trees, planar graphs, and bounded degree graphs enjoy labels of logarithmic size~\cite{Alstrup02, gavoille2007shorter, adjiashvili2014labeling}. 
 
 Routing labeling schemes for power-law graphs  have been investigated by Brady and Cowen~\cite{brady2006compact}, and by Chen et al.~\cite{chen2012compact}. Labeling schemes for other properties than adjacency have been investigated for various classes of graphs, e.g., distance~\cite{gavoillea2004distance}, and flow~\cite{katz2004labeling}. 
 Dynamic labeling schemes were studied by Korman and Peleg~\cite{korman2007general,korman2007compact,Korman07} and recently by Dahlgaard et. al~\cite{dahlgaard2014dynamic}.
-Experimental evaluation for some labeling schemes for various properties on general graphs have been performed by Caminiti et.~al~\cite{caminiti2008engineering}, Fischer~\cite{fischer2009short} and Rotbart et.~al~\cite{rotbart2014evaluation}.
+Experimental evaluations for some labeling schemes for various properties on general graphs have been performed by Caminiti et.~al~\cite{caminiti2008engineering}, Fischer~\cite{fischer2009short} and Rotbart et.~al~\cite{rotbart2014evaluation}.
 
-In the context of distributed graph computing systems,  a somewhat related paradigm of computation is the vertex centric computing model "think like a vertex". In this model  each vertex exchanges messages  only with nearby vertices, such that the locality and simplifies the design and implementation of such systems. Among the numerous systems proposed are Pregel~\cite{malewicz2010pregel}, Power-Graph~\cite{gonzalez2012powergraph} and GraphLab~\cite{low2012distributed}. For a recent survey on the topic see~\cite{mccunethinking2015}.
+In the context of distributed graph computing systems,  a somewhat related paradigm of computation is the vertex centric computing model "think like a vertex". In this model  each vertex exchanges messages  only with nearby vertices, to improve locality and simplify the design and implementation of such systems. Among the numerous systems proposed are Pregel~\cite{malewicz2010pregel}, Power-Graph~\cite{gonzalez2012powergraph} and GraphLab~\cite{low2012distributed}. For a recent survey on the topic see~\cite{mccunethinking2015}.
 
 
 
