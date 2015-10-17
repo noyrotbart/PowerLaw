@@ -81,29 +81,10 @@ s1M$^{\alpha=2.8}$    & 1,000,000       & 751,784         & 2.8   & 1,692  &-- \
 \subsection{Findings}
 Figure \ref{fig:findings} shows the distribution of maximum label sizes for two representative synthetic and  data sets. The maximum label size
 for the predicted and empirical thresholds as well as upper bounds on the label sizes from different label schemes in the literature can be seen in Table \ref{t:labelsizes}. 
-%Plots for the remaining data sets can be found in Appendix~\ref{App:ExpRes}.
 
-\begin{figure*}[!ht]
-\centering
-\subfloat[\small s300$^{\alpha=2.2}$]{
-    \includegraphics[width=0.3\textwidth]{Figures/synthetic-300k-alpha22.pdf}
-    \label{f:fsyn300k}
-}\hspace*{-2.5em}
-\subfloat[\small \textsc{\small s1M$^{\alpha=2.6}$}]{
-    \includegraphics[width=0.3\textwidth]{Figures/synthetic-1M-26}
-    \label{f:fsyn1M}
-}%
-\caption{Exemplary maximum label sizes of different threshold values for the synthetic data sets   s300$^{\alpha=2.2}$ and s1M$^{\alpha=2.6}$. 
-The triangles and crosses represent that for the tested threshold the largest label belong to fat, resp. thin node. The star indicate the position of the predicted threshold.
-See~\cite{} for the remaining  figures for synthetic data sets.}
-\label{fig:findings}%
-\end{figure*}
-
-%\input{FiguresRealLife}
 \input{FiguresRealLife-test}
-\input{FiguresSynthetic}
 \input{FigureRealLifeLarge}
-
+\input{FiguresSynthetic}
 Table~\ref{t:labelsizes}  shows  the maximum label sizes achieved using different labeling schemes on our data sets. ``Predicted'' shows the experimental maximum label size obtained by running our scheme on the graphs, ``Empirical'' is the label size attained by using the empirical threshold.
 ``Label Diff.'' shows the ratio between the predicted and empirical label sizes, and  ``Threshold Diff.'' shows the ratio between the absolute difference of the threshold values and the maximum degree.
  The remaining columns show non-experimental upper bounds for different label schemes: ``Bound'' is the upper bound guaranteed in Theorem~\ref{prop:labelingMain}, ``$c$-sparse'' is  the labeling scheme for sparse graphs defined in Theorem~\ref{sparse-label}, ``BD'' is the $\lceil \frac{\Delta}{2} \rceil \lceil \log n\rceil$ bounded degree graph  labeling of~\cite{adjiashvili2014labeling}, and AKTZ is the $\lceil n/2\rceil+6$ general graph  labeling of~\cite{alstrup2014adjacency}.
@@ -112,7 +93,7 @@ For the data set groups ``Real-Life" and ``Synthetic", the values of  ``Empirica
 In comparison to our analysis, this may incur a factor of up to $(\log n)/\alpha$  on the fat nodes and discount a similar factor for the thin nodes.
 Due to the size of the data sets in the group  "Real-Life Large Graphs", the computation of their predicted and empirical bounds was done using the observation that in our original labeling scheme the following holds: Given a  graph $G=(V,E)$, and threshold $t$, with $v_t \in V$ nodes of degree larger than $t$, the label size is $\max{(v_t,t \log n)}$. 
 
-\begin{table*}
+\begin{table*}[ht!]
 \small
 \begin{tabular}{ccccccccc}
 \hline \multicolumn{9}{c}{Real-Life Graphs}\\\hline
