@@ -7,14 +7,13 @@ Source code for our experiments can be found at:\\ \url{www.diku.dk/~simonsen/su
 \subsection{Experimental Framework}\label{Sec:Experimental}
 Recall that our labeling scheme separates  the nodes according to a selected threshold from the range $0$ to the maximal degree $\Delta$ of a node in the graph. The threshold is selected as a function of  the power-law parameter $\alpha$.
 The following observation is the key to assess our labeling scheme's quality.
-Suppose we chosoe a threshold  $n_0$ for a graph $G$. Call  the maximum label size thin and fat nodes $T(n_0)$ and $F(n_0)$ respectively. Then, the maximum label assigned by our labelling scheme-hence the quality of the scheme--is the larger of these two values.
+Suppose we choose a threshold  $n_0$ for a graph $G$. Call  the maximum label size thin and fat nodes $T(n_0)$ and $F(n_0)$ respectively. Then, the maximum label assigned by our labelling scheme-hence the quality of the scheme--is the larger of these two values.
 The critical observation is that, as our selection of threshold $n_0$ increases, $T(n_0)$ monotonically increases and  $F(n_0)$ monotonically decreases.
 The optimum value of $n_0$ is thus the one that minimises  $F(n_0)-T(n_0)$, in other words, where the graphs of
 the functions $T(\cdot)$ and $F(\cdot)$ intersect.
-In the remainder of this section we call this optimum threshold the \emph{empirical} threshold.For large real-world graphs, computing the empirical threshold requires operations on the entire network: a slow encoder for a labeling scheme can always find the empirical threshold by a binary search, but this would incur an $O(\log n)$ factor on its running time. 
+In the remainder of this section we call this optimum threshold the \emph{empirical} threshold. For large real-world graphs, computing the empirical threshold requires operations on the entire network: a slow encoder for a labeling scheme can always find the empirical threshold by a binary search, but this would incur an $O(\log n)$ factor on its running time.
 
-In contrast, we set the threshold in our labeling scheme as $\lceil \sqrt[\alpha]{C n/(\alpha-1)} \rceil$, which we denote as the \emph{predicted} threshold. The predicted and the empirical threshold will be identical when the degree distribution of the data perfectly follows a power-law curve with parameter $\alpha$. As real-world data rarely follow a power-law
-graph perfectly, there could conceivably be substantial difference between the predicted and the empirical threshold.
+In contrast, we set the threshold in our labeling scheme as $\lceil \sqrt[\alpha]{C n/(\alpha-1)} \rceil$, which we denote as the \emph{predicted} threshold. The predicted and the empirical threshold will be identical when the degree distribution of the data perfectly follows a power-law curve with parameter $\alpha$. As real-world data rarely follow a power-law graph perfectly, there could conceivably be substantial difference between the predicted and the empirical threshold.
 
 
 \paragraph{Performance Indicators}
@@ -42,10 +41,7 @@ We use the range $2< \alpha < 3$ as suggested in~\cite{clauset2009power} as this
 
 
 The seven \emph{real-world} data sets originate  from articles that found the data to be well-approximated by a power-law. 
-The \textsc{www} data set  \cite{albert1999internet} contains information on links between webpages within the nd.edu domain. 
-The \textsc{enron} data set ~\cite{leskovec2009community}  contains email communication between  Enron employees (vertices are email addresses; there is a link between two addresses
-if a mail has been sent between them).
-The \textsc{internet} data set~\cite{newman} provides a snapshot of the Internet structure at the level of  autonomous systems, reconstructed from BGP tables. 
+The data sets for themselves are from the Stanford  Large Dataset  Collection~\cite{snapnets}.
 For all of these sets, we consider the underlying simple, undirected graphs. For each set, standard maximum likelihood methods were used to compute the parameter
 $\alpha$ of the best-fitting power-law curve \cite{clauset2009power}. Additional information on the data sets can be found in Table~\ref{t:data sets}.
 
@@ -79,19 +75,8 @@ s1M$^{\alpha=2.8}$    & 1,000,000       & 751,784         & 2.8   & 1,692  &-- \
 
 
 \subsection{Findings}
-Figure \ref{fig:findings} shows the distribution of maximum label sizes for two representative synthetic and  data sets. The maximum label size
+Figures \ref{f:bla3},\ref{f:bla} and \ref{f:bla2} shows the distribution of maximum label sizes for the Synthetic graphs, Real-life graphs  and Real-Life Large Graphs   data sets respectively. The maximum label size
 for the predicted and empirical thresholds as well as upper bounds on the label sizes from different label schemes in the literature can be seen in Table \ref{t:labelsizes}. 
-
-\input{FiguresRealLife-test}
-\input{FigureRealLifeLarge}
-\input{FiguresSynthetic}
-Table~\ref{t:labelsizes}  shows  the maximum label sizes achieved using different labeling schemes on our data sets. ``Predicted'' shows the experimental maximum label size obtained by running our scheme on the graphs, ``Empirical'' is the label size attained by using the empirical threshold.
-``Label Diff.'' shows the ratio between the predicted and empirical label sizes, and  ``Threshold Diff.'' shows the ratio between the absolute difference of the threshold values and the maximum degree.
- The remaining columns show non-experimental upper bounds for different label schemes: ``Bound'' is the upper bound guaranteed in Theorem~\ref{prop:labelingMain}, ``$c$-sparse'' is  the labeling scheme for sparse graphs defined in Theorem~\ref{sparse-label}, ``BD'' is the $\lceil \frac{\Delta}{2} \rceil \lceil \log n\rceil$ bounded degree graph  labeling of~\cite{adjiashvili2014labeling}, and AKTZ is the $\lceil n/2\rceil+6$ general graph  labeling of~\cite{alstrup2014adjacency}.
- 
-For the data set groups ``Real-Life" and ``Synthetic", the values of  ``Empirical'' and  ``Bound'' are represented using simple concatenation of labels to represent both the fat and thin bit strings. 
-In comparison to our analysis, this may incur a factor of up to $(\log n)/\alpha$  on the fat nodes and discount a similar factor for the thin nodes.
-Due to the size of the data sets in the group  "Real-Life Large Graphs", the computation of their predicted and empirical bounds was done using the observation that in our original labeling scheme the following holds: Given a  graph $G=(V,E)$, and threshold $t$, with $v_t \in V$ nodes of degree larger than $t$, the label size is $\max{(v_t,t \log n)}$. 
 
 \begin{table*}[ht!]
 \small
@@ -120,16 +105,28 @@ s300$^{\alpha=2.8}$ &$1,350$    &$1,312$  & $2.8\%$ & $0.1\%$   & $6,244 $  &$12
 \label{t:labelsizes}
 \end{table*}
 
+\input{FiguresSynthetic}
+\input{FiguresRealLife-test}
+\input{FigureRealLifeLarge}
+Table~\ref{t:labelsizes}  shows  the maximum label sizes achieved using different labeling schemes on our data sets. ``Predicted'' shows the experimental maximum label size obtained by running our scheme on the graphs, ``Empirical'' is the label size attained by using the empirical threshold.
+``Label Diff.'' shows the ratio between the predicted and empirical label sizes, and  ``Threshold Diff.'' shows the ratio between the absolute difference of the threshold values and the maximum degree.
+ The remaining columns show non-experimental upper bounds for different label schemes: ``Bound'' is the upper bound guaranteed in Theorem~\ref{prop:labelingMain}, ``$c$-sparse'' is  the labeling scheme for sparse graphs defined in Theorem~\ref{sparse-label}, ``BD'' is the $\lceil \frac{\Delta}{2} \rceil \lceil \log n\rceil$ bounded degree graph  labeling of~\cite{adjiashvili2014labeling}, and AKTZ is the $\lceil n/2\rceil+6$ general graph  labeling of~\cite{alstrup2014adjacency}.
+ 
+For the data set groups ``Real-Life" and ``Synthetic", the values of  ``Empirical'' and  ``Bound'' are represented using simple concatenation of labels to represent both the fat and thin bit strings. 
+In comparison to our analysis, this may incur a factor of up to $(\log n)/\alpha$  on the fat nodes and discount a similar factor for the thin nodes.
+Due to the size of the data sets in the group  "Real-Life Large Graphs", we compute  the predicted and empirical bounds differently using the observation that in our original labeling scheme the following holds: Given a  graph $G=(V,E)$, and threshold $t$, with $v_t \in V$ nodes of degree larger than $t$, the label size is $\max{(v_t,t \log n)}$. 
+
+
+
 Our findings are as follows.
 For Performance Indicator (i), both our experimental results and theoretical upper bounds for our labeling scheme are several orders of magnitudes lower than for labeling schemes aimed at more general classes of graphs, as expected. Of the more general classes of graphs, it is most interesting to compare the upper bound of bounded degree graphs---the most restrictive class of graphs that both contains the class of power-law graphs and has an efficient labeling scheme described in the literature~\cite{adjiashvili2014labeling}.
-% As seen in Table \ref{t:labelsizes}, the upper bound on our labeling schemes for both power-law graphs and sparse graphs have better upper bounds on label sizes, but only marginally so for data sets with low maximum degree and low values of the power-law parameter $\alpha$, e.g. \textsc{Enron} ($\alpha = 1.97$). 
 The actual label sizes obtained in the experiments (the empirical labels) are substantially lower than the upper bounds, that is, the labeling scheme performs much better in practice than suggested by theory (down to less than 10 kilobytes per vertex for all data sets). 
 This phenomenon may be due to the degree distribution of the graphs of the data sets having only minor deviation from a power-law for small vertex degrees; our upper bounds on the label size are derived by using the very rich family $\PLB$ that allows very large deviation from a power-law for degrees between $1$ and $\sqrt[\alpha]{n/\log n} - 1$.
 
- For Performance Indicator (ii), our labeling scheme obtains maximum label size at most 3.5\% larger than what would have been obtained by using the empirical threshold for all synthetic data sets.
-This is expected---the synthetic data sets are graphs generated specifically to have power-law distributed degree distribution. 
-For the real-world data sets, the labeling scheme obtains maximum label that is much larger than the empirical threshold; this larger deviation is likely due to degree distributions of the data sets being close to, but not quite, power-law distributions due to natural phenomena or noise. E.g., for the \textsc{enron} data set there is sudden drop in frequency between nodes of degree $< 158$ and $\geq 158$. Despite the large difference in label size, we note that the threshold difference never exceeds $1.5\%$. This implies that using the theoretical threshold to speed up the labeling is a valid step even for graphs that are not perfectly power-law.
-
+ For Performance Indicator (ii), the empirical threshold for synthetic datasets obtains maximum label size at most 3.5\% larger than the empirical obtained  threshold. By this, we verify that for graphs with degree distribution that adheres strongly to a power-law distribution, a good labeling scheme need not consult the graph to achieve good label size.
+For the real-world data sets, the labeling scheme obtains maximum label that is much larger than the empirical threshold.
+We argue that this is likely due to degree distributions of the data sets being close to, but not quite, power-law distributions due to natural phenomena or noise. E.g., for the \textsc{enron} data set there is sudden drop in frequency between nodes of degree $< 158$ and $\geq 158$. 
+Despite the large difference in label size, we note that the threshold difference never exceeds $1.5\%$. This implies that using the theoretical threshold to speed up the labeling is a valid step even for graphs that are not perfectly power-law.
 
 Finally, note that our labeling scheme supports adjacency for \emph{directed} graphs by using one more bit per edge in each label to store the edge orientation.
 \section{Conclusion and Future Work}
