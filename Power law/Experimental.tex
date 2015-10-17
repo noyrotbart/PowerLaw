@@ -123,7 +123,7 @@ For Performance Indicator (i), both our experimental results and theoretical upp
 The actual label sizes obtained in the experiments (the empirical labels) are substantially lower than the upper bounds, that is, the labeling scheme performs much better in practice than suggested by theory (down to less than 10 kilobytes per vertex for all data sets). 
 This phenomenon may be due to the degree distribution of the graphs of the data sets having only minor deviation from a power-law for small vertex degrees; our upper bounds on the label size are derived by using the very rich family $\PLB$ that allows very large deviation from a power-law for degrees between $1$ and $\sqrt[\alpha]{n/\log n} - 1$.
 
- For Performance Indicator (ii), the empirical threshold for synthetic datasets obtains maximum label size at most 3.5\% larger than the empirical obtained  threshold. By this, we verify that for graphs with degree distribution that adheres strongly to a power-law distribution, a good labeling scheme need not consult the graph to achieve good label size.
+ For Performance Indicator (ii), the empirical threshold for synthetic data sets obtains maximum label size at most 3.5\% larger than the empirical obtained  threshold. By this, we verify that for graphs with degree distribution that adheres strongly to a power-law distribution, a good labeling scheme need not consult the graph to achieve good label size.
 For the real-world data sets, the labeling scheme obtains maximum label that is much larger than the empirical threshold.
 We argue that this is likely due to degree distributions of the data sets being close to, but not quite, power-law distributions due to natural phenomena or noise. E.g., for the \textsc{enron} data set there is sudden drop in frequency between nodes of degree $< 158$ and $\geq 158$. 
 Despite the large difference in label size, we note that the threshold difference never exceeds $1.5\%$. This implies that using the theoretical threshold to speed up the labeling is a valid step even for graphs that are not perfectly power-law.
@@ -132,19 +132,19 @@ Finally, note that our labeling scheme supports adjacency for \emph{directed} gr
 \section{Conclusion and Future Work}
 We have devised adjacency and distance labeling schemes for sparse graphs and graphs whose degree distribution approximately follows a power-law distribution.
  We have proven lower bounds for the class of power-law graphs showing that our strategy for adjacency labeling scheme is  almost  optimal. 
- Furthermore, we have shown experimentally that the labeling scheme for power-law graphs obtain
+ Furthermore, we have shown experimentally that the labeling scheme for power-law graphs obtains
 results in practice requiring little  space, and that the theoretical threshold we use in our strategy is reasonably close to the optimum threshold.
 
 \subsection{Future work}
 We propose the following directions:
 \begin{itemize}
-\item{Our labeling schemes are designed for static networks, and while it seems not difficult to extend our idea to dynamic networks, an analysis is required to account for the communication and number of re-labels such an extension will incur.}
-\item{Labeling schemes for power law graphs can likely be devised for the realistic case where the scheme only has incomplete knowledge of the graph, for example when the expected frequency of vertices of each degree is known, but not the exact frequency of each vertex.}
+\item{Our labeling schemes are designed for static networks, and while it seems not difficult to extend our idea to dynamic networks, an analysis is required to account for the communication and number of re-labels incurred by such extension.}
+\item{Labeling schemes for power-law graphs can likely be devised for the realistic case where the scheme only has incomplete knowledge of the graph, for example when the expected frequency of vertices of each degree is known, but not the exact frequency of each vertex.}
 %As our labeling scheme can be extended to handle directed graphs by using a single bit more per label, 
 \item{One way to view labeling schemes as a hole is the extreme scenario where our data structure is disseminated across $n$ machines.
 This may lead to a better understanding of  overheads observed in other  distributed graph storage technics.}
 %\item{The entropy of both the Chung-Liu and the BA model was recently determined to be similar. It is thus quite surprising that the label size difference is as large as we have proved. It is thus conjectured that the number of nodes of large label size is very small for this family.}
-\item{Closing the  gap of the multiplicative logarithmic factor may be  of interest to the theory community. A much more interesting gap exists for distance labeling schemes.
+\item{Closing the  gap of the multiplicative logarithmic factor may be  of interest to the theory community. A  more interesting gap exists for distance labeling schemes.
 As we have seen, there is a large gap between labeling schemes for short distance and adjacency for power-law (and sparse) graphs.
 This gap effectively deemed the distance labels uninteresting for practical applications.}
 \item{Finally, while power-law distributions may model the degree distribution of real-world networks, other distributions

@@ -1,14 +1,14 @@
 % !TEX root = WWW.tex
 \subsection{A labeling scheme for random graphs}
-There are schemes using randomness to ``grow''  graphs that, with high probability, have approximate power-law degree distribution for a range of degrees. One such scheme is the preferential attachment model \cite{barabasi1999emergence}. For graphs obtained from such models, their degree sequences are instead probability distributions. We now show that applying our labeling scheme for $\PLB$ to random graphs with the power law distribution results in a small expected worst-case label size.
+There are schemes using randomness to ``grow''  graphs that, with high probability, have approximate power-law degree distribution for a range of degrees. One such scheme is the preferential attachment model \cite{barabasi1999emergence}. For graphs obtained from such models, their degree sequences are instead probability distributions. We now show that applying our labeling scheme for $\PLB$ to random graphs with the power-law distribution results in a small expected worst-case label size.
 
-Using the definition of Mitzenmacher \cite{mitzenmacher2004brief}, a random variable $X$ is said to have the \emph{power law} distribution (w.r.t.~$\alpha > 1$) if
+Using the definition of Mitzenmacher \cite{mitzenmacher2004brief}, a random variable $X$ is said to have the \emph{power-law} distribution (w.r.t.~$\alpha > 1$) if
 \[
   Pr[X\geq x] \sim cx^{-\alpha+1},
 \]
 for a constant $c > 0$, i.e., $\lim_{x\to\infty}Pr[X\geq x]/cx^{-\alpha+1} = 1$.
 
-Let $\epsilon > 0$ be fixed. Consider a graph $G$ picked from a family $\mathcal F$ of random graphs whose degree sequences have the power law distribution. Order the vertices of $G$ arbitrarily as $v_1,\ldots,v_n$. For $i=1,\ldots,n$, let indicator variable $X_i$ be $1$ iff $v_i$ has degree at least $d = \sqrt[\alpha]{n/\log n}$. There is a constant $N_0\in\mathbb N$ (depending on $\epsilon$) such that if $n\geq N_0$ then for all $i$,
+Let $\epsilon > 0$ be fixed. Consider a graph $G$ picked from a family $\mathcal F$ of random graphs whose degree sequences have the power-law distribution. Order the vertices of $G$ arbitrarily as $v_1,\ldots,v_n$. For $i=1,\ldots,n$, let indicator variable $X_i$ be $1$ iff $v_i$ has degree at least $d = \sqrt[\alpha]{n/\log n}$. There is a constant $N_0\in\mathbb N$ (depending on $\epsilon$) such that if $n\geq N_0$ then for all $i$,
 \[
   E[X_i] = \mbox{Pr}[X_i = 1]\leq (1+\epsilon)cd^{-\alpha+1}.
 \]
@@ -22,5 +22,5 @@ With the same labeling scheme as for $\PLB$ with degree threshold $\threshold{n}
                        & = O\left(\sqrt[\alpha]n(\log n)^{1-1/\alpha}\right).
 \end{align*}
 \begin{theorem}\label{th:random}
-Let $\mathcal F$ be a family of graphs with degree sequences having the power law distribution w.r.t.~$\alpha > 1$. Then there is a labeling scheme for $\mathcal F$ such that the expected worst-case label size of any graph $G\in\mathcal F$ is $O(\sqrt[\alpha]n(\log n)^{1-1/\alpha})$ where $n$ is the number of vertices of $G$.
+Let $\mathcal F$ be a family of graphs with degree sequences having the power-law distribution w.r.t.~$\alpha > 1$. Then there is a labeling scheme for $\mathcal F$ such that the expected worst-case label size of any graph $G\in\mathcal F$ is $O(\sqrt[\alpha]n(\log n)^{1-1/\alpha})$ where $n$ is the number of vertices of $G$.
 \end{theorem}

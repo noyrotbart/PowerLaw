@@ -1,6 +1,6 @@
 % !TEX root = WWW.tex
 \section{A distance labeling scheme}\label{Sec:Distance}
-In this section we propose a distance labeling scheme for power law graphs. 
+In this section we propose a distance labeling scheme for power-law graphs. 
 
 The \emph{distance} between two nodes in an unweighted undirected graph is the length of the shortest path connecting
 the two nodes, if it exists, and $\infty$ if no such path exists. Let $f : \mathbb{N} \longrightarrow \mathbb{N}$ be a map such that
@@ -17,7 +17,7 @@ $O(\frac{n}{D} \log D)$ with sub-linear decoding time. Few general results on lo
 
 We now devise an $f(n)$-distance labeling scheme for $\PLBARG{\chi}{\alpha}$ working for any $\chi(n) \geq n^{1/(\alpha - 1 +f(n))}$.
 The scheme has shorter labels than any known labeling schemes for small distances. As
-the class of graphs with power law degree distribution is a subset of $\PLBARG{\chi}{\alpha}$, and as power-law graphs in general
+the class of graphs with power-law degree distribution is a subset of $\PLBARG{\chi}{\alpha}$, and as power-law graphs in general
 have very small expected distances, the labeling scheme should work well for practical purposes in power-law graphs.
 
 \begin{lemma}\label{lem:sparse_small_dist}
@@ -64,5 +64,5 @@ For $f(n) = \log n$, Lemma \ref{lem:sparse_small_dist} yields a labeling scheme 
 at most $O\left(n^{(\log n)/(\alpha - 1 + \log n)} \log\log n \right)$. Unsurprisingly, as we are only considering distances up
 to $f(n)$, this label size is asymptotically smaller than for the labeling
 schemes working for all distances in \emph{sparse} graphs, e.g. the largest label sizes of \cite{DBLP:journals/corr/GawrychowskiKU15} for sparse graphs is $O(n \frac{\log \log n}{ \log n})$.
-For power law random graphs, Chung and Lu show in \cite{chung2004average} that, subject to mild conditions, the diameter of power law graphs with $\alpha > 2$ is almost surely $\Theta(\log n)$. We thus expect our labeling scheme to have
+For power-law random graphs, Chung and Lu show in \cite{chung2004average} that, subject to mild conditions, the diameter of power-law graphs with $\alpha > 2$ is almost surely $\Theta(\log n)$. We thus expect our labeling scheme to have
 superior performance for such graphs.

@@ -15,7 +15,7 @@ In the following, let $i_1 = \Theta(\sqrt[\alpha]n)$ be the smallest integer suc
 \begin{definition} \label{def:general-family}
 Let $\alpha > 1$ be a real number and let $\chi:\mathbb N\rightarrow\mathbb N$ be a function. $\PLBARG{\chi}{\alpha}$ is the family of graphs $G$ such that if $n = \vert V(G)\vert$ then for all integers $k$ between $\chi(n)$ and $n-1$, $\sum_{i = k}^{n-1} {\vert V_i\vert} \leq C'(\frac{n}{k^{\alpha-1}})$. We shall usually suppress $\chi$ and $\alpha$, writing merely $\PLB$.
 \end{definition}
-The function $\chi$ captures the notion of a cutoff as defined in~\cite{clauset2009power} (Sec. 3.1); the intuition is  that for an $n$-vertex graph the power law distribution need only apply for nodes of degree higher than $\chi(n)$, rather than for all degrees. 
+The function $\chi$ captures the notion of a cutoff as defined in~\cite{clauset2009power} (Sec. 3.1); the intuition is  that for an $n$-vertex graph the power-law distribution need only apply for nodes of degree higher than $\chi(n)$, rather than for all degrees. 
 Setting $\chi(n) = 1$ corresponds to the case where the entire range of degrees follows a power-law distribution, hence
 even for small values of $\chi(n)$, $\PLB$ morally contains all graphs with power-law degree distribution.
 We will later prove upper bounds that hold for \emph{all} $\chi$ bounded from above by some function; in particular
@@ -99,14 +99,14 @@ as desired.
 
 \subsection{Comparison to other deterministic models}
 Numerous probabilistic and  deterministic  definitions of power-law graphs are given in the literature.
-A recent deterministic model, called  shifted power law distribution \cite{eom2011characterizing} has recently proven to capture a vast number of such definitions, both in theory and experimentally in \cite{Sankowski2016PowerLaw}.
+A recent deterministic model, called  shifted power-law distribution \cite{eom2011characterizing} has recently proven to capture a vast number of such definitions, both in theory and experimentally in \cite{Sankowski2016PowerLaw}.
 We show that our definition of $\PLB$ contains graphs that adhere to the model, which is defined as follows.
- Let $c_1 > 0$ be a constant. A graph $G$ is \emph{power law bounded} for parameters $\alpha > 1$ and $t\geq 0$ if for every integer $d\geq 0$, the number of vertices of $G$ of degree in $[2^d,2^{d+1})$ is at most
+ Let $c_1 > 0$ be a constant. A graph $G$ is \emph{power-law bounded} for parameters $\alpha > 1$ and $t\geq 0$ if for every integer $d\geq 0$, the number of vertices of $G$ of degree in $[2^d,2^{d+1})$ is at most
 \[
   c_1n(t+1)^{\alpha - 1}\sum_{i = 2^d}^{2^{d+1} - 1}(i+t)^{-\alpha}.
 \]
-As experimentally verified in \cite{Sankowski2016PowerLaw}, the value of $t$ is typically very small. If $t = O(1)$, the bound above becomes $O(n\sum_{i = 2^d}^{2^{d+1} - 1}i^{-\alpha})$. In this case, our family $\PLB(\chi,\alpha)$ is rich enough to contain these power law bounded graphs for sufficiently large $C'$ and any choice of $\chi$ and $\alpha$. This follows since for any power law bounded graph with $n$ vertices and any integer $k$ between $1$ and $n-1$, $\sum_{i = k}^{n-1}{\vert V_i\vert} = O(\sum_{d = \lfloor\lg k\rfloor}^{\lceil\lg(n-1)\rceil}n\sum_{i = 2^d}^{2^{d+1}-1}i^{-\alpha}) = O(\frac{n}{k^{\alpha-1}})$. Thus our upper bound also applies to power law bounded graphs. It is possible to extend our upper bound to super-constant $t$ where the bound is stronger the smaller $t$ is; we omit the details. Conversely, our family $\PLC$ is restrictive enough that
-$\PLC$ is contained in the family of power law bounded graphs when $t = O(1)$, and the lower bound we derive thus
+As experimentally verified in \cite{Sankowski2016PowerLaw}, the value of $t$ is typically very small. If $t = O(1)$, the bound above becomes $O(n\sum_{i = 2^d}^{2^{d+1} - 1}i^{-\alpha})$. In this case, our family $\PLB(\chi,\alpha)$ is rich enough to contain these power-law bounded graphs for sufficiently large $C'$ and any choice of $\chi$ and $\alpha$. This follows since for any power-law bounded graph with $n$ vertices and any integer $k$ between $1$ and $n-1$, $\sum_{i = k}^{n-1}{\vert V_i\vert} = O(\sum_{d = \lfloor\lg k\rfloor}^{\lceil\lg(n-1)\rceil}n\sum_{i = 2^d}^{2^{d+1}-1}i^{-\alpha}) = O(\frac{n}{k^{\alpha-1}})$. Thus our upper bound also applies to power-law bounded graphs. It is possible to extend our upper bound to super-constant $t$ where the bound is stronger the smaller $t$ is; we omit the details. Conversely, our family $\PLC$ is restrictive enough that
+$\PLC$ is contained in the family of power-law bounded graphs when $t = O(1)$, and the lower bound we derive thus
 also holds in that setting.
 
 
